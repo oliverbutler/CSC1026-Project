@@ -23,7 +23,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 .token.attr-name,
 .token.namespace,
 .token.deleted {
-	color: #9582ed;
+	color: var(--neon-purple);
 }
 
 .token.function-name {

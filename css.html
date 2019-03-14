@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Design</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <link href="prism/prism.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="prism/prism.js"></script>
+    <header>
+        <nav>
+            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="text">N</span></a>
+            <a href="index.html">Home</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html" class="selected">CSS</a>
+        </nav>
+    </header>
+
+    <section class="Header" id="CSS">
+        <p class="Heading">CSS</p>
+        <p class="SubHeading">&lt;Learn CSS&gt;</p>
+    </section>
+
+
+    <section class="CSS-1 black-bg">
+        <h2>A Simple CSS Stylesheet</h2>
+        <pre><code class="language-css">
+body {
+    margin: 0px;
+    font-family: "apercu", sans-serif;
+    background-color: var(--neon-white);
+    color: var(--neon-black);
+    font-size: 1.1em;
+    min-height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+
+p {
+    padding: 0px 15px 0px 15px;
+}
+        </code></pre>
+        <div class="white-bg fit">
+            <h3>Example Explained</h3>
+            <ul>
+                <li>The <code class="code-span blue">body</code> , <code class="code-span blue">h1</code> and <code class="code-span blue">p</code> tells what type of element tags you want to apply CSS to</li>
+                <li>The <code class="code-span blue"></code> element contains meta information about the document</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="Footer">
+        <ul>
+            <li><a href="#">Links to shit</a></li>
+            <li><a href="#">Maybe uni</a></li>
+            <li><a href="#">Idk</a></li>
+            <li><a href="#">Something</a></li>
+        </ul>
+        <p>Website developed by Oliver Butler</p>
+    </footer>
+</body>
+</html>

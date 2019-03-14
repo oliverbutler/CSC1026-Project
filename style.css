@@ -10,11 +10,13 @@
 }
 
 body {
-    margin: 0px;
     font-family: "apercu", sans-serif;
     background-color: var(--neon-white);
     color: var(--neon-black);
     font-size: 1.1em;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
 
 }
 nav {
@@ -38,9 +40,9 @@ nav a {
 
 nav #logo {
     position: absolute;
-    height: 30px;
+    height: 35px;
     top: 7px;
-    left: 9px;
+    left: 8px;
 }
 
 nav #text {
@@ -52,14 +54,17 @@ nav a:hover {
     background-color: var(--neon-blue);
 }
 
+nav .selected {
+    background-color: #272729;
+}
+
 section {
     padding: 0px 8px;
 }
 
 pre {
     width: fit-content;
-    background-color: #fff;
-    margin: 0px;
+    margin-left: 10px;
     padding-left: 20px;
     padding-right: 20px;
     border-left: 4px solid var(--neon-purple);
@@ -69,8 +74,15 @@ pre {
     color: var(--neon-white);
 }
 
-.code-span {
+.purple {
     color: var(--neon-purple);
+}
+
+.blue {
+    color: var(--neon-blue);
+}
+
+.code-span {
     background-color: #f1f1f1;
     padding-left: 4px;
     padding-right: 4px;
@@ -85,15 +97,27 @@ h1 {
 
 
 p {
+    padding: 0px 15px 0px 15px;
+}
 
+#Home {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("http://www.utc.com/News/CCS/PublishingImages/Imported%20Images/06c50dd3-66bf-4707-b2a7-0141cba20a8a/Newcastle%20University%20Chubb.jpg");
+}
+
+#HTML {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/34140/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#CSS {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .Header {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: 100%;
     color: var(--neon-white);
-    padding-bottom: 40px
+    padding-bottom: 20px
 }
 
 .Header .Heading {
@@ -102,7 +126,7 @@ p {
     text-align: center;
     margin: 0px;
     line-height: 0.9;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
 
 }
@@ -112,10 +136,65 @@ p {
     font-size: 6vmin;
     margin: 0px;
     text-align: center;
+    color: rgba(244, 247, 246, 0.5);
 }
 
-.Introduction {
+.Header a {
+    text-decoration: none;
+    color: rgba(244, 247, 246, 0.5);
 
 }
 
+.Header a:hover {
+    color: var(--neon-white);
+}
 
+.HTML-1 {
+}
+
+.black-bg {
+    background-color: #e9eceb;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.white-bg {
+    background-color: var(--neon-white);
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.fit {
+    width: fit-content;
+}
+
+footer {
+    background-color: var(--neon-black);
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    margin-bottom: -200px;
+    bottom: 0;
+}
+
+footer ul {
+    padding: 15px;
+}
+
+footer li {
+    padding: 1px;
+}
+
+footer a {
+    color: var(--neon-white);
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p {
+    color: var(--neon-white);
+}
