@@ -1,0 +1,121 @@
+:root {
+    --neon-black: #0E0B16;
+    --neon-purple: #A239CA;
+    --neon-blue: #4717F6;
+    --neon-white: #f4f7f6;
+}
+
+.blue {
+    color: var(--neon-blue);
+}
+
+body {
+    margin: 0px;
+    font-family: "apercu", sans-serif;
+    background-color: var(--neon-white);
+    color: var(--neon-black);
+    font-size: 1.1em;
+
+}
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--neon-black);
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: var(--neon-white);
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav #logo {
+    position: absolute;
+    height: 30px;
+    top: 7px;
+    left: 9px;
+}
+
+nav #text {
+    color: var(--neon-black);
+}
+
+/* Change the link color to #111 (black) on hover */
+nav a:hover {
+    background-color: var(--neon-blue);
+}
+
+section {
+    padding: 0px 8px;
+}
+
+pre {
+    width: fit-content;
+    background-color: #fff;
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 4px solid var(--neon-purple);
+    word-wrap: break-word;
+    font-size: 1.1em;
+    background: #2d2d2d;
+    color: var(--neon-white);
+}
+
+.code-span {
+    color: var(--neon-purple);
+    background-color: #f1f1f1;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 110%;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+
+p {
+
+}
+
+.Header {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: var(--neon-white);
+    padding-bottom: 40px
+}
+
+.Header .Heading {
+    font-weight: bolder;
+    font-size: 20vmin;
+    text-align: center;
+    margin: 0px;
+    line-height: 0.9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.Header .SubHeading {
+    font-style: italic;
+    font-size: 6vmin;
+    margin: 0px;
+    text-align: center;
+}
+
+.Introduction {
+
+}
+
+
