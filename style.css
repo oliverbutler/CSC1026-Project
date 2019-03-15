@@ -9,6 +9,11 @@
     color: var(--neon-blue);
 }
 
+.main {
+    max-width: 1500px;
+    margin: auto;
+}
+
 body {
     font-family: "apercu", sans-serif;
     background-color: var(--neon-white);
@@ -45,7 +50,7 @@ nav #logo {
     left: 8px;
 }
 
-nav #text {
+nav #logoletter {
     color: var(--neon-black);
 }
 
@@ -65,6 +70,7 @@ section {
 pre {
     width: fit-content;
     margin-left: 10px;
+    margin-right: 10px;
     padding-left: 20px;
     padding-right: 20px;
     border-left: 4px solid var(--neon-purple);
@@ -159,6 +165,10 @@ p {
     padding: 10px;
 }
 
+.black-bg h2{
+    padding-left: 15px;
+}
+
 .white-bg {
     background-color: var(--neon-white);
     margin: 10px;
@@ -175,7 +185,7 @@ footer {
     position: absolute;
     width: 100%;
     height: 200px;
-    margin-bottom: -200px;
+    margin-bottom: -210px;
     bottom: 0;
 }
 
@@ -197,4 +207,8 @@ footer a {
 
 footer p {
     color: var(--neon-white);
+}
+
+.list > li{
+    padding-bottom: 5px;
 }
