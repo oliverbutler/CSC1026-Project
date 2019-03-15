@@ -7,12 +7,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet"
           href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
     <script src="prism/prism.js"></script>
-
     <header>
         <nav>
             <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/" id="text"><img src="images/logo.png" id="logo" alt=""/><span id="logoletter">O</span></a>
@@ -20,11 +20,12 @@
             <a href="html.html">HTML</a>
             <a href="css.html" class="selected">CSS</a>
         </nav>
+        <a href="#CSS" class="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></a>
     </header>
 
     <section class="Header" id="CSS">
         <p class="Heading">CSS</p>
-        <p class="SubHeading">&lt;Learn CSS&gt;</p>
+        <p class="SubHeading">&lt;Learn <a href="#CSS">CSS</a>&gt;</p>
     </section>
 
     <section class="main">
@@ -66,14 +67,18 @@ p {
 
     </section>
 
-    <footer class="Footer">
-        <ul>
-            <li><a href="#">Links to shit</a></li>
-            <li><a href="#">Maybe uni</a></li>
-            <li><a href="#">Idk</a></li>
-            <li><a href="#">Something</a></li>
-        </ul>
-        <p>Website developed by Oliver Butler</p>
+    <footer class="col-2">
+        <div>
+            <ul>
+                <li><a href="#">Links to shit</a></li>
+                <li><a href="#">Maybe uni</a></li>
+                <li><a href="#">Idk</a></li>
+                <li><a href="#">Something</a></li>
+            </ul>
+        </div>
+        <div>
+            <p>Website developed by Oliver Butler</p>
+        </div>
     </footer>
 </body>
 </html>

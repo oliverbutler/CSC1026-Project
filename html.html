@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet"
           href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <link href="prism/prism.css" rel="stylesheet" />
 </head>
@@ -19,16 +20,17 @@
             <a href="html.html" class="selected">HTML</a>
             <a href="css.html">CSS</a>
         </nav>
+        <a href="#HTML" class="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></a>
     </header>
 
     <section class="Header" id="HTML">
         <p class="Heading">HTML</p>
-        <p class="SubHeading">&lt;Learn HTML&gt; </p>
+        <p class="SubHeading">&lt;Learn <a href="#HTML">HTML</a>&gt; </p>
     </section>
 
     <section class="main">
 
-        <section class="HTML-1 black-bg">
+        <section class="black-bg">
             <h2>A Simple HTML Document</h2>
             <div class="col-2-fit">
                 <div>
@@ -46,6 +48,8 @@
 &lt;/body&gt;
 &lt;/html&gt;
                     </code></pre>
+                    <a href="https://codepen.io/oliverbutler/pen/RdMwmg" class="run">RUN <i class="fas fa-play"></i></a>
+
                 </div>
                 <div class="white-bg fit">
                     <h3>Example Explained</h3>
@@ -62,16 +66,51 @@
             </div>
         </section>
 
+        <section class="black-bg">
+            <h2>HTML Tags</h2>
+            <p>HTML tags are element names surrounded by angle brackets:</p>
+            <pre><code class="language-html">
+&lt;tagname&gt;content goes here...&lt;/tagname&gt;
+            </code></pre>
+            <ul>
+                <li>HTML tags normally come <b>in pairs</b> like <code class="code-span purple">&lt;p&gt;</code> and <code class="code-span purple">&lt;/p&gt;</code></li>
+                <li>The first tag in a pair is the <b> start tag,</b> the second tag is the <b> end tag</b></li>
+                <li>The end tag is written like the start tag, but with a <strong>forward slash</strong>
+                    inserted before the tag name </li>
+            </ul>
+            <div class="note">
+                <p><b>Note:</b> The start tag is also called the <b>opening tag</b>, and the end tag the <b>closing tag</b>.</p>
+            </div>
+        </section>
+
+        <section class="black-bg">
+            <h2>The &lt;!DOCTYPE&gt; Declaration</h2>
+            <p>HTML tags are element names surrounded by angle brackets:</p>
+            <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+            </code></pre>
+            <p>The <code class="code-span purple">&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly.</p>
+            <p>The <code class="code-span purple">&lt;!DOCTYPE&gt;</code> declaration is not case sensitive.</p>
+            <p>The <code class="code-span purple">&lt;!DOCTYPE&gt;</code> declaration for HTML5 is:</p>
+            <div class="warn">
+                <p><b>Warning:</b> It must only appear once, at the top of the page (before any HTML tags). </p>
+            </div>
+        </section>
+
     </section>
 
-    <footer class="Footer">
-        <ul>
-            <li><a href="#">Links to shit</a></li>
-            <li><a href="#">Maybe uni</a></li>
-            <li><a href="#">Idk</a></li>
-            <li><a href="#">Something</a></li>
-        </ul>
-        <p>Website developed by Oliver Butler</p>
+    <footer class="col-2">
+        <div>
+            <ul>
+                <li><a href="#">Links to shit</a></li>
+                <li><a href="#">Maybe uni</a></li>
+                <li><a href="#">Idk</a></li>
+                <li><a href="#">Something</a></li>
+            </ul>
+        </div>
+        <div>
+            <p>Website developed by Oliver Butler</p>
+        </div>
     </footer>
 </body>
 </html>

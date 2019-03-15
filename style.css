@@ -14,6 +14,14 @@
     margin: auto;
 }
 
+.floatingButton {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-size: 2em;
+    color: var(--neon-black);
+}
+
 body {
     font-family: "apercu", sans-serif;
     background-color: var(--neon-white);
@@ -73,11 +81,45 @@ pre {
     margin-right: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 5px;
     border-left: 4px solid var(--neon-purple);
     word-wrap: break-word;
     font-size: 1.1em;
     background: #2d2d2d;
     color: var(--neon-white);
+}
+
+.warn {
+    width: fit-content;
+    padding: 1px 5px 1px 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-left: 4px solid yellow;
+    word-wrap: break-word;
+    background: #fffdcd;
+    color: var(--neon-black);
+}
+
+.note {
+    width: fit-content;
+    padding: 1px 5px 1px 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-left: 4px solid #20ff1f;
+    word-wrap: break-word;
+    background: #d5ffd7;
+    color: var(--neon-black);
+}
+
+.run {
+    text-decoration: none;
+    color: var(--neon-purple);
+    /*background: #2d2d2d;*/
+    margin-left: 0px;
+    font-size: 0.8em;
+    padding: 10px;
+    font-weight: bold;
+    /*border-left: 4px solid var(--neon-purple);*/
 }
 
 .purple {
@@ -184,7 +226,7 @@ footer {
     background-color: var(--neon-black);
     position: absolute;
     width: 100%;
-    height: 200px;
+    height: auto;
     margin-bottom: -210px;
     bottom: 0;
 }
@@ -207,6 +249,7 @@ footer a {
 
 footer p {
     color: var(--neon-white);
+    float: right;
 }
 
 .list > li{
@@ -220,6 +263,17 @@ footer p {
 
 @Media (max-width: 700px) {
     .col-2-fit {
+        grid-template-columns: 1fr;
+    }
+}
+
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@Media (max-width: 700px) {
+    .col-2 {
         grid-template-columns: 1fr;
     }
 }
