@@ -1,5 +1,8 @@
+/*==================| Colors |================*/
+
 :root {
     --neon-black: #0E0B16;
+    --neon-slate: #272729;
     --neon-purple: #A239CA;
     --neon-blue: #4717F6;
     --neon-white: #f4f7f6;
@@ -9,12 +12,17 @@
     color: var(--neon-blue);
 }
 
-.main {
-    max-width: 1500px;
-    margin: auto;
+.purple {
+    color: var(--neon-purple);
 }
 
-.floatingButton {
+/*==================| Floating Button |================*/
+
+#floatingButton {
+    display: none;
+    border: none;
+    outline: none;
+    background: none;
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -22,16 +30,30 @@
     color: var(--neon-black);
 }
 
-body {
-    font-family: "apercu", sans-serif;
-    background-color: var(--neon-white);
-    color: var(--neon-black);
-    font-size: 1.1em;
-    margin: 0;
-    min-height: 100%;
-    position: relative;
+/*==================| Header Images |================*/
 
+#Home {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
 }
+
+#HTML {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/34140/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#CSS {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#History {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/1624895/pexels-photo-1624895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#JS {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+/*==================| Navigation Bar |================*/
+/*todo make navbar collapse into burger*/
 nav {
     list-style-type: none;
     margin: 0;
@@ -45,7 +67,7 @@ nav a {
     display: block;
     color: var(--neon-white);
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1rem;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -68,12 +90,45 @@ nav a:hover {
 }
 
 nav .selected {
-    background-color: #272729;
+    background-color: var(--neon-slate);
 }
 
-section {
-    padding: 0px 8px;
+nav .dropdown {
+    float: left;
+    overflow: hidden;
+    height: 46px;
 }
+
+nav .dropdown .dropdown-button {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    background-color: var(--neon-black);
+    margin: 0;
+    padding: 0;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--neon-black);
+    top: 46px;
+}
+
+nav .dropdown-content a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 10px 10px;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*=====================| Code |==================*/
 
 pre {
     width: fit-content;
@@ -88,6 +143,59 @@ pre {
     background: #2d2d2d;
     color: var(--neon-white);
 }
+
+.run {
+    text-decoration: none;
+    color: var(--neon-purple);
+    margin-left: 0px;
+    font-size: 0.8em;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.code-span {
+    background-color: #f1f1f1;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 110%;
+}
+
+/*==================| Main Page Layout |================*/
+
+section {
+    padding: 0px 8px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+
+p {
+    padding: 0px 15px 0px 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main {
+    max-width: 1500px;
+    margin: auto;
+}
+
+body {
+    font-family: "apercu", sans-serif;
+    background-color: var(--neon-white);
+    color: var(--neon-black);
+    font-size: 1.1em;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+
+}
+
 
 .warn {
     width: fit-content;
@@ -109,55 +217,6 @@ pre {
     word-wrap: break-word;
     background: #d5ffd7;
     color: var(--neon-black);
-}
-
-.run {
-    text-decoration: none;
-    color: var(--neon-purple);
-    /*background: #2d2d2d;*/
-    margin-left: 0px;
-    font-size: 0.8em;
-    padding: 10px;
-    font-weight: bold;
-    /*border-left: 4px solid var(--neon-purple);*/
-}
-
-.purple {
-    color: var(--neon-purple);
-}
-
-.blue {
-    color: var(--neon-blue);
-}
-
-.code-span {
-    background-color: #f1f1f1;
-    padding-left: 4px;
-    padding-right: 4px;
-    font-size: 110%;
-}
-
-
-h1 {
-    text-align: center;
-    font-size: 2.5em;
-}
-
-
-p {
-    padding: 0px 15px 0px 15px;
-}
-
-#Home {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("http://www.utc.com/News/CCS/PublishingImages/Imported%20Images/06c50dd3-66bf-4707-b2a7-0141cba20a8a/Newcastle%20University%20Chubb.jpg");
-}
-
-#HTML {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/34140/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
-
-#CSS {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .Header {
@@ -193,6 +252,9 @@ p {
 
 }
 
+.Introduction {
+    text-align: center;
+}
 .Header a:hover {
     color: var(--neon-white);
 }
@@ -202,25 +264,125 @@ p {
 
 .black-bg {
     background-color: #e9eceb;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.main > section {
+    margin: 15px;
+}
+
+.divider {
+    background-color: #3b5260;
     margin: 10px;
     border-radius: 15px;
     padding: 10px;
+    color: var(--neon-white);
+}
+
+.divider h1 {
+    margin: 0px;
+}
+
+.divider h2 {
+    text-align: center;
+    font-size: 20px;
 }
 
 .black-bg h2{
     padding-left: 15px;
 }
 
-.white-bg {
-    background-color: var(--neon-white);
-    margin: 10px;
-    border-radius: 15px;
-    padding: 10px;
+.black-bg img {
+    width: 92%;
 }
 
-.fit {
+.fit-width {
     width: fit-content;
 }
+
+.fit-height {
+    height: fit-content;
+}
+
+.fit-both {
+    width: fit-content;
+    height: fit-content;
+}
+
+.list > li{
+    padding-bottom: 5px;
+}
+
+.credit {
+    font-size: 13px;
+    text-align: center;
+}
+
+/*==================| Sections |================*/
+
+#HistoryOfTheWeb table img{
+    width: 45px;
+}
+
+#HistoryOfTheWeb table th {
+    font-weight: normal;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.smallImage {
+    width: 100px;
+}
+
+.main .content {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+.big {
+    font-size: 1.4em;
+}
+
+.small {
+    font-size: 0.6em;
+}
+
+.main .content th{
+    font-weight: normal;
+    border: 1px solid #999999;
+    padding: 5px;
+    text-align: left;
+}
+
+.main .content tr:first-child {
+    background-color: #626671;
+    color: white;
+}
+
+.main .content tr {
+    /*background-color: #20ff1f;*/
+}
+
+.main .content tr:nth-child(even) {
+    background-color: #e9eceb;;
+}
+
+.boringTags {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.boringTags h1, .boringTags h2, .boringTags h2,
+.boringTags h3, .boringTags h4, .boringTags h5,
+.boringTags h6 {
+    padding: 0px;
+    margin: 2px;
+}
+
+/*==================| Footer |================*/
 
 footer {
     background-color: var(--neon-black);
@@ -252,28 +414,23 @@ footer p {
     float: right;
 }
 
-.list > li{
-    padding-bottom: 5px;
-}
-
-.col-2-fit {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-}
-
-@Media (max-width: 700px) {
-    .col-2-fit {
-        grid-template-columns: 1fr;
-    }
-}
+/*==================| Responsive Fit |================*/
 
 .col-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.col-2-fit {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
 
-@Media (max-width: 700px) {
+@Media (max-width: 800px) {
     .col-2 {
         grid-template-columns: 1fr;
     }
+    .col-2-fit {
+        grid-template-columns: 1fr;
+    }
+
 }

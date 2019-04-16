@@ -9,18 +9,59 @@
           href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script src="script.js"></script>
+    <script src="prism/prism.js"></script>
     <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="prism/prism.js"></script>
+
     <header>
         <nav>
             <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
             <a href="index.html" class="selected">Home</a>
-            <a href="html.html">HTML</a>
-            <a href="css.html">CSS</a>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="web.html">Web</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#HistoryOfTheWeb">History of the Web</a>
+                    <a href="#WebServers">Web Servers</a>
+                    <a href="#WebArchitechture">Web Architechture</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="html.html">HTML</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">HTML Versions</a>
+                    <a href="#">XHTML</a>
+                    <a href="#">HTML Document</a>
+                    <a href="#">HTML Tags</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="css.html">CSS</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">css Section</a>
+                    <a href="#">css2 Section</a>
+                    <a href="#">css3 Section</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="js.html">JS</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">js Section</a>
+                    <a href="#">js2 Section</a>
+                    <a href="#">js3 Section</a>
+                </div>
+            </div>
         </nav>
-        <a href="#Home" class="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></a>
+        <button onclick="topFunction()" id="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></button>
     </header>
 
     <section class="Header" id="Home">
@@ -30,25 +71,30 @@
 
     <section class="main">
 
+<!--        todo QUIZES!!!!-->
+
         <section class="Introduction">
             <h1>CSC1026: Website Design and Construction</h1>
             <p>Within CSC1026 you will learn how to build and develop websites, using both <b>HTML</b> (Hyper Text Markup Language) and <b>CSS</b> (Cascading Style Sheets), aswell as utlizing Javascript for interactive elements.</p>
         </section>
 
-        <section class="black-bg">
-            <h2>Aims</h2>
-            <p>
-                This module aims to provide a clear and logical introduction to the principles and practice which underpin the development, delivery and consumption of web content.
-                <br/><br/>
-                It will cover the common technical infrastructure and protocols used across World Wide Web, the client-server relationship at its heart and the ways in which web content is created, accessed and consumed.
-                <br/><br/>
-                Students will explore current client-side technologies used to structure, present and manipulate web content – along with the evolution of the standards to which they conform – and use them to design and build working, standards-compliant solutions to practical problems.
-                <br/><br/>
-                The module also considers current web design trends and practice, in particular the ways (both good and bad) in which design influences user experience and how new and evolving technologies can be safely incorporated into current and future web sites.
-            </p>
+        <section id="Aims">
+            <div class="black-bg">
+                <h2>Aims</h2>
+                <p>
+                    This module aims to provide a clear and logical introduction to the principles and practice which underpin the development, delivery and consumption of web content.
+                    <br/><br/>
+                    It will cover the common technical infrastructure and protocols used across World Wide Web, the client-server relationship at its heart and the ways in which web content is created, accessed and consumed.
+                    <br/><br/>
+                    Students will explore current client-side technologies used to structure, present and manipulate web content – along with the evolution of the standards to which they conform – and use them to design and build working, standards-compliant solutions to practical problems.
+                    <br/><br/>
+                    The module also considers current web design trends and practice, in particular the ways (both good and bad) in which design influences user experience and how new and evolving technologies can be safely incorporated into current and future web sites.
+                </p>
+            </div>
         </section>
 
-        <section class="col-2">
+        <section id="ModuleInfo">
+            <div class="col-2">
                 <div class="list black-bg">
                     <h2>Course Syllabus</h2>
                     <ul class="list">
@@ -95,7 +141,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="black-bg">
+                <div class="black-bg fit-height">
                     <h2>Module Information</h2>
                     <ul><li class="status">Offered for Year: <b>2018/19</b></li></ul>
                     <ul>
@@ -108,6 +154,7 @@
                         <li>Teaching Location: <b>Newcastle City Campus</b></li>
                     </ul>
                 </div>
+            </div>
         </section>
 
     </section>

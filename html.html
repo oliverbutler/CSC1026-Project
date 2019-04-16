@@ -9,6 +9,7 @@
           href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script src="script.js"></script>
     <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
@@ -17,10 +18,49 @@
         <nav>
             <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
             <a href="index.html">Home</a>
-            <a href="html.html" class="selected">HTML</a>
-            <a href="css.html">CSS</a>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="web.html">Web</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#HistoryOfTheWeb">History of the Web</a>
+                    <a href="#WebServers">Web Servers</a>
+                    <a href="#WebArchitechture">Web Architechture</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="html.html" class="selected">HTML</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">HTML Versions</a>
+                    <a href="#">XHTML</a>
+                    <a href="#">HTML Document</a>
+                    <a href="#">HTML Tags</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="css.html">CSS</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">css Section</a>
+                    <a href="#">css2 Section</a>
+                    <a href="#">css3 Section</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="js.html">JS</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">js Section</a>
+                    <a href="#">js2 Section</a>
+                    <a href="#">js3 Section</a>
+                </div>
+            </div>
         </nav>
-        <a href="#HTML" class="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></a>
+        <button onclick="topFunction()" id="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></button>
     </header>
 
     <section class="Header" id="HTML">
@@ -30,70 +70,893 @@
 
     <section class="main">
 
-        <section class="black-bg">
-            <h2>A Simple HTML Document</h2>
+        <!--Divider-->
+        <section class="Introduction">
+            <h1>HTML, XHTML & HTML5</h1>
+            <p>In this section I will go over <b>HTML</b>, <b>XHTML</b> and <b>HTML5</b>. How they vary, their uses, their disadvantages and advantages and why they are important.</p>
+        </section>
+
+        <section id="HTMLVersions">
+            <div>
+                <h2>HTML Versions</h2>
+                <ul>
+                    <li><b>HTML</b> was originally designed to be very simple, and handle text-based documents
+                        <ul>
+                            <li>As the web developed, more features were added to newer versions</li>
+                        </ul>
+                    </li>
+                    <li><b>HTML 2.0</b>  -> <b>HTML3.2</b> (1996) standardised common features, page structure, forms, images, tables and frames</li>
+                    <li><b>HTML 4.01</b> (1999) added enhancements for new technology
+                        <ul>
+                            <li>Support for CSS</li>
+                            <li>Support for dynamic scripting with JavaScript</li>
+                            <li>Accessibility features</li>
+                            <li>Standardised support for multimedia and embedded objects</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>Problems with HTML</h2>
+                <ul>
+                    <li><b>HTML</b> originally only targeted at Web Browsers on PCs and workstations
+                        <ul>
+                            <li>Forgiving of syntax errors and variations in <b>HTML</b> markup (elements with and without end tags, upper and lowercase tag names etc.)</li>
+                            <li>Requires more processing at browser than a markup language with stricter syntax</li>
+                        </ul>
+                    </li>
+                    <li>This lead to the development of <b>XTML 1.0</b> in 2000/2002</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="divider">
+            <h1>XML</h1>
+        </section>
+
+        <section id="XML">
             <div class="col-2-fit">
                 <div>
-                    <pre><code class="language-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;h1&gt;My First Heading&lt;/h1&gt;
-&lt;p&gt;My first paragraph.&lt;/p&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-                    </code></pre>
-                    <a href="https://codepen.io/oliverbutler/pen/RdMwmg" class="run">RUN <i class="fas fa-play"></i></a>
-
+                    <img class="smallImage" src="images/xml-file-format-symbol.png" alt="">
                 </div>
-                <div class="white-bg fit">
-                    <h3>Example Explained</h3>
+                <div>
+                    <p>Extensible Markup Language, a standardised, but flexible specification for creating markup languages</p>
                     <ul>
-                        <li>The <code class="code-span purple">&lt;!DOCTYPE html&gt;</code> declaration defines this document to be HTML5</li>
-                        <li>The <code class="code-span purple">&lt;html&gt;</code> element is the root element of an HTML page</li>
-                        <li>The <code class="code-span purple">&lt;head&gt;</code> element contains meta information about the document</li>
-                        <li>The <code class="code-span purple">&lt;title&gt;</code> element specifies a title for the document</li>
-                        <li>The <code class="code-span purple">&lt;body&gt;</code> element contains the visible page content</li>
-                        <li>The <code class="code-span purple">&lt;h1&gt; </code>element defines a large heading</li>
-                        <li>The <code class="code-span purple">&lt;p&gt;</code> element defines a paragraph</li>
+                        <li>Designed for online data description and exchange
+                            <ul>
+                                <li>Strict but simplified core rules for structuring documents</li>
+                                <li>e.g. RSS, XHTML, SVG etc.</li>
+                            </ul>
+                        </li>
+                        <li>A well-formed XML document can be any XML parser</li>
+                        <li>Provides greater consistency</li>
+                        <li>Final context applied by client/application
+                            <ul>
+                                <li>e.g. web browser, news aggregator etc.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="black-bg">
-            <h2>HTML Tags</h2>
-            <p>HTML tags are element names surrounded by angle brackets:</p>
-            <pre><code class="language-html">
-&lt;tagname&gt;content goes here...&lt;/tagname&gt;
-            </code></pre>
-            <ul>
-                <li>HTML tags normally come <b>in pairs</b> like <code class="code-span purple">&lt;p&gt;</code> and <code class="code-span purple">&lt;/p&gt;</code></li>
-                <li>The first tag in a pair is the <b> start tag,</b> the second tag is the <b> end tag</b></li>
-                <li>The end tag is written like the start tag, but with a <strong>forward slash</strong>
-                    inserted before the tag name </li>
-            </ul>
-            <div class="note">
-                <p><b>Note:</b> The start tag is also called the <b>opening tag</b>, and the end tag the <b>closing tag</b>.</p>
+        <section class="divider">
+            <h1>XHTML</h1>
+        </section>
+
+        <section>
+            <div class="col-2-fit">
+                <div>
+                    <img class="smallImage" src="images/xhtml.png" alt="">
+                </div>
+                <div>
+                    <ul>
+                        <li>The syntax for <b>HTML</b> was made stricter using XML mark-up rules</li>
+                        <li>This created <b>XHTML</b>, "<i>HTML as an application of XML</i>"</li>
+                        <li><b>XHTML</b> uses the same tags and attributes as HTML 4.01</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div>
+                    <h3>Advantages</h3>
+                    <ul>
+                        <li>Sustainability
+                            <ul>
+                                <li>Web applications tend towards XML. Using XHTMl now instead of HTML will make any
+                                    conversion of the website to a XML application easier.</li>
+                            </ul>
+                        </li>
+                        <li>Extensibility
+                            <ul>
+                                <li>Due to how extensive XML can be, XHTML documents allow for other forms of markup, in
+                                    addition to HyperText... MathML (Math Markup Language) SVG (Scaleable Vector Graphics),
+                                    however this was never widely accepted so alot of browsers don't support this.</li>
+                            </ul>
+                        </li>
+                        <li>Compatibility
+                            <ul>
+                                <li>As XHTML documents are written with strict rules, as it is with XML, XML-Processing
+                                    programs are able to easily convert XHTML to another format e.g. PDF.
+                                </li>
+                                <li>Less processing power required for the browser, as none of the HTML is malformed,
+                                    unlike alot of sites.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Disadvantages</h3>
+                    <ul>
+                        <li>Limited Practical use
+                            <ul>
+                                <li>Not many browsers offer any advantages by using XHTML documents, e.g. Internet
+                                    Explorer doesn't even support XHTML</li>
+                            </ul>
+                        </li>
+                        <li>Limited Tags and Attributes
+                            <ul>
+                                <li>As XHTML uses the tags and attributes of HTML 4.01, which means it is lacking alot
+                                    of the features of HTML5. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="note">
+                        <p>The differences are in the structure and syntax</p>
+                        <ul>
+                            <li>Tag/attribute names must be in lower case</li>
+                            <li>Attributes <b>must</b> be name/value pairs</li>
+                            <li>Tags must both open <b>and</b> close</li>
+                            <li>Self-contained tags <b>must</b> be closed</li>
+                            <li>Special characters <b>must</b> use correct entity values</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="black-bg">
-            <h2>The &lt;!DOCTYPE&gt; Declaration</h2>
-            <p>HTML tags are element names surrounded by angle brackets:</p>
-            <pre><code class="language-html">
+        <section class="divider">
+            <h1>HTML5</h1>
+        </section>
+
+        <section id="HTML5">
+            <div class="col-2-fit">
+                <div>
+                    <img class="smallImage" src="images/html5.png" alt="">
+                </div>
+                <div>
+                    <h3>What is HTML5? More than HTML.</h3>
+                    <ul>
+                        <li>Logical extension of our three concerns:
+                            <ul>
+                                <li>Markup - developed from HTML 4.01/XHTML</li>
+                                <li>Presentation - extensions to CSS ... CSS3</li>
+                                <li>Behavior - extensions to DOM</li>
+                            </ul>
+                        </li>
+                        <li>Some core principals
+                            <ul>
+                                <li>Improve semantic organisation</li>
+                                <li>Replace scripting with core markup where possible</li>
+                                <li>Reduce need for browser plugins</li>
+                                <li>Improved device independence</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3>Why is HTML5 important?</h3>
+                <ul>
+                    <li>Provides a cross-platform, device independent option for rich
+                    application development - not just "web pages"</li>
+                    <li>Includes features such as
+                        <ul>
+                            <li>Semantic content structure elements</li>
+                            <li>Logical video and audio elements for media playback</li>
+                            <li>New forms controls - with baked in validation</li>
+                            <li>Drag and drop interfaces</li>
+                            <li>Support for local offline storage</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="divider">
+            <h1>HTML Document</h1>
+        </div>
+
+        <section  id="HTMLDocument" >
+            <div>
+                <h2>HTML Document Structure</h2>
+                <p>Why is HTML structure important? Due to the fact that, unlike most things you make,
+                 when you are developing a website, you are making it to be processed at the point of final
+                use. Because of this, you have less control over the final output.</p>
+
+                <h3>Correctly structured HTML...</h3>
+                <ul>
+                    <li>Allows for consistent rendering in all browsers</li>
+                    <li>Means users can take advantage of accessibility features for display and navigation of pages</li>
+                    <li>Makes editing and maintaining documents easier</li>
+                    <li>Gives page authors full access to style sheet and scripting features </li>
+                </ul>
+                <h2>A Simple HTML Document</h2>
+                <div class="col-2-fit">
+                    <div>
+                    <pre><code class="language-html">
 &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                        <a href="https://codepen.io/oliverbutler/pen/RdMwmg" class="run">RUN <i class="fas fa-play"></i></a>
+                    </div>
+                    <div class="black-bg fit-both">
+                        <h3>Example Explained</h3>
+                        <ul>
+                            <li>The <code class="code-span purple">&lt;!DOCTYPE html&gt;</code> declaration defines this document to be HTML5</li>
+                            <li>The <code class="code-span purple">&lt;html&gt;</code> element is the root element of an HTML page</li>
+                            <li>The <code class="code-span purple">&lt;head&gt;</code> element contains meta information about the document</li>
+                            <li>The <code class="code-span purple">&lt;title&gt;</code> element specifies a title for the document</li>
+                            <li>The <code class="code-span purple">&lt;body&gt;</code> element contains the visible page content</li>
+                            <li>The <code class="code-span purple">&lt;h1&gt; </code>element defines a large heading</li>
+                            <li>The <code class="code-span purple">&lt;p&gt;</code> element defines a paragraph</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>How to validate correct HTML </h2>
+                <div class="col-2-fit">
+                    <div>
+                        <a href="https://validator.w3.org/"><img class="smallImage" src="images/w3c.png" alt=""></a>
+                    </div>
+                    <div>
+                        <p>In order to ensure that your current HTML Markup is correct and the syntax is correct, you can use a HTML validator
+                            such as the  W3C Markup Validation Service</p>
+                    </div>
+                </div>
+                <h2>Web page specifications</h2>
+                <ul>
+                    <li>The specifications for HTML are provided by the W3C (World Wide Web Consortium)</li>
+                    <li>W3C publishes the Document Type Definitions (DTD) for each version of HTML</li>
+                    <li>A DTD contains the rules for a markup language e.g.
+                        <ul>
+                            <li>Which tags can be used</li>
+                            <li>Where they can appear in the document</li>
+                            <li>Which attributes they can hold</li>
+                        </ul>
+                    </li>
+                    <li>Alongside the DTD are recommendations as to how user-agents (e.g. web browsers) should</li>
+                    interpret and render the marked up content
+                </ul>
+                <h2>HTML: Basic Document Structure</h2>
+                <h3><i>Specification set by the W3C </i></h3>
+                <p>A HTML document is composed of three parts:</p>
+                <ol>
+                    <li>A line containing HTML version inforamtion</li>
+                    <li>A declarative header section (delimited by the &lt;head&gt; element)</li>
+                    <li>A body, which contains the document's actual content... implemented by the
+                    &lt;body&gt; element...</li>
+                </ol>
+            </div>
+            <div>
+                <h2>The &lt;!DOCTYPE&gt; Declaration</h2>
+                <p>HTML tags are element names surrounded by angle brackets:</p>
+                <pre><code class="language-html">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD
+HTML 4.01//EN" "http://www.w3.org
+            /TR/html4/strict.dtd"&gt;
+                </code></pre>
+                <ul>
+                    <li>This is the DTD (Document Type Definition) declaration</li>
+                    <li>Identifies the document version to the user-agent
+                        <ul>
+                            <li>The PUBLIC part identifies the version e.g. XHTML 1.0, HTML4</li>
+                            <li>The URL specifies the location of the mark-up specification</li>
+                        </ul>
+                    </li>
+                    <li>Common browsers do not validate pages against DTD but...
+                        <ul>
+                            <li>A DTD will allows a browser to process document correctly</li>
+                            <li>Sometimes called a DOCTYPE switching</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="warn">
+                    <p><b>Warning:</b> It must only appear once, at the top of the page (before any HTML tags). </p>
+                </div>
+
+                <h2>The &lt;head&gt; section</h2>
+                <pre><code class="language-html">
+&lt;head&gt;
+    &lt;title&gt;A Simple Document&lt;/title&gt;
+    &lt;meta http-equiv="content-type"
+    content="text/html;charset=utf-u"&gt;
+&lt;/head&gt;
+                </code></pre>
+                <ul>
+                    <li>Information about the document, used to help process it
+                        <ul>
+                            <li>Must include a <code class="code-span purple">&lt;title&gt;</code> and character set info</li>
+                        </ul>
+                    </li>
+                    <li>Optional declarations and references for:
+                        <ul>
+                            <li>Metadata via <code class="code-span purple">&lt;meta&gt;</code></li>
+                            <li>Scripts via <code class="code-span purple">&lt;script&gt;...&lt;/script&gt;</code></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>The &lt;body&gt; section</h2>
+                <pre><code class="language-html">
+&lt;body&gt;
+    &lt;img src="logo.gif" alt="My Logo"&gt;
+    &lt;h1&gt;Creating Web Pages&lt;/h1&gt;#
+    &lt;p&gt;Random &lt;b&gt;text&lt;/b&gt;
+        &lt;a href="http://www.ncl.ac
+        .uk/"&gt;NCL&lt;/a&gt;
+    &lt;/p&gt; 
+&lt;/body&gt;
+                </code></pre>
+                <ul>
+                    <li>This is processed into the content users actually see</li>
+                    <li>Final appearance may be influenced by information from the <code class="code-span purple">&lt;head&gt;</code>
+                     (scripts, style sheets etc)</li>
+                </ul>
+                
+            </div>
+        </section>
+
+        <div class="divider">
+            <h1>Compare HTML Documents</h1>
+        </div>
+
+        <section id="compareHTMLDocuments">
+            <div>
+                <h2>HTML 4.01</h2>
+                <div class="col-2-fit">
+                    <div>
+                          <pre><code class="language-html">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD
+HTML 4.01//EN" "http://www.w3.org/TR
+            /html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML 4.01 Document&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Creating pages&lt;/h1&gt;
+    &lt;br&gt;
+    &lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="black-bg fit-both">
+                        <ul>
+                            <li>HTML 4.01 DTD</li>
+                            <li>Simple <code class="code-span purple">&lt;html&gt;</code> tag</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>XHTML 1.0</h2>
+                <div class="col-2-fit">
+                    <div>
+                        <pre><code class="language-html">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML
+1.0 Strict//EN" "http://www.w3.org/TR/xhtml1
+/DTD /xhtml1-strict.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML 4.01 Document&lt;/title&gt;
+    &lt;meta charset="utf-8" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Creating pages&lt;/h1&gt;
+    &lt;br /&gt;
+    &lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                         </code></pre>
+                    </div>
+                    <div class="black-bg fit-both">
+                        <ul>
+                            <li>XHTML 1.0 DTD</li>
+                            <li>Extra attribute in <code class="code-span purple">&lt;html&gt;</code> tag</li>
+                            <li>Self-closing non-paired </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <h2>HTML 5</h2>
+                <div class="col-2-fit">
+                    <div>
+                        <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML 5 Document&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Creating pages&lt;/h1&gt;
+    &lt;br&gt;
+    &lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="black-bg fit-both">
+                        <ul>
+                            <li>Simplified <code class="code-span purple">DOCTYPE</code></li>
+                            <li>No extra attribute in <code class="code-span purple">&lt;html&gt;</code> tag</li>
+                            <li>XHTML syntax is OK (as is HTML!)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider">
+            <h1>Tags and Attributes</h1>
+        </div>
+
+        <section  id="TagsAndAttributes">
+            <div class="col-2">
+                <div>
+                    <h2>HTML Tags</h2>
+                    <p>HTML tags are element names surrounded by angle brackets:</p>
+                    <pre><code class="language-html">
+&lt;tagname&gt;content goes here...&lt;/tagname&gt;
             </code></pre>
-            <p>The <code class="code-span purple">&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly.</p>
-            <p>The <code class="code-span purple">&lt;!DOCTYPE&gt;</code> declaration is not case sensitive.</p>
-            <p>The <code class="code-span purple">&lt;!DOCTYPE&gt;</code> declaration for HTML5 is:</p>
-            <div class="warn">
-                <p><b>Warning:</b> It must only appear once, at the top of the page (before any HTML tags). </p>
+                    <ul>
+                        <li>HTML tags normally come <b>in pairs</b> like <code class="code-span purple">&lt;p&gt;</code> and <code class="code-span purple">&lt;/p&gt;</code></li>
+                        <li>The first tag in a pair is the <b> start tag,</b> the second tag is the <b> end tag</b></li>
+                        <li>The end tag is written like the start tag, but with a <strong>forward slash</strong>
+                            inserted before the tag name </li>
+                        <li>Inline tags can be nested inside block level tags
+                            <ul>
+                                <li><code class="code-span purple">&lt;p&gt;The &lt;em&gt;useful&lt;/em&gt; bit of this paragraph&lt;/p&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li>Where as some block level tags can be nested together, such as <code class="code-span purple">&lt;p&gt;</code> can be nested within a <code class="code-span purple">div</code></li>
+                    </ul>
+                    <div class="note">
+                        <p><b>Note:</b> The start tag is also called the <b>opening tag</b>, and the end tag the <b>closing tag</b>.</p>
+                    </div>
+                </div>
+                <div class="black-bg fit-both">
+                    <h2>Formatting tags</h2>
+                    <ul>
+                        <li><code class="code-span purple">&lt;b&gt;&lt;/b&gt;</code> - <b>Bold</b></li>
+                        <li><code class="code-span purple">&lt;strong&gt;&lt;/strong&gt;</code> - <strong>Strong text</strong></li>
+                        <li><code class="code-span purple">&lt;i&gt;&lt;/i&gt;</code> - <i>Italics</i></li>
+                        <li><code class="code-span purple">&lt;em&gt;&lt;/em&gt;</code> - <em>Emphasized Text</em></li>
+                        <li><code class="code-span purple">&lt;mark&gt;&lt;/mark&gt;</code> - <mark>Marked Text</mark></li>
+                        <li><code class="code-span purple">&lt;small&gt;&lt;/small&gt;</code> - <small>Small Text</small></li>
+                        <li><code class="code-span purple">&lt;del&gt;&lt;/del&gt;</code> - <del>Deleted Text</del></li>
+                        <li><code class="code-span purple">&lt;ins&gt;&lt;/ins&gt;</code> - <ins>Insert Text</ins></li>
+                        <li><code class="code-span purple">&lt;sub&gt;&lt;/sub&gt;</code> - <sub>Subscripted</sub> Text</li>
+                        <li><code class="code-span purple">&lt;sup&gt;&lt;/sup&gt;</code> - <sup>Superscripted</sup> Text</li>
+                    </ul>
+                    <div class="note">
+                        <p><b>Note:</b> Bold/Strong and Italics/Emphasized both have the same effect but the latter of each are <i>Important</i> </p>
+                    </div>
+                </div>
+                <div>
+                    <h2>Attributes</h2>
+                    <ul>
+                        <li>Specify additional properties and/or behavior for HTML tags as name/value pairs
+                            <ul>
+                                <li><code class="code-span purple">&lt;tag attribute="value"&gt;content&lt;/tag&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li>Attributes are declared in the opening tag
+                            <ul>
+                                <li><code class="code-span purple">&lt;div id="content-block-1"&gt;content&lt;/div&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li>Self-closing tags can contain attributes too
+                            <ul>
+                                <li><code class="code-span purple">&lt;img src="logo.gif" alt="my logo"&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li>All attributes in XHTML must have a value
+                            <ul>
+                                <li><code class="code-span purple">checked"</code> becomes
+                                    <code class="code-span purple">checked="checked"</code> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Common Attributes</h2>
+                    <ul>
+                        <li>Can be applied to any &lt;body&gt; tag</li>
+                        <li>Typically used to proved the framework for enhancements to the user experience</li>
+                    </ul>
+                    <table class="content">
+                        <tr>
+                            <th><b>Attributes</b></th>
+                            <th><b>Purpose</b></th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">class</code></th>
+                            <th>Associates an element with a CSS class</th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">id</code></th>
+                            <th>Uniquely identifies element for CSS/scripting</th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">style</code></th>
+                            <th>Provides inline CSS style rules for an element</th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">title</code></th>
+                            <th>Describes an element and its content. Creates tool-
+                            tips in browsers & used by screen readers</th>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2>Body tags</h2>
+                    <ul>
+                        <li><b>Block-level</b>
+                            <ul>
+                                <li>Define blocks(!) of content</li>
+                                <li>Browser will add new lines above and below</li>
+                                <li>Default width/height handled automatically</li>
+                            </ul>
+                        </li>
+                        <li><b>Inline</b>
+                            <ul>
+                                <li>Semantics and organisation within block</li>
+                                <li>Not associated with new lines</li>
+                                <li>Must be nested inside a block-level element</li>
+                            </ul>
+                        </li>
+                        <li><b>Replaced</b>
+                            <ul>
+                                <li>Browser calculates dimension and <i>replaces</i> with embedded or drawn objects</li>
+                                <li>Nesting as for inline tags</li>
+                                <li>Used for specific page elements such as <b>images</b> and <b>form controls</b></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>HTML5 Element classification</h2>
+                    <ul>
+                        <li>HTML5 reclassified tags into "more logical" groups based on content model
+                            <ul>
+                                <li>"Heading", "Flow" and "Sectioning" elements... mostly block-level</li>
+                                <li>"Phrasing" elements... mostly inline</li>
+                                <li>"Embedding" elements... images and other included items</li>
+                                <li>"Interactive" elemetns... including form controls</li>
+                                <li>"Metadata" elements... about the document and linked code</li>
+                            </ul>
+                        </li>
+                        <li>Organised by use in document not rendering rules
+                            <ul>
+                                <li>Some elements appear in multiple categories</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider">
+            <h1>Body-Level Tags</h1>
+        </div>
+
+        <section id="BodyLevel">
+            <div class="col-2">
+                <div>
+                    <h2>Block-Level tags</h2>
+                    <ul>
+                        <li>Block-level tags provide basic content structure for a web page</li>
+                        <li>Text Structure e.g.
+                            <ul>
+                                <li>Headings</li>
+                                <li>Paragraphs</li>
+                                <li>Horizontal rules</li>
+                            </ul>
+                        </li>
+                        <li>List organisation</li>
+                        <li>Tables
+                            <ul>
+                                <li>Primarily for data presentation</li>
+                                <li>Can also be used (with care) for simple content layout</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+                <div>
+                    <h2>Headings</h2>
+                    <ul>
+                        <li>Most important structural component for a page
+                            <ul>
+                                <li>Sets reading patterns, allowing users to scan content</li>
+                                <li>Provides core accessibility for screen readers etc.</li>
+                            </ul>
+                        </li>
+                        <li>Canbe set to six levels, &lt;h1&gt; to &lt;h6&gt;
+                            <ul>
+                                <li>Each is a seperate block and cannot be nested</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="boringTags">
+                        <h1>&lt;h1&gt;</h1> <h2>&lt;h2&gt;</h2> <h3>&lt;h3&gt;</h3>
+                        <h4>&lt;h4&gt;</h4>
+                        <h5>&lt;h5&gt;</h5>
+                        <h6>&lt;h6&gt;</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                    <h2>Paragraphs, breaks & rules</h2>
+                    <ul>
+                        <li>Paragraph used as basic container for body text
+                            <ul>
+                                <li><code class="code-span purple">&lt;p&gt;lorem ipsum&lt;/p&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li>Line breaks can be forced (but try to avoid doing so)
+                            <ul>
+                                <li><code class="code-span purple">&lt;b /&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li>Sections can be easily delineated using a horizontal rule
+                            <ul>
+                                <li><code class="code-span purple">&lt;hr /&gt;</code> eg. below
+                                <hr>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <div>
+                <h2>Lists</h2>
+                <ul>
+                    <li>HTML supports 3 types of list structure
+                        <ul>
+                            <li>Unordered (bullets)</li>
+                            <li>Ordered (numbered)</li>
+                            <li>Definition (descriptive terms)</li>
+                        </ul>
+                    </li>
+                    <li>Focus is on semantics/organisation not visual display
+                        <ul>
+                            <li>Lists can be fine-tuned using CSS</li>
+                        </ul>
+                    </li>
+                    <li>Well structured lists form the basics of many dynamic menu and tab effects
+                        <ul>
+                            <li>In combination with CSS and JavaScript</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="black-bg fit-both">
+                <h2>Un-ordered List</h2>
+                <div class="col-2">
+                    <div>
+                        <pre><code class="language-html">
+&lt;ul&gt;
+    &lt;li&gt;Element 1&lt;/li&gt;
+    &lt;li&gt;Element 2&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Element 1</li>
+                            <li>Element 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="black-bg fit-both">
+                <h2>Ordered List</h2>
+                <div class="col-2">
+                    <div>
+                        <pre><code class="language-html">
+&lt;ol&gt;
+    &lt;li&gt;Element 1&lt;/li&gt;
+    &lt;li&gt;Element 2&lt;/li&gt;
+&lt;/ol&gt;
+                        </code></pre>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>Element 1</li>
+                            <li>Element 2</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="black-bg fit-both">
+                <h2>Definition Lists</h2>
+                <div class="col-2">
+                    <div>
+                        <pre><code class="language-html">
+&lt;dl&gt;
+    &lt;dt&gt;Key 1&lt;/dt&gt;
+        &lt;dd&gt;Element 1&lt;/dd&gt;
+    &lt;dt&gt;Key 2&lt;/dt&gt;
+        &lt;dd&gt;Element 2&lt;/dd&gt;
+&lt;/dl&gt;
+                        </code></pre>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt>Key 1</dt>
+                            <dd>Element 1</dd>
+                            <dt>Key 2</dt>
+                            <dd>Element 2</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>HTML5: Flow elements</h2>
+                <ul>
+                    <li>Introduced to reflect a logical structure for "modern" web documents</li>
+                    <li>Notable additions, typically used at block-level:
+                        <ul>
+                            <li><code class="code-span purple">&lt;article&gt;</code></li>
+                            <li><code class="code-span purple">&lt;section&gt;</code></li>
+                            <li><code class="code-span purple">&lt;nav&gt;</code></li>
+                            <li><code class="code-span purple">&lt;aside&gt;</code></li>
+                            <li><code class="code-span purple">&lt;header&gt;</code></li>
+                            <li><code class="code-span purple">&lt;footer&gt;</code></li>
+                            <li><code class="code-span purple">&lt;menu&gt;</code></li>
+                        </ul>
+                    </li>
+                    <li>Reduces the need for extra common id and class attributes (see later)</li>
+                </ul>
+                <div class="note">
+                    <p><b>Only</b> available in HTML5</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider">
+            <h1>Inline Tags</h1>
+        </div>
+
+        <section id="InlineTags">
+            <div class="col-2">
+                <div>
+                    <h2>Inline Tags</h2>
+                    <ul>
+                        <li>Must be nested inside a block-level tag e.g.
+                            <ul>
+                                <li><code class="code-span purple">&lt;p&gt;Some content marked up &lt;em&gt; using inline tags&lt;/em&gt;&lt;/p&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li><b>Logical tags</b> supply additional semantic meaning or rendering intent to content</li>
+                        <li>Allowing content to be consistently interpreted
+                            <ul>
+                                <li>Different user-agents might render them differently
+                                    e.g. bold text on screen or stronger tone in speech synthesizer</li>
+                            </ul>
+                        </li>
+                        <li>Some (older) <b>physical tags</b> still exist
+                            <ul>
+                                <li>Only really produce a visual effect</li>
+                                <li>Try and avoid them as alternatives exist</li>
+                            </ul>
+                        </li>
+                        <li>Tags used to create links are also inline</li>
+                    </ul>
+                </div>
+                <div>
+                    <table class="content">
+                        <tr>
+                            <th>Tag</th>
+                            <th>Enclosed content is...</th>
+                            <th>Typical visual feedback</th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">&lt;em&gt;</code></th>
+                            <th>...given extra emphasis</th>
+                            <th>Text in <i>italics</i></th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">&lt;strong&gt;</code></th>
+                            <th>...given strong emphasis</th>
+                            <th>Text in <b>bold</b></th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">&lt;cite&gt;</code></th>
+                            <th>...a citation or reference</th>
+                            <th>Usually <i>italicised</i> - detail in a <code>title</code> attribute</th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">&lt;code&gt;</code></th>
+                            <th>...Is program code</th>
+                            <th>Text in <code>monospace</code> font</th>
+                        </tr>
+                        <tr>
+                            <th><code class="code-span purple">&lt;abbr&gt;</code> and
+                                <code class="code-span purple">&lt;acronym&gt;</code></th>
+                            <th>...is a shortened form</th>
+                            <th>None - requires a <code>title</code> attribute</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h2>Common physical inline tags</h2>
+                <p>Provide visual feedback, many <i>deprecated</i>... so use the alternative</p>
+                <table class="content">
+                    <tr>
+                        <th>Tag</th>
+                        <th>Visual Appearance</th>
+                        <th>Alternative</th>
+                    </tr>
+                    <tr>
+                        <th><code class="code-span purple">&lt;b&gt;</code></th>
+                        <th>Bold</th>
+                        <th><code class="code-span purple">&lt;strong&gt;</code> or CSS</th>
+                    </tr>
+                    <tr>
+                        <th><code class="code-span purple">&lt;i&gt;</code></th>
+                        <th>Italics</th>
+                        <th><code class="code-span purple">&lt;em&gt;</code> or CSS</th>
+                    </tr>
+                    <tr>
+                        <th><code class="code-span purple">&lt;big&gt;</code></th>
+                        <th><span class="big">Big</span> font size</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <th><code class="code-span purple">&lt;small&gt;</code></th>
+                        <th><span class="small">small</span> font size</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <th><code class="code-span purple">&lt;sub&gt;</code></th>
+                        <th><sub>subscript</sub> Text</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <th><code class="code-span purple">&lt;sup&gt;</code></th>
+                        <th><sup>superscript</sup> Text</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <th><code class="code-span purple">&lt;u&gt;</code></th>
+                        <th><u>Underline</u></th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <th><code class="code-span purple">&lt;s&gt;</code></th>
+                        <th><s>Strikethrough</s></th>
+                        <th>CSS</th>
+                    </tr>
+                </table>
+                <div class="warn">
+                    <p>The only one deprecated in HTML is <code>big</code>, however they should be avoid regardless</p>
+                </div>
             </div>
         </section>
 

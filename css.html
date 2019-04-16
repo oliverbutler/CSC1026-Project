@@ -9,18 +9,58 @@
           href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script src="script.js"></script>
     <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
     <script src="prism/prism.js"></script>
     <header>
         <nav>
-            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/" id="text"><img src="images/logo.png" id="logo" alt=""/><span id="logoletter">O</span></a>
+            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
             <a href="index.html">Home</a>
-            <a href="html.html">HTML</a>
-            <a href="css.html" class="selected">CSS</a>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="web.html">Web</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#HistoryOfTheWeb">History of the Web</a>
+                    <a href="#WebServers">Web Servers</a>
+                    <a href="#WebArchitechture">Web Architechture</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="html.html">HTML</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">HTML Versions</a>
+                    <a href="#">XHTML</a>
+                    <a href="#">HTML Document</a>
+                    <a href="#">HTML Tags</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="css.html" class="selected">CSS</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">css Section</a>
+                    <a href="#">css2 Section</a>
+                    <a href="#">css3 Section</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <a href="js.html">JS</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">js Section</a>
+                    <a href="#">js2 Section</a>
+                    <a href="#">js3 Section</a>
+                </div>
+            </div>
         </nav>
-        <a href="#CSS" class="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></a>
+        <button onclick="topFunction()" id="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></button>
     </header>
 
     <section class="Header" id="CSS">
@@ -30,7 +70,12 @@
 
     <section class="main">
 
-        <section class="CSS-1 black-bg">
+        <section class="Introduction">
+            <h1>Cascading Style Sheets</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam ducimus facere id ipsam, labore nam quibusdam recusandae velit. Fugiat hic itaque officiis possimus provident quas repellat. Eaque, eum, quibusdam!</p>
+        </section>
+
+        <section id="SimpleCSS">
             <h2>A Simple CSS Stylesheet</h2>
             <div class="col-2-fit">
                 <div>
@@ -55,7 +100,7 @@ p {
 }
                     </code></pre>
                 </div>
-                <div class="white-bg fit">
+                <div class="black-bg fit-both">
                     <h3>Example Explained</h3>
                     <ul>
                         <li>The <code class="code-span blue">body</code> , <code class="code-span blue">h1</code> and <code class="code-span blue">p</code> tells what type of element tags you want to apply CSS to</li>
