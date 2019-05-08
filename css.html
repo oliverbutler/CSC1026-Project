@@ -10,57 +10,30 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script src="script.js"></script>
-    <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="prism/prism.js"></script>
     <header>
-        <nav>
+        <nav id="topNav">
             <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
             <a href="index.html">Home</a>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="web.html">Web</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#HistoryOfTheWeb">History of the Web</a>
-                    <a href="#WebServers">Web Servers</a>
-                    <a href="#WebArchitechture">Web Architechture</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="html.html">HTML</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">HTML Versions</a>
-                    <a href="#">XHTML</a>
-                    <a href="#">HTML Document</a>
-                    <a href="#">HTML Tags</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="css.html" class="selected">CSS</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">css Section</a>
-                    <a href="#">css2 Section</a>
-                    <a href="#">css3 Section</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="js.html">JS</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">js Section</a>
-                    <a href="#">js2 Section</a>
-                    <a href="#">js3 Section</a>
-                </div>
-            </div>
+            <a href="web.html">Web</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html" class="selected">CSS</a>
+            <a href="js.html">JS</a>
         </nav>
-        <button onclick="topFunction()" id="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></button>
+        <nav id="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#Introduction">Introduction</a>
+            <a href="#CSSEssentials">CSS Essentials</a>
+            <a href="#CSSBoxModel">CSS Box Model</a>
+            <a href="#CSSPositioning">CSS Positioning</a>
+            <a href="#MediaSpecificStyles">Media Specific Styles</a>
+            <a href="#BrowserCompatibility">Browser Compatibility</a>
+            <a href="#StandardsAndValidation">Standards and Validation</a>
+            <a href="#CSS3">CSS3</a>
+        </nav>
+        <a onclick="openNav()" id="sideNavButton"><i class="fas fa-chevron-circle-right"></i></a>
+        <button onclick="topFunction()" id="floatingButton"><i class="fas fa-chevron-circle-up"></i></button>
     </header>
 
     <section class="Header" id="CSS">
@@ -68,18 +41,21 @@
         <p class="SubHeading">&lt;Learn <a href="#CSS">CSS</a>&gt;</p>
     </section>
 
-    <section class="main">
+    <section id="main" onclick="closeNav()">
 
         <section class="Introduction">
             <h1>Cascading Style Sheets</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam ducimus facere id ipsam, labore nam quibusdam recusandae velit. Fugiat hic itaque officiis possimus provident quas repellat. Eaque, eum, quibusdam!</p>
+            <p>CSS (Cascading style sheets) are what gives a website its appearance, it is the navigation bars, animations, custom formatting, text styles, div styles and all of the custom sections which make a website unique and responsive</p>
+            <p>In this section I will go over all of the CSS related content in the Web Development lecture slides, with interative code demonstrations, explained snippets and also a quiz to test how much you have learn or already know
+            I have also made sure to include of all of necessary information for building your own websites, across layouts, styles, body tags and inline tags etc. <b>Enjoy!</b></p>
         </section>
 
         <section id="SimpleCSS">
-            <h2>A Simple CSS Stylesheet</h2>
-            <div class="col-2-fit">
-                <div>
-                     <pre><code class="language-css">
+            <div>
+                <h2>A Simple CSS Stylesheet</h2>
+                <div class="col-2-fit">
+                    <div>
+                         <pre>
 body {
     margin: 0px;
     font-family: "apercu", sans-serif;
@@ -98,21 +74,1319 @@ h1 {
 p {
     padding: 0px 15px 0px 15px;
 }
-                    </code></pre>
-                </div>
-                <div class="black-bg fit-both">
-                    <h3>Example Explained</h3>
-                    <ul>
-                        <li>The <code class="code-span blue">body</code> , <code class="code-span blue">h1</code> and <code class="code-span blue">p</code> tells what type of element tags you want to apply CSS to</li>
-                        <li>The <code class="code-span blue"></code> element contains meta information about the document</li>
-                    </ul>
+                        </pre>
+                    </div>
+                    <div class="black-bg fit-both">
+                        <h3>Example Explained</h3>
+                        <ul>
+                            <li>The <code>body</code> , <code>h1</code> and <code>p</code> tells what type of element tags you want to apply CSS to</li>
+                            <li>The <code></code> element contains meta information about the document</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <section class="divider">
+            <h1>CSS Essentials</h1>
+        </section>
+
+        <section id="CSSEssentials">
+            <div>
+                <h2>Evolution of HTML formatting</h2>
+                <ul>
+                    <li>(X)HTML only for structuring content
+                        <ul>
+                            <li>Specification only contains <i>guidelines</i> for visual browsers</li>
+                        </ul>
+                    </li>
+                    <li>Some tags/attributes added for visual formatting
+                        <ul>
+                            <li><code>&lt;font face="Arial" color="red"&gt;Hello&lt;/font&gt;</code> -> <span id="red-text">Hello</span></li>
+                        </ul>
+                    </li>
+                    <li>This mixes style and structure
+                        <ul>
+                            <li>Often using proprietary mark up with limitations on what can be applied</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>The Solution: CSS</h2>
+                <ul>
+                    <li>Cascading Style Sheet
+                        <ul>
+                            <li>Separation of style from structure</li>
+                            <li>Control - potentially over every item in the page</li>
+                            <li>Easier style management</li>
+                        </ul>
+                    </li>
+                    <li>Strict XHTML & Strict HTML 4.01 both <i>deprecated</i> HTML formatting in favour of CSS</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Why style?</h2>
+                <ul>
+                    <li>Plain web pages are dull!
+                        <ul>
+                            <li>Additional meaning and aesthetics enhance (and influence) user experience</li>
+                        </ul>
+                    </li>
+                    <li>An opportunity for creative expression</li>
+                    <li>Need to balance signal (information & purpose) with noise (distraction) where...
+                        <ul>
+                            <li>Absence of style == monotone signal</li>
+                            <li>"Overstyled" == increased noise</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>CSS style sheets</h2>
+                <p>Style sheets specify formatting <i>rules</i></p>
+                <p>Rules consist of selectors and declarations</p>
+                <pre class="code-css">
+p {
+    background-color: blue;
+    color: white;
+}
+                </pre>
+                <p>As you can see, in the CSS code above, we set the background color to blue, and the
+                colour of the text to white. (be careful, the American spelling "color" is used.)</p>
+                <pre class="code-html">
+&lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Accusantium ad aut commodi corporis dolore, ducimus ea illo,
+    inventore iure libero minima modi molestias nam nisi odio quisquam
+    quo tenetur vero?
+&lt;/p&gt;
+                </pre>
+                <p id="blue-example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores aspernatur beatae consectetur delectus dolor dolorem earum eligendi inventore nobis obcaecati omnis optio possimus provident quo, recusandae reiciendis reprehenderit? Libero!</p>
+                <img src="images/basic-css.png" alt="">
+            </div>
+            <div>
+                <h2>Internal style sheet</h2>
+                <p>Rules set out in <code>&lt;style&gt;</code> tags in the <code>&lt;head&gt;</code> section of the page</p>
+                <pre class="code-html">
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Internal Example&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        h1 {color: green; font-style: italic;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Heading in green italics&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </div>
+            <div>
+                <h2>External style sheets</h2>
+                <ul>
+                    <li>Style sheets are stored in separate files
+                        <ul>
+                            <li>Linked to current document</li>
+                            <li>Multiple style sheets can be linked to a single page</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Using @import rules</h2>
+                <ul>
+                    <li>Alternative way to include external style sheets
+                        <pre class="code-html">
+&lt;style type="text/css"&gt;
+    @import url("style.css");
+&lt;/style&gt;
+                        </pre>
+                    </li>
+                    <li>No difference in effect or behavior, but can be more convenient
+                        <ul>
+                            <li>Only need one hard-coded <code>&lt;link&gt;</code> in XHTML document</li>
+                            <li>Style sheets can be edited/attached/renamed without touching XHTML document
+                                <ul>
+                                    <li><code>&lt;link rel="stylesheet" type="text/css" href="styles.css" /&gt;</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><code>@import url("default.css");</code><br>
+                <code>@import url("navbar.css");</code><br>
+                <code>@import url("print.css");</code></p>
+                <p>Single linked style sheet used to import actual styles from seperate files</p>
+            </div>
+            <div>
+                <h2>Inline styles</h2>
+                <ul>
+                    <li>Style can also be added <i>inline</i>
+                        <ul>
+                            <li>Uses <code>style</code> attribute with CSS rule(s) as value <br>
+                            <code>&lt;p style="color: white; background-color: blue;"&gt;Hello&lt;/p&gt;</code></li>
+                        </ul>
+                    </li>
+                    <li><b>Try to avoid</b> if possible - mixes style and structure back up</li>
+                    <li>Can be useful option if needed to overcome a <i>specificity</i> issue</li>
+                </ul>
+            </div>
+            <div>
+                <h2>More on CSS selectors</h2>
+                <ul>
+                    <li>Three basic selector types define patterns to find in the mark-up</li>
+                </ul>
+                <p><b>Tag</b> - match all instances of the tag e.g. every <code>&lt;p&gt;...&lt;/p&gt;</code><br>
+                <b>Class</b> - match tags containing this <code>class</code> attribute <br>
+                <b>Id</b> - match the unique tag containing this <code>id</code> attribute</p>
+                <ul>
+                    <li>Can be combined for more <i>specific</i> matches</li>
+                    <li>Additional syntax and operators allow precise control</li>
+                    <li>Combine with <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> to build a <i>framework</i> for display</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Classes as selectors</h2>
+                <ul>
+                    <li>Used to apply styles to specific sub-sets of HTML tags
+                        <ul>
+                            <li>Tags are grouped using a <code>class</code> attribute</li>
+                            <li>Tags can be in more than one class</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;h1 class="special"&gt;A heading&lt;/h1&gt;
+&lt;p&gt;Normal paragraph&lt;/p&gt;
+&lt;p class="special"&gt;A different class paragraph&lt;/p&gt;
+                </pre>
+                <ul>
+                    <li>Define style rule(s) in the style sheet</li>
+                </ul>
+                <pre class="code-css">
+p {text-align: left; color: red;}
+.special {text-transform: uppercase;}
+p.special {text-align: right; color: green;}
+h1.special {text-decoration: underline;}
+                </pre>
+                <p>Dot (.) in the selector pattern indicates a class e.g. p.special matches <code>&lt;p class="special"&gt;</code></p>
+            </div>
+            <div>
+                <h2>ID as a selector</h2>
+                <ul>
+                    <li>Used to identify <i>unique</i> elements in the page
+                        <ul>
+                            <li>Uses an <code>id</code> attribute in the tag</li>
+                            <li>Each <code>id</code> value can only be used once in any page, (same <code>id</code> can 
+                                be used on multiple pages though)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;p&gt;The &lt;span id="oneoff"&gt;Important&lt;/span&gt; bit of...&lt;/p&gt;
+                </pre>
+                <p>oneoff now provides a unique id for a single element in this document</p>
+                <ul>
+                    <li>Hash (#) in the CSS selector pattern indicates an <code>id</code></li>
+                </ul>
+                <pre class="code-css">
+#oneoff {font-style: italic; font-weight: bold;}
+                </pre>
+            </div>
+            <div>
+                <h2>More selector syntax</h2>
+                <table class="content">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Pattern matched</th>
+                    </tr>
+                    <tr>
+                        <td><code>p</code></td>
+                        <td>all <code>&lt;p&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.special</code></td>
+                        <td><code>&lt;anytag class="special"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>p.special</code></td>
+                        <td>All <code>&lt;p class="special"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>#thisBox</code></td>
+                        <td>The only <code>&lt;anytag id="thisBox"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>#thisBox p</code></td>
+                        <td>All <code>&lt;p&gt;</code> nested anywhere inside the only <code>&lt;anytag
+                        id="thisBox"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>#thisBox &gt; p</code></td>
+                        <td>All <code>&lt;p&gt;</code> that are <i>direct children</i> of <code>&lt;anytag id="thisBox"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>#thisBox p.special</code></td>
+                        <td>All <code>&lt;p class="special"&gt;</code> nested anywhere inside the only tag with the
+                            <code>id</code> of <code>thisBox</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>div#thisBox p</code></td>
+                        <td>All <code>&lt;p&gt;</code> nested anywhere inside the only <code>&lt;div id="thisBox"&gt;</code></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Cascading style sheets</h2>
+                <ul>
+                    <li>All available styles for a page are combined as it loads
+                        <ul>
+                            <li>Final appearance for each element is composit of all appropriate rules</li>
+                        </ul>
+                    </li>
+                    <li>Conflicting property value resolved by simple rules
+                        <ol>
+                            <li><b>Source:</b> User-specific styles (in the browser) are more specific</li>
+                            <li><b>Specificity:</b> Relative weighting of selector priority</li>
+                            <li><b>Order declared:</b> If specificity value are the same then "last one wins"
+                            (means inline styles are always more specific)</li>
+                        </ol>
+                    </li>
+                    <li>Specificity - a measure of importance
+                        <ul>
+                            <li>The more <i>specific</i> the rule is... the greater priority its declarations
+                            have </li>
+                            <li>Easy to calculate...</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Specificity calculator</h2>
+                <table class="content">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Ids</th>
+                        <th>Classes</th>
+                        <th>Tags</th>
+                    </tr>
+                    <tr>
+                        <td><code>#thisBox</code></td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><code>.special</code></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><code>p</code></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>p.special</code></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>#thisBox p</code></td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>#thisBox > p</code></td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><code>div#thisBox</code></td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><code>#thisBox p.special</code></td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>CSS Units</h2>
+                <ul>
+                    <li>CSS Supports many types of measurement unit</li>
+                    <li><b>Absolute</b> units calculated independently of other page content and/or browser defaults
+                        <ul>
+                            <li>Useful for precise layout</li>
+                            <li>Include Pixels (px), Points (pt), Millimetres (mm)</li>
+                        </ul>
+                    </li>
+                    <li><b>Relative</b> units calculated proportionally against other page content or a browser default
+                        <ul>
+                            <li>e.g. currently available width, default text size etc.</li>
+                            <li>Include percentages (%), Ems (em), Exes (ex)</li>
+                            <li>Also special relative units for text e.g. small, large, x-large... etc.</li>
+                        </ul>
+                    </li>
+                    <li>Good design uses a combination of both</li>
+                </ul>
+            </div>
+            <div>
+                <h2>CSS Colours</h2>
+                <ul>
+                    <li>CSS allows rich control over colo(u)r
+                        <ul>
+                            <li>Any colour can be specified using RGB or Hex (Hexadecimal) codes</li>
+                            <li>Only 17names are valid in CSS2</li>
+                        </ul>
+                    </li>
+                </ul>
+                <img src="images/colours.png" alt="">
+            </div>
+            <div>
+                <h2>Pseudo elements</h2>
+                <p>Selectors for special parts of some elements</p>
+                <pre class="code-css">
+p.opening:first-letter {
+    font-size: 200%;
+    font-weight: bold;
+}
+                </pre>
+                <pre class="code-html">
+&lt;p class="opening"&gt; Examples are fancy &lt;/p&gt;
+                </pre>
+                <p id="first-letter-test">Examples are fancy</p>
+                <p>Unvisited Link</p>
+                <pre class="code-css">
+a:link {
+    color: blue;
+}
+                </pre>
+                <p>Visited link</p>
+                <pre class="code-css">
+a:visited {
+    color: blue;
+}
+                </pre>
+                <p id="mouseOver">Mouse over link</p>
+                <pre class="code-css">
+a:hover {
+    color: blue;
+}
+                </pre>
+                <p>Selected link</p>
+                <pre class="code-css">
+a:active {
+    color: blue;
+}
+                </pre>
+                <div class="note">
+                    <p><b>Note:</b> Hover over "Mouse over link"</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>The CSS box model</h1>
+        </section>
+
+        <section id="CSSBoxModel">
+            <div>
+                <h2>The CSS box model</h2>
+                <ul>
+                    <li>Fundamental to CSS layout
+                        <ul>
+                            <li>Every page element is represented as a box</li>
+                            <li>Box properties are not inherited from parent boxes</li>
+                        </ul>
+                    </li>
+                    <li>Box properties can apply to whole box or individually to any of the 4 sides
+                        <ul>
+                            <li>Shorthand declarations make this easy</li>
+                            <li>Depends on the property</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Border</h2>
+                <ul>
+                    <li>The outline of a box, made up of three sub-properties
+                        <ul>
+                            <li><b>Width</b> - a unit of measurement e.g. <code>border-width: 20px</code></li>
+                            <li><b>Style</b> - value from a preset list e.g. <code>border-style: solid|dashed|...</code></li>
+                            <li><b>Color</b> - a valid color value e.g. <code>border-color: blue|#jdf32</code></li>
+                        </ul>
+                    </li>
+                    <li>Simple shorthand to set quickly
+                        <ul>
+                            <li><code>p {border: 20px solid green}</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Padding</h2>
+                <ul>
+                    <li>The space between the <i>outside</i> edge of the content and the <i>inside</i> edges of its box
+                        <ul>
+                            <li>i.e. excluding any borders</li>
+                        </ul>
+                    </li>
+                    <li>Creates space <i>inside</i> boxes
+                        <ul>
+                            <li>Leave empty (negative space)</li>
+                            <li>Use background images to fill</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-css">
+p {
+    border: 20px solid green;
+    <b>padding: 20px;</b>
+}
+                </pre>
+                <pre class="code-html">
+&lt;p&gt;Here is some great content&lt;/p&gt;
+                </pre>
+                <div class="PaddingExample">
+                    <p>Here is some great content</p>
+                    <p>padding</p>
+                </div>
+            </div>
+            <div>
+                <h2>Margin</h2>
+                <ul>
+                    <li>The space around the outside edge of a box - including borders</li>
+                    <li>Creates space <i>between</i> boxes
+                        <ul>
+                            <li>Useful for spacing content</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-css">
+p {
+    border: 20px solid green;
+    padding: 20px;
+    <b>margin: 20px;</b>
+
+}
+                </pre>
+                <pre class="code-html">
+&lt;p&gt;Here is some great content&lt;/p&gt;
+                </pre>
+                <div class="MarginExample">
+                    <div class="PaddingExample">
+                        <p>Here is some great content</p>
+                    </div>
+                    <p>margin</p>
+                </div>
+            </div>
+            <div>
+                <h2>Shorthand declarations</h2>
+                <ul>
+                    <li>Useful for setting box properties quickly and/or precisely
+                        <ul>
+                            <li>Use wherever possible to reduce the amount of code required to style a page</li>
+                        </ul>
+                    </li>
+                </ul>
+                <table class="content">
+                    <tr>
+                        <th>Declaration</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td><code>border-width: 20px;</code></td>
+                        <td>Width 20px on all 4 sides</td>
+                    </tr>
+                    <tr>
+                        <td><code>border-left-width: 20px;</code></td>
+                        <td>Width 20px on left-hand side only</td>
+                    </tr>
+                    <tr>
+                        <td><code>margin: 20px 40px;</code></td>
+                        <td>Margin 20px top/botton 40px left/right</td>
+                    </tr>
+                    <tr>
+                        <td><code>padding: 20px 40px 10px 30px;</code></td>
+                        <td>Padding set for top/right/bottom/left</td>
+                    </tr>
+                    <tr>
+                        <td><code>border: 20px solid blue;</code></td>
+                        <td>20px, solid, blue border on all 4 sides</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Width and height</h2>
+                <ul>
+                    <li>By default, browser uses the max width available for each box</li>
+                    <li>Box property <code>width</code> used to impose a defined value for content width
+                        <ul>
+                            <li><code>#box1 {width: 200px;}</code></li>
+                            <li>Total width (i.e. as drawn) = width + 2*padding + 2*margin</li>
+                        </ul>
+                    </li>
+                    <li>Modern browsers also support more flexible min/max
+                        <ul>
+                            <li><code>#box1 {min-width: 200px; max-width: 800px;}</code></li>
+                        </ul>
+                    </li>
+                    <li>Height can be set the same way</li>
+                </ul>
+                <div class="PaddingExample">
+                    <p>Here is some great content</p>
+                </div>
+            </div>
+            <div>
+                <h2>The Internet Explorer box model</h2>
+                <ul>
+                    <li>IE Box Model uses CSS <code>width</code> and <code>height</code> for <i>total</i> box dimensions
+                        <ul>
+                            <li>Common cause of cross-browser issues</li>
+                        </ul>
+                    </li>
+                    <li>IE6+ now uses the standard model if DTD present in file
+                        <ul>
+                            <li>Fix is to write standards compliant code</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Background</h2>
+                <ul>
+                    <li>Background of all the visible space <i>inside</i> any borders i.e. (content + padding)</li>
+                    <li>Made up of several sub-properties</li>
+                </ul>
+                <table class="content">
+                    <tr>
+                        <th>Name</th>
+                        <th>Options</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><b>Color</b></td>
+                        <td>A valid color value (or transparent)</td>
+                        <td><code>background-color: red;</code></td>
+                    </tr>
+                    <tr>
+                        <td><b>Image</b></td>
+                        <td>Use an image file as box background</td>
+                        <td><code>background-image url(/images/bg1.png);</code></td>
+                    </tr>
+                    <tr>
+                        <td><b>Position</b></td>
+                        <td>Control placement for initial image tile</td>
+                        <td><code>background-position: top right;</code></td>
+                    </tr>
+                    <tr>
+                        <td><b>Repeat</b></td>
+                        <td>Control direction of image</td>
+                        <td><code>background-repeat: repeat-x|y|no-repeat</code></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Using background images</h2>
+                <ul>
+                    <li>Form the basis of most modern web designs</li>
+                    <li>Easy to work with once you have grasped the basic box model (and you have the correct graphics)</li>
+                    <li>Two important things to remember
+                        <ol>
+                            <li>CSS2 only allows one image per box, CSS3 allows multiple</li>
+                            <li>Images delivered by CSS are a decorative part of the design <b>not</b> the content
+                                <ul>
+                                    <li>Image content e.g. photos, diagrams etc. should be part of the HTML itself using the <code>&lt;img&gt;</code> tag</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Placing a background image</h2>
+                <pre class="code-css">
+background-image: url(images/nyan.png);
+background-size: 150px;
+background-position: center right;
+background-repeat: no-repeat;
+                </pre>
+                <p id="background-image">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad adipisci aspernatur atque ducimus, eligendi fugiat fugit id iusto labore, laudantium nesciunt nihil obcaecati perspiciatis quae quasi rem veritatis voluptas!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt facilis, quae. Amet cum deleniti natus nihil numquam optio rem, sapiente sunt temporibus vel. Amet aspernatur doloribus, esse nam recusandae vitae.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consequuntur ducimus earum expedita fuga illum mollitia odit provident. Consectetur cum, delectus eligendi illo necessitatibus nulla reiciendis suscipit tempore veritatis vitae?</p>
+                <h3>You can also add a second image by putting commas after all of the categories</h3>
+                <pre class="code-css">
+background-image: url(images/nyan.png), url(images/nyanbackground.jpg);
+background-size: 150px, cover;
+background-position: center right, center;
+background-repeat: repeat, no-repeat;
+                </pre>
+                <p id="background-image-repeat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad adipisci aspernatur atque ducimus, eligendi fugiat fugit id iusto labore, laudantium nesciunt nihil obcaecati perspiciatis quae quasi rem veritatis voluptas!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt facilis, quae. Amet cum deleniti natus nihil numquam optio rem, sapiente sunt temporibus vel. Amet aspernatur doloribus, esse nam recusandae vitae.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consequuntur ducimus earum expedita fuga illum mollitia odit provident. Consectetur cum, delectus eligendi illo necessitatibus nulla reiciendis suscipit tempore veritatis vitae?</p>
+            </div>
+            <div>
+                <h2>Content > Box Size = Overflow</h2>
+                <p>Use box's <code>overflow</code> property to control</p>
+                <div class="col-2">
+                    <div>
+                        <p><code>overflow: visible;</code></p>
+                        <div class="overflowExample">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias, aspernatur, beatae doloremque dolores ducimus excepturi hic illo labore nemo pariatur possimus provident quae, quidem quisquam ratione sit? Eius, nemo?</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p><code>overflow: hidden;</code></p>
+                        <div class="overflowExample hidden">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias, aspernatur, beatae doloremque dolores ducimus excepturi hic illo labore nemo pariatur possimus provident quae, quidem quisquam ratione sit? Eius, nemo?</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p><code>overflow: scroll|auto;</code></p>
+                        <div class="overflowExample scroll">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias, aspernatur, beatae doloremque dolores ducimus excepturi hic illo labore nemo pariatur possimus provident quae, quidem quisquam ratione sit? Eius, nemo?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Display and visibility</h2>
+                <ul>
+                    <li>CSS <code>display</code> property controls the display <i>type</i> of an element
+                        <ul>
+                            <li>Can be used to override HTML default or even remove items from the styled page flow
+                                <ul>
+                                    <li><code>display: block;</code></li>
+                                    <li><code>display: inline;</code></li>
+                                    <li><code>display: none;</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>CSS visibility does exactly what it says on the tin!
+                        <ul>
+                            <li>Show/hide elements whilst leaving them in the page flow
+                                <ul>
+                                    <li><code>visibility: hidden;</code></li>
+                                    <li><code>visibility: visible;</code></li>
+                                    <li><code>visibility: collapse;</code> (tables only)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="col-2">
+                    <div>
+                        <p><code>p {display: inline;}</code></p>
+                        <div class="displayTable">
+                            <p><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at commodi eligendi eos esse facilis, fugiat fugit id ipsam labore laboriosam molestias nam nobis optio pariatur quae, quos reprehenderit suscipit.</p>
+                            <p><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at commodi eligendi eos esse facilis, fugiat fugit id ipsam labore laboriosam molestias nam nobis optio pariatur quae, quos reprehenderit suscipit.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p><code>p.opening {display: none;}</code></p>
+                        <div class="displayTable">
+                            <p class="none"><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at commodi eligendi eos esse facilis, fugiat fugit id ipsam labore laboriosam molestias nam nobis optio pariatur quae, quos reprehenderit suscipit.</p>
+                            <p><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at commodi eligendi eos esse facilis, fugiat fugit id ipsam labore laboriosam molestias nam nobis optio pariatur quae, quos reprehenderit suscipit.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p><code>p.opening {visibility: hidden;}</code></p>
+                        <div class="displayTable">
+                            <p class="hidden"><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at commodi eligendi eos esse facilis, fugiat fugit id ipsam labore laboriosam molestias nam nobis optio pariatur quae, quos reprehenderit suscipit.</p>
+                            <p><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at commodi eligendi eos esse facilis, fugiat fugit id ipsam labore laboriosam molestias nam nobis optio pariatur quae, quos reprehenderit suscipit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Positioning possibilities</h2>
+                <p>Once content can be viewed as "just boxes", CSS positioning and layout simply involves moving, placing or rearranging them</p>
+                <ul>
+                    <li>Specific box properties control how positioning takes place
+                        <ul>
+                            <li>Position, float, top, left etc.</li>
+                            <li>These are considered in more detail in CSS Positioning</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>CSS Positioning</h1>
+        </section>
+
+        <section id="CSSPositioning">
+            <div>
+                <h2>First... clean (X)HTML</h2>
+                <ul>
+                    <li>Good CSS layout relies on good (X)HTML</li>
+                    <li>Positioning is easier to manage in a well structured document
+                        <ul>
+                            <li>Important to know which elements are contained within which others</li>
+                            <li>Good use of <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>class</code> and <code>id</code> to create additional framework</li>
+                        </ul>
+                    </li>
+                    <li>Choosing HTML or XHTML doesnt't matter</li>
+                    <li>Choosing <i>strict</i> HTML or XHTML <i>is</i> <b>important</b>
+                        <ul>
+                            <li>Avoids temptation to use deprecated tags/attributes</li>
+                            <li>Encourages the use of CSS instead</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Second... the CSS box model</h2>
+                <ul>
+                    <li>The first step to mastering CSS positioning and layout is to understand the CSS Box Model
+                        <ul>
+                            <li>Easier will well structured (X)HTML</li>
+                        </ul>
+                    </li>
+                    <li>Once content is viewed as "just boxes", CSS positioning and layout simply involves moving, placing or rearranging them</li>
+                </ul>
+                <img src="images/positioning.png" alt="" class="wideImg">
+            </div>
+            <div>
+                <h2>Next... check natural page flow</h2>
+                <ul>
+                    <li>The <i>natural page flow</i> of a document is the source order display of the (X)HTML element boxes it contains</li>
+                    <li>The final rendered position of each block of content determines the starting point for the following ones</li>
+                    <li>With no CSS applied this may not look pretty - but should make logic sense to help non-visual browsers
+                        <ul>
+                            <li>e.g. screen reading text-to speech browsers</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Natural page flow</h2>
+                <pre class="code-html">
+&lt;html&gt;
+&lt;head&gt;etc.&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="A"&gt;A&lt;/div&gt;
+    &lt;div id="B"&gt;B&lt;/div&gt;
+    &lt;div id="C"&gt;C&lt;/div&gt;
+    &lt;div id="D"&gt;D&lt;/div&gt;
+    &lt;div id="E"&gt;E&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <img src="images/unordered.png" alt="">
+            </div>
+            <div>
+                <h2>Finally... apply CSS and enjoy</h2>
+                <ul>
+                    <li>Browser parses (reads) the (X)HTML and the CSS styles which apply to each page before drawing the page</li>
+                    <li>The final appearance is determined by combination of CSS properties and (if not explicitly set in CSS) browser defaults</li>
+                    <li>CSS can be used to re-position content...
+                        <ul>
+                            <li>Within the page flow i.e. offset from natural location</li>
+                            <li>Contrary to the page flow i.e. removed from natural flow and placed elsewhere</li>
+                        </ul>
+                    </li>
+                    <img src="images/ordered.png" alt="">
+                </ul>
+            </div>
+            <div>
+                <h2>Floats</h2>
+                <p>Potentially very neat way to position content, <b>but</b> avoid this important misconception...</p>
+                <img src="images/floats.png" alt="" class="wideImg">
+            </div>
+            <div>
+                <h2>Floats: What really happens</h2>
+                <img src="images/floats-really.png" alt="" class="wideImg">
+            </div>
+            <div>
+                <h2>Clearing floats</h2>
+                <ul>
+                    <li>The CSS <code>clear</code> property can be used to stop the float covering later content</li>
+                    <li>Values <code>left</code>, <code>right</code> or <code>both</code> determine which side of the box should be "clear" of any floated elements</li>
+                </ul>
+                <img src="images/float-clear.png" alt="" class="wideImg">
+            </div>
+            <div>
+                <h2>Columns</h2>
+                <p>CSS columns are (relatively) easy with floats</p>
+                <img src="images/float-columns.png" alt="" class="wideImg">
+            </div>
+            <div>
+                <h2>Floats and columns</h2>
+                <p>The non-floated boxes can be turned into columns using <code>margin</code> or <code>padding</code></p>
+                <img src="images/float-columns2.png" alt="" class="wideImg">
+                <p class="credit">From the booklet</p>
+            </div>
+            <div>
+                <h2>CSS <code>position</code> property</h2>
+                <p>Four values explicitly re-position boxes using CSS</p>
+                <table class="content">
+                    <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>static</code></td>
+                        <td>Default non-positioned value. Not normally set unless to specifcy an override of other positionng</td>
+                    </tr>
+                    <tr>
+                        <td><code>relative</code></td>
+                        <td>Leaves element in the page flow, but allows it to be displayed in an offset position</td>
+                    </tr>
+                    <tr>
+                        <td><code>absolute</code></td>
+                        <td>Removes element from page flow and allows it to be positioned anywhere</td>
+                    </tr>
+                    <tr>
+                        <td><code>fixed</code></td>
+                        <td>Removed element from page flow and fixes it to the browser viewport. Rest of page can noe scroll behind it</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Relative positioning</h2>
+                <ul>
+                    <li>Box is initially <b>positioned according to natural flow</b>
+                        <ul>
+                            <li>Offset is specified using "from the..." properties</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-css">
+#thisBox {
+    position: relative;
+    top: 25px;
+    left: 100px;
+}
+                </pre>
+                <ul>
+                    <li>Following HTML retains original position</li>
+                </ul>
+                <img src="images/relative.png" alt="" class="medImg">
+            </div>
+            <div>
+                <h2>Absolute positioning</h2>
+                <ul>
+                    <li>Box removed from natural flow
+                        <ul>
+                            <li>New position is specified using "from the..." properties</li>
+                            <li>Measured from <b><i>nearest positioned parent container</i></b> (default is <code>&lt;body&gt;</code>)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-css">
+#thisBox {
+    position: absolute;
+    top: 25px;
+    left: 100px;
+}
+                </pre>
+                <ul>
+                    <li>Following (X)HTML behaves as if positioned block never existed</li>
+                </ul>
+                <img src="images/absolute-pos.png" alt="" class="medImg">
+            </div>
+            <div>
+                <h2>Positioned parents</h2>
+                <ul>
+                    <li>An element acting as an origin point for absolute positioning must itself <i>have</i> position
+                        <ul>
+                            <li>It does not have to be <i>moved</i> though</li>
+                        </ul>
+                    </li>
+                    <li>If no containers with <i>position</i> found, browser uses <code>&lt;body&gt;</code></li>
+                </ul>
+                <div class="col-2-fit">
+                    <div>
+                        <pre class="code-html">
+&lt;body&gt;
+&lt;div id="A"&gt;&lt;/div&gt;
+&lt;div id="B"&gt;
+    &lt;div id="C"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="D"&gt;&lt;/div&gt;
+&lt;/body&gt;
+                        </pre>
+                    </div>
+                    <img src="images/absolute-parents1.png" alt="">
+                </div>
+                <div class="col-2-fit">
+                    <div>
+                        <pre class="code-css">
+#B {
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+
+#C {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+                        </pre>
+                    </div>
+                    <img src="images/absolute-parents2.png" alt="">
+                </div>
+            </div>
+            <div>
+                <h2>Fixed positioning</h2>
+                <ul>
+                    <li>Box <i>removed</i> from natural flow and fixed to the browser viewport
+                        <ul>
+                            <li>New position is specified relative to the viewport... following content scrolls underneath</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-css">
+#thisBox {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+                </pre>
+                <img src="images/fixed.png" alt="" class="wideImg">
+            </div>
+            <div>
+                <h2>Stacking order</h2>
+                <ul>
+                    <li>Only works on content with <code>position</code>
+                        <ul>
+                            <li>Uses <code>z-index</code> property</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-css">
+#thisBox {
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    z-index: 1;
+}
+                </pre>
+            </div>
+            <div>
+                <h2>Precision layouts</h2>
+                <p>You can choose to work with or against the browser defaults</p>
+                <ul>
+                    <li>For ultimate precision some designers use a "reset style sheet"
+                        <ul>
+                            <li>Loaded first, this resets/strips out all of the default style</li>
+                        </ul>
+                    </li>
+                </ul>
+                <img src="images/resetStyle.png" alt="" class="wideImg">
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Media specific styles</h1>
+        </section>
+
+        <section id="MediaSpecificStyles">
+            <div>
+                <h2>CSS: Media types</h2>
+                <p>CSS spec identifies a range of media types to which specific styles can be applied</p>
+                <table class="content">
+                    <tr>
+                        <th>Media</th>
+                        <th>Intended device</th>
+                    </tr>
+                    <tr>
+                        <td><code>all</code></td>
+                        <td>Apply to all outputs (default)</td>
+                    </tr>
+                    <tr>
+                        <td><code>screen</code></td>
+                        <td>Computer screens</td>
+                    </tr>
+                    <tr>
+                        <td><code>print</code></td>
+                        <td>Printed media (and Print Preview)</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>CSS: Using media specific styles</h2>
+                <ul>
+                    <li>Specify via <code>media</code> attribute in <code>&lt;link /&gt;</code></li>
+                </ul>
+                <pre class="code-html">
+&lt;link rel="stylesheet" type= "text/css" href="printer.css" media="print"&gt;
+                </pre>
+                <ul>
+                    <li>Styles only added to page when media "invoked"
+                        <ul>
+                            <li>Effect is cumulative (i.e. specificity/inheritance important!)</li>
+                        </ul>
+                    </li>
+                    <li>Use with other media types for better control</li>
+                </ul>
+                <pre class="code-html">
+&lt;link rel="stylesheet" type= "text/css" href="core.css" media="all"&gt;
+&lt;link rel="stylesheet" type= "text/css" href="layout.css" media="screen"&gt;
+&lt;link rel="stylesheet" type= "text/css" href="printer.css" media="print"&gt;
+                </pre>
+            </div>
+            <div>
+                <h2>CSS: Using media specific styles</h2>
+                <p>Specify inside style sheets using @media rules</p>
+                <pre class="code-css">
+@media print {
+    body {background-color: blue; color: white}
+    a {text-decoration: none; font-weight: normal; color: white;}
+    #navbar {display, none;}
+    h2 {page-break-before: always;}
+}
+                </pre>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>CSS: Browser compatibility</h1>
+        </section>
+
+        <section id="BrowserCompatibility">
+            <div>
+                <h2>CSS: Browser support</h2>
+                <ul>
+                    <li>Often seen as a big issue - mostly historical
+                        <ul>
+                            <li>Worst (mainstream) offenders Netscape 4 (ignore nowadays) & IE 4-6</li>
+                        </ul>
+                    </li>
+                    <li>IE still seen by many as the "big problem" but...
+                        <ul>
+                            <li>IE 4-5.5 can be safely ignored</li>
+                            <li>IE7 & IE8 much better</li>
+                            <li>Main issue is slow (corporate) migration from IE6</li>
+                        </ul>
+                    </li>
+                    <li>Standards compliance is important for less reliance on "hacks"</li>
+                    <li>All browsers have some "quirks" - is perfection possible?</li>
+                    <li>Tools to help
+                        <ul>
+                            <li>!Doctype switching</li>
+                            <li>Compatibility tables</li>
+                            <li>Clean code and good design practise</li>
+                        </ul>
+                    </li>
+                    <li>Testing!</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Dealing with IE</h2>
+                <ul>
+                    <li>Policies
+                        <ul>
+                            <li>Decide not to cater for IE differences?</li>
+                            <li>Hacks - CSS tricks to hide/show specific rules to IE?</li>
+                            <li>Conditional comments - regular HTML comments with IE specific syntax (not just CSS!)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;!--[if IE 6]&gt;
+&lt;style type="text/css"&gt;
+    p{property: value for IE6 only; }
+&lt;/style&gt;
+&lt;![endif]--&gt;
+                </pre>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>CSS: Standards and validation</h1>
+        </section>
+
+        <section id="StandardsAndValidation">
+            <div>
+                <h2>CSS: Validation</h2>
+                <ul>
+                    <li>CSS is error tolerant
+                        <ul>
+                            <li>Process all complete, valid rules, ignore "incorrect" rules</li>
+                        </ul>
+                    </li>
+                    <li>W3C spec for CSS1 & CSS2.1 currently widely adopted (CSS3 creeping out)</li>
+                    <li>Validation services exist - use them</li>
+                </ul>
+                <a href="http://jigsaw.w3.org/css-validator">http://jigsaw.w3.org/css-validator</a>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>CSS3</h1>
+        </section>
+
+        <section id="CSS3">
+            <div>
+                <h2>Box model</h2>
+                <div class="col-2">
+                    <div>
+                        <p>Rounded corners with border-radius</p>
+                        <pre class="code-css">
+#thisbox {
+    border-radius: 10px;
+}
+                    </pre>
+                        <div>
+                            <img src="images/corners-round.png" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <p>Shadows with box-shadow</p>
+                        <pre class="code-css">
+#thisbox {
+    box-shadow: 10px 10px 40px 0px #0000000;
+}
+                    </pre>
+                        <div>
+                            <img src="images/corners-shadow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Background enhancements</h2>
+                <div class="col-2-fit">
+                    <div>
+                        <ul>
+                            <li>Multiple background images</li>
+                        </ul>
+                        <pre class="code-css">
+background-image: url('red-box.png'),
+                  url('amber-box.png'),
+                  url('green-box.png');
+background-position: 30px 30px,
+                     390px 30px,
+                     210px 330px;
+background-repeat: no-repeat;
+                        </pre>
+                    </div>
+                    <img src="images/background-multiple.png" alt="">
+                </div>
+                <div class="col-2-fit">
+                    <div>
+                        <ul>
+                            <li>Background origin (includes/excludes the border)</li>
+                        </ul>
+                       <pre class="code-css">
+background-origin: padding-box|content-box|border-box;
+                        </pre> 
+                    </div>
+                    <img src="images/background-origin.png" alt="">
+                </div>
+            </div>
+            <div>
+                <h2>Fonts</h2>
+                <ul>
+                    <li>Use the @font-face rule to define a font to be used in a document</li>
+                </ul>
+                <pre class="code-css">
+@font-face {
+    font-family: 'BLOKKNeue-Regular';
+    src: url('BLOKKNeue-Regular.eot');
+    src: url('BLOKKNeue-Regular.eot#iefix') format('embedded-opentype'),
+         url('BLOKKNeue-Regular.woff') format('woff'),
+         url('BLOKKNeue-Regular.svg#BLOKKNeue-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+                </pre>
+                <ul>
+                    <li>Apply as normal</li>
+                </ul>
+                <pre class="code-css">
+body { font-family: 'BLOKKNeue-Regular'; }
+                </pre>
+            </div>
+            <div>
+                <h2>Text shadows</h2>
+                <ul>
+                    <li>If you really want to...</li>
+                </ul>
+                <pre class="code-css">
+h1 {text-shadow: 1px 3px 5px gray; }
+                </pre>
+                <h2 id="shadow">Example</h2>
+            </div>
+            <div>
+                <h2>Opacity</h2>
+                <div class="col-2">
+                    <div>
+                        <ul>
+                            <li>For whole elements use <code>opacity</code></li>
+                        </ul>
+                        <pre class="code-css">
+#thisbox {opacity: 0.5; }
+                        </pre>  
+                    </div>
+                    <img src="images/opacity-1.png" alt="">
+                </div>
+                <div class="col-2">
+                    <div>
+                        <ul>
+                            <li>For just the colour use the new rgba specification</li>
+                        </ul>
+                        <pre class="code-css">
+#thisbox {border-color: rgba(43,82,119,<b>0.5</b>);}
+                        </pre>
+                    </div>
+                    <img src="images/opacity-2.png" alt="">
+                </div>
+            </div>
+            <div>
+                <h2>Generated content</h2>
+                <ul>
+                    <li>Dynamically inserting content based on CSS patterns e.g.
+                        <ul>
+                            <li>text, images, counters etc.</li>
+                        </ul>
+                    </li>
+                    <li>Uses better pseudo-element support in modern browsers</li>
+                </ul>
+                <img src="images/generatedContent.png" alt="" class="wideImg">
+            </div>
+            <div>
+                <h2>Media queries</h2>
+                <ul>
+                    <li>Cornerstone of "responsive design"</li>
+                    <li>Allow browsers to adapt presentation based on browser dimensions</li>
+                </ul>
+                <pre class="code-css">
+@media screen and (max-width: 980px) {
+    /*CSS rules for viewports smaller than 980px*/
+}
+@media screen and (max-width: 650px) {
+    /*CSS rules for viewports smaller than 650px*/
+}
+@media screen and (max-width: 480px) {
+    /*CSS rules for viewports smaller than 480px*/
+}
+                </pre>
+            </div>
+        </section>
+
+        </section>
+
     </section>
 
-    <footer class="col-2">
+    <footer class="col-2" onclick="closeNav()">
         <div>
             <ul>
                 <li><a href="#">Links to shit</a></li>

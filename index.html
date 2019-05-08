@@ -10,83 +10,54 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script src="script.js"></script>
-    <script src="prism/prism.js"></script>
-    <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
-
     <header>
-        <nav>
+        <nav id="topNav">
             <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
             <a href="index.html" class="selected">Home</a>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="web.html">Web</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#HistoryOfTheWeb">History of the Web</a>
-                    <a href="#WebServers">Web Servers</a>
-                    <a href="#WebArchitechture">Web Architechture</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="html.html">HTML</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">HTML Versions</a>
-                    <a href="#">XHTML</a>
-                    <a href="#">HTML Document</a>
-                    <a href="#">HTML Tags</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="css.html">CSS</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">css Section</a>
-                    <a href="#">css2 Section</a>
-                    <a href="#">css3 Section</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="js.html">JS</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">js Section</a>
-                    <a href="#">js2 Section</a>
-                    <a href="#">js3 Section</a>
-                </div>
-            </div>
+            <a href="web.html">Web</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
         </nav>
-        <button onclick="topFunction()" id="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></button>
+        <nav id="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#Introduction">Introduction</a>
+            <a href="#Aims">Aims</a>
+            <a href="#ModuleInfo">Module Information</a>
+        </nav>
+        <a onclick="openNav()" id="sideNavButton"><i class="fas fa-chevron-circle-right"></i></a>
+        <button onclick="topFunction()" id="floatingButton"><i class="fas fa-chevron-circle-up"></i></button>
     </header>
 
-    <section class="Header" id="Home">
+    <section class="Header" id="Home" onclick="closeNav()">
         <p class="Heading">Web Design</p>
         <p class="SubHeading">&lt;<a href="html.html">HTML</a> & <a href="css.html">CSS</a>&gt;</p>
     </section>
 
-    <section class="main">
+    <section id="main" onclick="closeNav()">
 
-<!--        todo QUIZES!!!!-->
+    <!--        todo QUIZES!!!!-->
 
-        <section class="Introduction">
+        <section id="Introduction">
             <h1>CSC1026: Website Design and Construction</h1>
-            <p>Within CSC1026 you will learn how to build and develop websites, using both <b>HTML</b> (Hyper Text Markup Language) and <b>CSS</b> (Cascading Style Sheets), aswell as utlizing Javascript for interactive elements.</p>
+            <p>Within CSC1026 you will learn how to build and develop websites, using both <b>HTML</b> (Hyper Text Markup Language) and <b>CSS</b> (Cascading Style Sheets), aswell as utilizing Javascript for interactive elements.</p>
+            <p>During your stay on this site, you will learn the <b>full</b> depth and breadth of the <i>CSC1026 syllabus</i>, this website was designed to be a 1st year students <i>one-stop shop</i> to their revision needs,
+            Due to this I have designed the site in such a way that will enable you to to navigate through all of the topics with ease, or find a specific section that you might need help with.
+            You can also test yourself with the available quiz's and activities. </p>
         </section>
 
         <section id="Aims">
             <div class="black-bg">
                 <h2>Aims</h2>
+                <p>As laid out by the module page on Newcastle Universities website, see the button in the top left.</p>
                 <p>
                     This module aims to provide a clear and logical introduction to the principles and practice which underpin the development, delivery and consumption of web content.
                     <br/><br/>
-                    It will cover the common technical infrastructure and protocols used across World Wide Web, the client-server relationship at its heart and the ways in which web content is created, accessed and consumed.
+                    It will cover the common technical <b>infrastructure</b> and <b>protocols</b> used across <b>World Wide Web</b>, the <b>client-server relationship</b> at its heart and the ways in which web content is created, accessed and consumed.
                     <br/><br/>
-                    Students will explore current client-side technologies used to structure, present and manipulate web content – along with the evolution of the standards to which they conform – and use them to design and build working, standards-compliant solutions to practical problems.
+                    Students will explore current client-side technologies used to structure, present and manipulate web content – along with the evolution of the standards to which they conform – and use them to <b>design and build</b> working, standards-compliant solutions to practical problems.
                     <br/><br/>
                     The module also considers current web design trends and practice, in particular the ways (both good and bad) in which design influences user experience and how new and evolving technologies can be safely incorporated into current and future web sites.
                 </p>
@@ -148,7 +119,7 @@
                         <li>Module Leader(s): <b>Dr Jennifer Warrender</b></li>
                         <li>Demonstrator: <b>Miss Laura Heels</b></li>
                         <li>Lecturer: <b>Dr Sara Fernstad</b></li>
-                        </b></li></ul>
+                    </ul>
                     <ul>
                         <li>Owning School: <b>Computing</b></li>
                         <li>Teaching Location: <b>Newcastle City Campus</b></li>
@@ -159,7 +130,7 @@
 
     </section>
 
-    <footer class="col-2">
+    <footer class="col-2" onclick="closeNav()">
         <div>
             <ul>
                 <li><a href="#">Links to shit</a></li>

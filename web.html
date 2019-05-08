@@ -10,225 +10,224 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script src="script.js"></script>
-    <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
-<script src="prism/prism.js"></script>
-<header>
-    <nav>
-        <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <a href="web.html" class="selected">Web</a>
-            </button>
-            <div class="dropdown-content">
-                <a href="#HistoryOfTheWeb">History of the Web</a>
-                <a href="#WebServers">Web Servers</a>
-                <a href="#WebArchitechture">Web Architechture</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <a href="html.html">HTML</a>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">HTML Versions</a>
-                <a href="#">XHTML</a>
-                <a href="#">HTML Document</a>
-                <a href="#">HTML Tags</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <a href="css.html">CSS</a>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">css Section</a>
-                <a href="#">css2 Section</a>
-                <a href="#">css3 Section</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <a href="js.html">JS</a>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">js Section</a>
-                <a href="#">js2 Section</a>
-                <a href="#">js3 Section</a>
-            </div>
-        </div>
-    </nav>
-    <button onclick="topFunction()" id="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></button>
-</header>
+    <header>
+        <nav id="topNav">
+            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
+            <a href="index.html">Home</a>
+            <a href="web.html" class="selected">Web</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
+        </nav>
+        <nav id="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#WhatIsInternet">What is the internet?</a>
+            <a href="#WebClients">Web Clients</a>
+            <a href="#WebServers">Web Servers</a>
+            <a href="#WebArchitechture">Web Architecture</a>
+            <a href="#History">History</a>
+        </nav>
+        <a onclick="openNav()" id="sideNavButton"><i class="fas fa-chevron-circle-right"></i></a>
+        <button onclick="topFunction()" id="floatingButton"><i class="fas fa-chevron-circle-up"></i></button>
+    </header>
 
-<section class="Header" id="History">
-    <p class="Heading">The Web</p>
-    <p class="SubHeading">&lt;Behind the World Wide Web&gt; </p>
-</section>
-
-<section class="main">
-
-    <section class="Introduction">
-        <h1>What is the Web?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores at ea eos facilis fugit in ipsa itaque, magnam magni, minima natus obcaecati quidem quis, reprehenderit similique sint tenetur vitae.</p>
+    <section class="Header" id="Web" onclick="closeNav()">
+        <p class="Heading">The Web</p>
+        <p class="SubHeading">&lt;Behind the World Wide Web&gt; </p>
     </section>
 
-    <section id="WhatIsInternet">
-        <div>
-            <h2>What is the Internet?</h2>
-            <ul>
-                <li>Based upon a networking infrastructure that allows hardware devices to connect to eachother
-                    <ul>
-                        <li>Servers, Desktop PCs, Mobile devices etc.</li>
-                        <li>Based on common standards - notably the TCP/IP protocol suite.</li>
-                    </ul>
-                </li>
-                <br>
-                <li><b>Protocols</b> specify how the transactions are carried out
-                    <ul>
-                        <li>They say how communication is initiated and maintained.</li>
-                        <li>Type, size and structure of the data to be sent and recieved.</li>
-                        <li>Enable the services running over the internet.</li>
-                    </ul>
-                </li>
-                <br>
-                <li>Software clients (and servers) allow users and devices to access and use internet services
-                    <ul>
-                        <li>Using centralised servers or P2P (Peer-2-Peer) systems.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <section id="main" onclick="closeNav()">
 
-    <section class="divider">
-        <h1>Web Clients</h1>
-    </section>
+        <section class="Introduction">
+            <h1>What is the Web?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores at ea eos facilis fugit in ipsa itaque, magnam magni, minima natus obcaecati quidem quis, reprehenderit similique sint tenetur vitae.</p>
+        </section>
 
-    <section id="HistoryOfTheWeb">
-        <div class="col-2">
+        <section id="WhatIsInternet">
             <div>
-                <h2>Web Clients</h2>
+                <h2>What is the Internet?</h2>
                 <ul>
-                    <li>Web Clients are pieces of software which are used to create and send HTTP requests, and handle the responses </li>
-                    <li>Mosaic kick-started mainstream interest - then came Internet Explorer and Netscape</li>
-                    <li>Many of the common browsers share common layout engines e.g. Trident, Gecko, KHTMl/Webkit etc.</li>
-                </ul>
-
-                <h2>Common Web Browsers</h2>
-                <table>
-                    <tr>
-                        <th><img src="images/chrome.png" alt=""></th>
-                        <th>Google Chrome</th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/ie.png" alt=""></th>
-                        <th>Internet Explorer</th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/safari.png" alt=""></th>
-                        <th>Safari</th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/firefox.png" alt=""></th>
-                        <th>Firefox</th>
-                    </tr>
-                </table>
-            </div>
-            <div class="black-bg">
-                <h2>Simple DNS Request</h2>
-                <p>The diagram shows how a simple DNS request works, between a client and a remote server.</p>
-                <ol>
-                    <li>Client Request</li>
-                    <li>DNS Query to a DNS server, this is where your browser asks a remote server called a DNS Server, which then responds with the IP address where the target server is located.</li>
-                    <li>The DNS server responds with the target IP</li>
-                    <li>The client then opens a 2-way TCP connection with the target web server</li>
-                    <li>A protocol request is sent</li>
-                    <li>A protocol reply is recieved</li>
-                </ol>
-                <img src="images/dns.png" alt="A Simple DNS request">
-                <p class="credit">Image by Oliver Butler</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="divider">
-        <h1>Web Servers</h1>
-    </section>
-
-    <section id="WebServers">
-        <div class="col-2">
-            <div>
-                <h2>Web Servers</h2>
-                <ul>
-                    <li>"<i>Web Server</i>" refers to software not a physical computer, one single computer can run multiple servers</li>
-                    <li>Server <i>listens</i> on an open network port for incoming HTTP requests and responds accordingly</li>
-                    <li>Original specs from CERN released in 1991
+                    <li>Based upon a networking infrastructure that allows hardware devices to connect to eachother
                         <ul>
-                            <li>Until 1995 dominant server was the <b>"NCSA server"</b></li>
-                            <li>NCSA spawned the <b>Apache project</b> (#1 by the end of 1996)</li>
-                            <li>Apache still dominates the server market</li>
+                            <li>Servers, Desktop PCs, Mobile devices etc.</li>
+                            <li>Based on common standards - notably the TCP/IP protocol suite.</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><b>Protocols</b> specify how the transactions are carried out
+                        <ul>
+                            <li>They say how communication is initiated and maintained.</li>
+                            <li>Type, size and structure of the data to be sent and recieved.</li>
+                            <li>Enable the services running over the internet.</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>Software clients (and servers) allow users and devices to access and use internet services
+                        <ul>
+                            <li>Using centralised servers or P2P (Peer-2-Peer) systems.</li>
                         </ul>
                     </li>
                 </ul>
-                <img src="https://news.netcraft.com/wp-content/uploads/2018/01/wpid-wss-share1.png" alt="graph" class="">
-                <p class="credit">Image from <a href="https://news.netcraft.com/archives/2018/02/13/february-2018-web-server-survey.html"> Netcraft</a></p>
             </div>
+        </section>
+
+        <section class="divider">
+            <h1>Web Clients</h1>
+        </section>
+
+        <section id="WebClients">
+            <div class="col-2">
+                <div>
+                    <h2>Web Clients</h2>
+                    <ul>
+                        <li>Web Clients are pieces of software which are used to create and send HTTP requests, and handle the responses </li>
+                        <li>Mosaic kick-started mainstream interest - then came Internet Explorer and Netscape</li>
+                        <li>Many of the common browsers share common layout engines e.g. Trident, Gecko, KHTMl/Webkit etc.</li>
+                    </ul>
+
+                    <h2>Common Web Browsers</h2>
+                    <table>
+                        <tr>
+                            <th><img src="images/chrome.png" alt=""></th>
+                            <th>Google Chrome</th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/ie.png" alt=""></th>
+                            <th>Internet Explorer</th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/safari.png" alt=""></th>
+                            <th>Safari</th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/firefox.png" alt=""></th>
+                            <th>Firefox</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="black-bg">
+                    <h2>Simple DNS Request</h2>
+                    <p>The diagram shows how a simple DNS request works, between a client and a remote server.</p>
+                    <ol>
+                        <li>Client Request</li>
+                        <li>DNS Query to a DNS server, this is where your browser asks a remote server called a DNS Server, which then responds with the IP address where the target server is located.</li>
+                        <li>The DNS server responds with the target IP</li>
+                        <li>The client then opens a 2-way TCP connection with the target web server</li>
+                        <li>A protocol request is sent</li>
+                        <li>A protocol reply is recieved</li>
+                    </ol>
+                    <img src="images/dns.png" alt="A Simple DNS request">
+                    <p class="credit">Image by Oliver Butler</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Web Servers</h1>
+        </section>
+
+        <section id="WebServers">
+            <div class="col-2">
+                <div>
+                    <h2>Web Servers</h2>
+                    <ul>
+                        <li>"<i>Web Server</i>" refers to software not a physical computer, one single computer can run multiple servers</li>
+                        <li>Server <i>listens</i> on an open network port for incoming HTTP requests and responds accordingly</li>
+                        <li>Original specs from CERN released in 1991
+                            <ul>
+                                <li>Until 1995 dominant server was the <b>"NCSA server"</b></li>
+                                <li>NCSA spawned the <b>Apache project</b> (#1 by the end of 1996)</li>
+                                <li>Apache still dominates the server market</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <img src="https://news.netcraft.com/wp-content/uploads/2018/01/wpid-wss-share1.png" alt="graph" class="">
+                    <p class="credit">Image from <a href="https://news.netcraft.com/archives/2018/02/13/february-2018-web-server-survey.html"> Netcraft</a></p>
+                </div>
+                <div>
+                    <h2>Typical Web server features</h2>
+                    <p><b>Path translation</b> - Locate resource specified </p>
+                    <p><b>Virtual hosting</b> - Run multiple websites from one server</p>
+                    <p><b>Access restriction</b> - Control who can access the resources></p>
+                    <p><b>Log access & errors</b> - Record what's going on (and what went wrong!)</p>
+                    <p><b>Encrypted operation</b> - Protect sensitive data in transit</p>
+                    <p><b>Load balancing</b> - Manage traffic and processing resources</p>
+                    <p><b>Server scripting</b> - Run external programs and applications</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Web architechture</h1>
+            <h2>HTTP, URIs and URLs</h2>
+        </section>
+
+        <section id="WebArchitechture">
             <div>
-                <h2>Typical Web server features</h2>
-                <p><b>Path translation</b> - Locate resource specified </p>
-                <p><b>Virtual hosting</b> - Run multiple websites from one server</p>
-                <p><b>Access restriction</b> - Control who can access the resources></p>
-                <p><b>Log access & errors</b> - Record what's going on (and what went wrong!)</p>
-                <p><b>Encrypted operation</b> - Protect sensitive data in transit</p>
-                <p><b>Load balancing</b> - Manage traffic and processing resources</p>
-                <p><b>Server scripting</b> - Run external programs and applications</p>
+                <h2>Key web architechture components</h2>
+                <ul>
+                    <li><b>HTTP/1.1</b> HyperText Transfer Protocol
+                        <ul>
+                            <li>Format and semantics of request/response messages</li>
+                        </ul>
+                    </li>
+                    <li><b>URI:</b> Uniform Resource Identifier
+                        <ul>
+                            <li>Formatted string that identifies a resource</li>
+                        </ul>
+                    </li>
+                    <li><b>HTML/XHTML:</b> HyperText Markup Language and Extensible HTML</li>
+                    <li><b>DNS:</b> Domain Name System</li>
+                    <li><b>TCP/IP:</b> Internet Protocol Suite</li>
+                </ul>
             </div>
-        </div>
+        </section>
+
+        <section class="divider">
+            <h1>History</h1>
+        </section>
+
+        <section id="History">
+            <div class="timeline">
+                <div>
+                    <h2>2019</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.</p>
+                </div>
+                <div>
+                    <h2>2018</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.</p>
+                </div>
+                <div>
+                    <h2>2017</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.</p>
+                </div>
+                <div>
+                    <h2>2016</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+
     </section>
 
-    <section class="divider">
-        <h1>Web architechture</h1>
-        <h2>HTTP, URIs and URLs</h2>
-    </section>
-
-    <section id="WebArchitechture">
+    <footer class="col-2" onclick="closeNav()">
         <div>
-            <h2>Key web architechture components</h2>
             <ul>
-                <li><b>HTTP/1.1</b> HyperText Transfer Protocol
-                    <ul>
-                        <li>Format and semantics of request/response messages</li>
-                    </ul>
-                </li>
-                <li><b>URI:</b> Uniform Resource Identifier
-                    <ul>
-                        <li>Formatted string that identifies a resource</li>
-                    </ul>
-                </li>
-                <li><b>HTML/XHTML:</b> HyperText Markup Language and Extensible HTML</li>
-                <li><b>DNS:</b> Domain Name System</li>
-                <li><b>TCP/IP:</b> Internet Protocol Suite</li>
+                <li><a href="#">Links to shit</a></li>
+                <li><a href="#">Maybe uni</a></li>
+                <li><a href="#">Idk</a></li>
+                <li><a href="#">Something</a></li>
             </ul>
         </div>
-    </section>
-
-</section>
-
-<footer class="col-2">
-    <div>
-        <ul>
-            <li><a href="#">Links to shit</a></li>
-            <li><a href="#">Maybe uni</a></li>
-            <li><a href="#">Idk</a></li>
-            <li><a href="#">Something</a></li>
-        </ul>
-    </div>
-    <div>
-        <p>Website developed by Oliver Butler</p>
-    </div>
-</footer>
+        <div>
+            <p>Website developed by Oliver Butler</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -10,65 +10,45 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script src="script.js"></script>
-    <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="prism/prism.js"></script>
     <header>
-        <nav>
+        <nav id="topNav">
             <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
             <a href="index.html">Home</a>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="web.html">Web</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#HistoryOfTheWeb">History of the Web</a>
-                    <a href="#WebServers">Web Servers</a>
-                    <a href="#WebArchitechture">Web Architechture</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="html.html" class="selected">HTML</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">HTML Versions</a>
-                    <a href="#">XHTML</a>
-                    <a href="#">HTML Document</a>
-                    <a href="#">HTML Tags</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="css.html">CSS</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">css Section</a>
-                    <a href="#">css2 Section</a>
-                    <a href="#">css3 Section</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <a href="js.html">JS</a>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">js Section</a>
-                    <a href="#">js2 Section</a>
-                    <a href="#">js3 Section</a>
-                </div>
-            </div>
+            <a href="web.html">Web</a>
+            <a href="html.html" class="selected">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
         </nav>
-        <button onclick="topFunction()" id="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></button>
+        <nav id="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#HTMLVersions">HTML Versions</a>
+            <a href="#XML">XML</a>
+            <a href="#XHTML">XHTML</a>
+            <a href="#HTML5">HTML 5</a>
+            <a href="#HTMLDocument">HTML Document</a>
+            <a href="#CompareHTMLDocuments">Compare HTML Documents</a>
+            <a href="#TagsAndAttributes">Tags and attributes</a>
+            <a href="#BodyLevel">Body-level tags</a>
+            <a href="#InlineTags">Inline tags</a>
+            <a href="#Links">Links</a>
+            <a href="#Tables">Tables</a>
+            <a href="#StructuralGrouping">Structural Grouping</a>
+            <a href="#SpecialCharacters">Special Characters</a>
+            <a href="#ImagesAndMultimedia">Images and multimedia</a>
+            <a href="#Forms">Forms</a>
+        </nav>
+        <a onclick="openNav()" id="sideNavButton"><i class="fas fa-chevron-circle-right"></i></a>
+        <button onclick="topFunction()" id="floatingButton"><i class="fas fa-chevron-circle-up"></i></button>
     </header>
 
-    <section class="Header" id="HTML">
+    <section class="Header" id="HTML" onclick="closeNav()">
         <p class="Heading">HTML</p>
         <p class="SubHeading">&lt;Learn <a href="#HTML">HTML</a>&gt; </p>
     </section>
 
-    <section class="main">
+    <section id="main" onclick="closeNav()">
 
         <!--Divider-->
         <section class="Introduction">
@@ -144,7 +124,7 @@
             <h1>XHTML</h1>
         </section>
 
-        <section>
+        <section id="XHTML">
             <div class="col-2-fit">
                 <div>
                     <img class="smallImage" src="images/xhtml.png" alt="">
@@ -284,7 +264,7 @@
                 <h2>A Simple HTML Document</h2>
                 <div class="col-2-fit">
                     <div>
-                    <pre><code class="language-html">
+                        <pre class="code-html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -297,19 +277,18 @@
 
 &lt;/body&gt;
 &lt;/html&gt;
-                    </code></pre>
-                        <a href="https://codepen.io/oliverbutler/pen/RdMwmg" class="run">RUN <i class="fas fa-play"></i></a>
+                        </pre>
                     </div>
                     <div class="black-bg fit-both">
                         <h3>Example Explained</h3>
                         <ul>
-                            <li>The <code class="code-span purple">&lt;!DOCTYPE html&gt;</code> declaration defines this document to be HTML5</li>
-                            <li>The <code class="code-span purple">&lt;html&gt;</code> element is the root element of an HTML page</li>
-                            <li>The <code class="code-span purple">&lt;head&gt;</code> element contains meta information about the document</li>
-                            <li>The <code class="code-span purple">&lt;title&gt;</code> element specifies a title for the document</li>
-                            <li>The <code class="code-span purple">&lt;body&gt;</code> element contains the visible page content</li>
-                            <li>The <code class="code-span purple">&lt;h1&gt; </code>element defines a large heading</li>
-                            <li>The <code class="code-span purple">&lt;p&gt;</code> element defines a paragraph</li>
+                            <li>The <code>&lt;!DOCTYPE html&gt;</code> declaration defines this document to be HTML5</li>
+                            <li>The <code>&lt;html&gt;</code> element is the root element of an HTML page</li>
+                            <li>The <code>&lt;head&gt;</code> element contains meta information about the document</li>
+                            <li>The <code>&lt;title&gt;</code> element specifies a title for the document</li>
+                            <li>The <code>&lt;body&gt;</code> element contains the visible page content</li>
+                            <li>The <code>&lt;h1&gt; </code>element defines a large heading</li>
+                            <li>The <code>&lt;p&gt;</code> element defines a paragraph</li>
                         </ul>
                     </div>
                 </div>
@@ -350,11 +329,11 @@
             <div>
                 <h2>The &lt;!DOCTYPE&gt; Declaration</h2>
                 <p>HTML tags are element names surrounded by angle brackets:</p>
-                <pre><code class="language-html">
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD
-HTML 4.01//EN" "http://www.w3.org
-            /TR/html4/strict.dtd"&gt;
-                </code></pre>
+                <div>
+                    <pre class="code-html">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+                    </pre>
+                </div>
                 <ul>
                     <li>This is the DTD (Document Type Definition) declaration</li>
                     <li>Identifies the document version to the user-agent
@@ -375,44 +354,47 @@ HTML 4.01//EN" "http://www.w3.org
                 </div>
 
                 <h2>The &lt;head&gt; section</h2>
-                <pre><code class="language-html">
+                <div>
+                    <pre class="code-html">
 &lt;head&gt;
     &lt;title&gt;A Simple Document&lt;/title&gt;
     &lt;meta http-equiv="content-type"
     content="text/html;charset=utf-u"&gt;
 &lt;/head&gt;
-                </code></pre>
+                    </pre>
+                </div>
                 <ul>
                     <li>Information about the document, used to help process it
                         <ul>
-                            <li>Must include a <code class="code-span purple">&lt;title&gt;</code> and character set info</li>
+                            <li>Must include a <code>&lt;title&gt;</code> and character set info</li>
                         </ul>
                     </li>
                     <li>Optional declarations and references for:
                         <ul>
-                            <li>Metadata via <code class="code-span purple">&lt;meta&gt;</code></li>
-                            <li>Scripts via <code class="code-span purple">&lt;script&gt;...&lt;/script&gt;</code></li>
+                            <li>Metadata via <code>&lt;meta&gt;</code></li>
+                            <li>Scripts via <code>&lt;script&gt;...&lt;/script&gt;</code></li>
                         </ul>
                     </li>
                 </ul>
 
                 <h2>The &lt;body&gt; section</h2>
-                <pre><code class="language-html">
+                <div>
+                    <pre class="code-html">
 &lt;body&gt;
     &lt;img src="logo.gif" alt="My Logo"&gt;
     &lt;h1&gt;Creating Web Pages&lt;/h1&gt;#
     &lt;p&gt;Random &lt;b&gt;text&lt;/b&gt;
-        &lt;a href="http://www.ncl.ac
-        .uk/"&gt;NCL&lt;/a&gt;
-    &lt;/p&gt; 
+        &lt;a href="http://www.ncl.ac.uk/"&gt;NCL&lt;/a&gt;
+    &lt;/p&gt;
 &lt;/body&gt;
-                </code></pre>
+                    </pre>
+                </div>
                 <ul>
                     <li>This is processed into the content users actually see</li>
-                    <li>Final appearance may be influenced by information from the <code class="code-span purple">&lt;head&gt;</code>
+                    <li>Final appearance may be influenced by information from the <code>&lt;head&gt;</code>
                      (scripts, style sheets etc)</li>
                 </ul>
-                
+
             </div>
         </section>
 
@@ -420,15 +402,13 @@ HTML 4.01//EN" "http://www.w3.org
             <h1>Compare HTML Documents</h1>
         </div>
 
-        <section id="compareHTMLDocuments">
+        <section id="CompareHTMLDocuments">
             <div>
                 <h2>HTML 4.01</h2>
                 <div class="col-2-fit">
                     <div>
-                          <pre><code class="language-html">
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD
-HTML 4.01//EN" "http://www.w3.org/TR
-            /html4/strict.dtd"&gt;
+                          <pre class="code-html">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;title&gt;HTML 4.01 Document&lt;/title&gt;
@@ -440,12 +420,12 @@ HTML 4.01//EN" "http://www.w3.org/TR
     &lt;p&gt;Lorem ipsum&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-                        </code></pre>
+                        </pre>
                     </div>
                     <div class="black-bg fit-both">
                         <ul>
                             <li>HTML 4.01 DTD</li>
-                            <li>Simple <code class="code-span purple">&lt;html&gt;</code> tag</li>
+                            <li>Simple <code>&lt;html&gt;</code> tag</li>
                         </ul>
                     </div>
                 </div>
@@ -453,10 +433,8 @@ HTML 4.01//EN" "http://www.w3.org/TR
                 <h2>XHTML 1.0</h2>
                 <div class="col-2-fit">
                     <div>
-                        <pre><code class="language-html">
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML
-1.0 Strict//EN" "http://www.w3.org/TR/xhtml1
-/DTD /xhtml1-strict.dtd"&gt;
+                        <pre class="code-html">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD /xhtml1-strict.dtd"&gt;
 
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
 &lt;head&gt;
@@ -468,13 +446,13 @@ HTML 4.01//EN" "http://www.w3.org/TR
     &lt;br /&gt;
     &lt;p&gt;Lorem ipsum&lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-                         </code></pre>
+&lt;/html&gt;   
+                        </pre>
                     </div>
                     <div class="black-bg fit-both">
                         <ul>
                             <li>XHTML 1.0 DTD</li>
-                            <li>Extra attribute in <code class="code-span purple">&lt;html&gt;</code> tag</li>
+                            <li>Extra attribute in <code>&lt;html&gt;</code> tag</li>
                             <li>Self-closing non-paired </li>
                         </ul>
                     </div>
@@ -484,7 +462,7 @@ HTML 4.01//EN" "http://www.w3.org/TR
                 <h2>HTML 5</h2>
                 <div class="col-2-fit">
                     <div>
-                        <pre><code class="language-html">
+                        <pre class="code-html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -497,12 +475,12 @@ HTML 4.01//EN" "http://www.w3.org/TR
     &lt;p&gt;Lorem ipsum&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-                        </code></pre>
+                        </pre>
                     </div>
                     <div class="black-bg fit-both">
                         <ul>
-                            <li>Simplified <code class="code-span purple">DOCTYPE</code></li>
-                            <li>No extra attribute in <code class="code-span purple">&lt;html&gt;</code> tag</li>
+                            <li>Simplified <code>DOCTYPE</code></li>
+                            <li>No extra attribute in <code>&lt;html&gt;</code> tag</li>
                             <li>XHTML syntax is OK (as is HTML!)</li>
                         </ul>
                     </div>
@@ -519,20 +497,22 @@ HTML 4.01//EN" "http://www.w3.org/TR
                 <div>
                     <h2>HTML Tags</h2>
                     <p>HTML tags are element names surrounded by angle brackets:</p>
-                    <pre><code class="language-html">
+                    <div>
+                        <pre class="code-html">
 &lt;tagname&gt;content goes here...&lt;/tagname&gt;
-            </code></pre>
+                        </pre>
+                    </div>
                     <ul>
-                        <li>HTML tags normally come <b>in pairs</b> like <code class="code-span purple">&lt;p&gt;</code> and <code class="code-span purple">&lt;/p&gt;</code></li>
+                        <li>HTML tags normally come <b>in pairs</b> like <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code></li>
                         <li>The first tag in a pair is the <b> start tag,</b> the second tag is the <b> end tag</b></li>
                         <li>The end tag is written like the start tag, but with a <strong>forward slash</strong>
                             inserted before the tag name </li>
                         <li>Inline tags can be nested inside block level tags
                             <ul>
-                                <li><code class="code-span purple">&lt;p&gt;The &lt;em&gt;useful&lt;/em&gt; bit of this paragraph&lt;/p&gt;</code></li>
+                                <li><code>&lt;p&gt;The &lt;em&gt;useful&lt;/em&gt; bit of this paragraph&lt;/p&gt;</code></li>
                             </ul>
                         </li>
-                        <li>Where as some block level tags can be nested together, such as <code class="code-span purple">&lt;p&gt;</code> can be nested within a <code class="code-span purple">div</code></li>
+                        <li>Where as some block level tags can be nested together, such as <code>&lt;p&gt;</code> can be nested within a <code>div</code></li>
                     </ul>
                     <div class="note">
                         <p><b>Note:</b> The start tag is also called the <b>opening tag</b>, and the end tag the <b>closing tag</b>.</p>
@@ -541,16 +521,16 @@ HTML 4.01//EN" "http://www.w3.org/TR
                 <div class="black-bg fit-both">
                     <h2>Formatting tags</h2>
                     <ul>
-                        <li><code class="code-span purple">&lt;b&gt;&lt;/b&gt;</code> - <b>Bold</b></li>
-                        <li><code class="code-span purple">&lt;strong&gt;&lt;/strong&gt;</code> - <strong>Strong text</strong></li>
-                        <li><code class="code-span purple">&lt;i&gt;&lt;/i&gt;</code> - <i>Italics</i></li>
-                        <li><code class="code-span purple">&lt;em&gt;&lt;/em&gt;</code> - <em>Emphasized Text</em></li>
-                        <li><code class="code-span purple">&lt;mark&gt;&lt;/mark&gt;</code> - <mark>Marked Text</mark></li>
-                        <li><code class="code-span purple">&lt;small&gt;&lt;/small&gt;</code> - <small>Small Text</small></li>
-                        <li><code class="code-span purple">&lt;del&gt;&lt;/del&gt;</code> - <del>Deleted Text</del></li>
-                        <li><code class="code-span purple">&lt;ins&gt;&lt;/ins&gt;</code> - <ins>Insert Text</ins></li>
-                        <li><code class="code-span purple">&lt;sub&gt;&lt;/sub&gt;</code> - <sub>Subscripted</sub> Text</li>
-                        <li><code class="code-span purple">&lt;sup&gt;&lt;/sup&gt;</code> - <sup>Superscripted</sup> Text</li>
+                        <li><code>&lt;b&gt;&lt;/b&gt;</code> - <b>Bold</b></li>
+                        <li><code>&lt;strong&gt;&lt;/strong&gt;</code> - <strong>Strong text</strong></li>
+                        <li><code>&lt;i&gt;&lt;/i&gt;</code> - <i>Italics</i></li>
+                        <li><code>&lt;em&gt;&lt;/em&gt;</code> - <em>Emphasized Text</em></li>
+                        <li><code>&lt;mark&gt;&lt;/mark&gt;</code> - <mark>Marked Text</mark></li>
+                        <li><code>&lt;small&gt;&lt;/small&gt;</code> - <small>Small Text</small></li>
+                        <li><code>&lt;del&gt;&lt;/del&gt;</code> - <del>Deleted Text</del></li>
+                        <li><code>&lt;ins&gt;&lt;/ins&gt;</code> - <ins>Insert Text</ins></li>
+                        <li><code>&lt;sub&gt;&lt;/sub&gt;</code> - <sub>Subscripted</sub> Text</li>
+                        <li><code>&lt;sup&gt;&lt;/sup&gt;</code> - <sup>Superscripted</sup> Text</li>
                     </ul>
                     <div class="note">
                         <p><b>Note:</b> Bold/Strong and Italics/Emphasized both have the same effect but the latter of each are <i>Important</i> </p>
@@ -561,23 +541,23 @@ HTML 4.01//EN" "http://www.w3.org/TR
                     <ul>
                         <li>Specify additional properties and/or behavior for HTML tags as name/value pairs
                             <ul>
-                                <li><code class="code-span purple">&lt;tag attribute="value"&gt;content&lt;/tag&gt;</code></li>
+                                <li><code>&lt;tag attribute="value"&gt;content&lt;/tag&gt;</code></li>
                             </ul>
                         </li>
                         <li>Attributes are declared in the opening tag
                             <ul>
-                                <li><code class="code-span purple">&lt;div id="content-block-1"&gt;content&lt;/div&gt;</code></li>
+                                <li><code>&lt;div id="content-block-1"&gt;content&lt;/div&gt;</code></li>
                             </ul>
                         </li>
                         <li>Self-closing tags can contain attributes too
                             <ul>
-                                <li><code class="code-span purple">&lt;img src="logo.gif" alt="my logo"&gt;</code></li>
+                                <li><code>&lt;img src="logo.gif" alt="my logo"&gt;</code></li>
                             </ul>
                         </li>
                         <li>All attributes in XHTML must have a value
                             <ul>
-                                <li><code class="code-span purple">checked"</code> becomes
-                                    <code class="code-span purple">checked="checked"</code> </li>
+                                <li><code>checked"</code> becomes
+                                    <code>checked="checked"</code> </li>
                             </ul>
                         </li>
                     </ul>
@@ -594,21 +574,21 @@ HTML 4.01//EN" "http://www.w3.org/TR
                             <th><b>Purpose</b></th>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">class</code></th>
-                            <th>Associates an element with a CSS class</th>
+                            <td><code>class</code></td>
+                            <td>Associates an element with a CSS class</td>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">id</code></th>
-                            <th>Uniquely identifies element for CSS/scripting</th>
+                            <td><code>id</code></td>
+                            <td>Uniquely identifies element for CSS/scripting</td>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">style</code></th>
-                            <th>Provides inline CSS style rules for an element</th>
+                            <td><code>style</code></td>
+                            <td>Provides inline CSS style rules for an element</td>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">title</code></th>
-                            <th>Describes an element and its content. Creates tool-
-                            tips in browsers & used by screen readers</th>
+                            <td><code>title</code></td>
+                            <td>Describes an element and its content. Creates tool-
+                            tips in browsers & used by screen readers</td>
                         </tr>
                     </table>
                 </div>
@@ -715,17 +695,17 @@ HTML 4.01//EN" "http://www.w3.org/TR
                     <ul>
                         <li>Paragraph used as basic container for body text
                             <ul>
-                                <li><code class="code-span purple">&lt;p&gt;lorem ipsum&lt;/p&gt;</code></li>
+                                <li><code>&lt;p&gt;lorem ipsum&lt;/p&gt;</code></li>
                             </ul>
                         </li>
                         <li>Line breaks can be forced (but try to avoid doing so)
                             <ul>
-                                <li><code class="code-span purple">&lt;b /&gt;</code></li>
+                                <li><code>&lt;b /&gt;</code></li>
                             </ul>
                         </li>
                         <li>Sections can be easily delineated using a horizontal rule
                             <ul>
-                                <li><code class="code-span purple">&lt;hr /&gt;</code> eg. below
+                                <li><code>&lt;hr /&gt;</code> eg. below
                                 <hr>
                                 </li>
                             </ul>
@@ -758,12 +738,12 @@ HTML 4.01//EN" "http://www.w3.org/TR
                 <h2>Un-ordered List</h2>
                 <div class="col-2">
                     <div>
-                        <pre><code class="language-html">
+                        <pre class="code-html">
 &lt;ul&gt;
     &lt;li&gt;Element 1&lt;/li&gt;
     &lt;li&gt;Element 2&lt;/li&gt;
 &lt;/ul&gt;
-                        </code></pre>
+                        </pre>
                     </div>
                     <div>
                         <ul>
@@ -777,12 +757,12 @@ HTML 4.01//EN" "http://www.w3.org/TR
                 <h2>Ordered List</h2>
                 <div class="col-2">
                     <div>
-                        <pre><code class="language-html">
+                        <pre class="code-html">
 &lt;ol&gt;
     &lt;li&gt;Element 1&lt;/li&gt;
     &lt;li&gt;Element 2&lt;/li&gt;
 &lt;/ol&gt;
-                        </code></pre>
+                        </pre>
                     </div>
                     <div>
                         <ol>
@@ -796,14 +776,14 @@ HTML 4.01//EN" "http://www.w3.org/TR
                 <h2>Definition Lists</h2>
                 <div class="col-2">
                     <div>
-                        <pre><code class="language-html">
+                        <pre class="code-html">
 &lt;dl&gt;
     &lt;dt&gt;Key 1&lt;/dt&gt;
         &lt;dd&gt;Element 1&lt;/dd&gt;
     &lt;dt&gt;Key 2&lt;/dt&gt;
         &lt;dd&gt;Element 2&lt;/dd&gt;
 &lt;/dl&gt;
-                        </code></pre>
+                        </pre>
                     </div>
                     <div>
                         <dl>
@@ -821,13 +801,13 @@ HTML 4.01//EN" "http://www.w3.org/TR
                     <li>Introduced to reflect a logical structure for "modern" web documents</li>
                     <li>Notable additions, typically used at block-level:
                         <ul>
-                            <li><code class="code-span purple">&lt;article&gt;</code></li>
-                            <li><code class="code-span purple">&lt;section&gt;</code></li>
-                            <li><code class="code-span purple">&lt;nav&gt;</code></li>
-                            <li><code class="code-span purple">&lt;aside&gt;</code></li>
-                            <li><code class="code-span purple">&lt;header&gt;</code></li>
-                            <li><code class="code-span purple">&lt;footer&gt;</code></li>
-                            <li><code class="code-span purple">&lt;menu&gt;</code></li>
+                            <li><code>&lt;article&gt;</code></li>
+                            <li><code>&lt;section&gt;</code></li>
+                            <li><code>&lt;nav&gt;</code></li>
+                            <li><code>&lt;aside&gt;</code></li>
+                            <li><code>&lt;header&gt;</code></li>
+                            <li><code>&lt;footer&gt;</code></li>
+                            <li><code>&lt;menu&gt;</code></li>
                         </ul>
                     </li>
                     <li>Reduces the need for extra common id and class attributes (see later)</li>
@@ -849,7 +829,7 @@ HTML 4.01//EN" "http://www.w3.org/TR
                     <ul>
                         <li>Must be nested inside a block-level tag e.g.
                             <ul>
-                                <li><code class="code-span purple">&lt;p&gt;Some content marked up &lt;em&gt; using inline tags&lt;/em&gt;&lt;/p&gt;</code></li>
+                                <li><code>&lt;p&gt;Some content marked up &lt;em&gt; using inline tags&lt;/em&gt;&lt;/p&gt;</code></li>
                             </ul>
                         </li>
                         <li><b>Logical tags</b> supply additional semantic meaning or rendering intent to content</li>
@@ -876,30 +856,30 @@ HTML 4.01//EN" "http://www.w3.org/TR
                             <th>Typical visual feedback</th>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">&lt;em&gt;</code></th>
-                            <th>...given extra emphasis</th>
-                            <th>Text in <i>italics</i></th>
+                            <td><code>&lt;em&gt;</code></td>
+                            <td>...given extra emphasis</td>
+                            <td>Text in <i>italics</i></td>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">&lt;strong&gt;</code></th>
-                            <th>...given strong emphasis</th>
-                            <th>Text in <b>bold</b></th>
+                            <td><code>&lt;strong&gt;</code></td>
+                            <td>...given strong emphasis</td>
+                            <td>Text in <b>bold</b></td>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">&lt;cite&gt;</code></th>
-                            <th>...a citation or reference</th>
-                            <th>Usually <i>italicised</i> - detail in a <code>title</code> attribute</th>
+                            <td><code>&lt;cite&gt;</code></td>
+                            <td>...a citation or reference</td>
+                            <td>Usually <i>italicised</i> - detail in a <code>title</code> attribute</td>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">&lt;code&gt;</code></th>
-                            <th>...Is program code</th>
-                            <th>Text in <code>monospace</code> font</th>
+                            <td><code>&lt;code&gt;</code></td>
+                            <td>...Is program code</td>
+                            <td>Text in <code>monospace</code> font</td>
                         </tr>
                         <tr>
-                            <th><code class="code-span purple">&lt;abbr&gt;</code> and
-                                <code class="code-span purple">&lt;acronym&gt;</code></th>
-                            <th>...is a shortened form</th>
-                            <th>None - requires a <code>title</code> attribute</th>
+                            <td><code>&lt;abbr&gt;</code> and
+                                <code>&lt;acronym&gt;</code></td>
+                            <td>...is a shortened form</td>
+                            <td>None - requires a <code>title</code> attribute</td>
                         </tr>
                     </table>
                 </div>
@@ -914,55 +894,949 @@ HTML 4.01//EN" "http://www.w3.org/TR
                         <th>Alternative</th>
                     </tr>
                     <tr>
-                        <th><code class="code-span purple">&lt;b&gt;</code></th>
-                        <th>Bold</th>
-                        <th><code class="code-span purple">&lt;strong&gt;</code> or CSS</th>
+                        <td><code>&lt;b&gt;</code></td>
+                        <td>Bold</td>
+                        <td><code>&lt;strong&gt;</code> or CSS</td>
                     </tr>
                     <tr>
-                        <th><code class="code-span purple">&lt;i&gt;</code></th>
-                        <th>Italics</th>
-                        <th><code class="code-span purple">&lt;em&gt;</code> or CSS</th>
+                        <td><code>&lt;i&gt;</code></td>
+                        <td>Italics</td>
+                        <td><code>&lt;em&gt;</code> or CSS</td>
                     </tr>
                     <tr>
-                        <th><code class="code-span purple">&lt;big&gt;</code></th>
-                        <th><span class="big">Big</span> font size</th>
-                        <th>CSS</th>
+                        <td><code>&lt;big&gt;</code></td>
+                        <td><span class="big">Big</span> font size</td>
+                        <td>CSS</td>
                     </tr>
                     <tr>
-                        <th><code class="code-span purple">&lt;small&gt;</code></th>
-                        <th><span class="small">small</span> font size</th>
-                        <th>CSS</th>
+                        <td><code>&lt;small&gt;</code></td>
+                        <td><span class="small">small</span> font size</td>
+                        <td>CSS</td>
                     </tr>
                     <tr>
-                        <th><code class="code-span purple">&lt;sub&gt;</code></th>
-                        <th><sub>subscript</sub> Text</th>
-                        <th>CSS</th>
+                        <td><code>&lt;sub&gt;</code></td>
+                        <td><sub>subscript</sub> Text</td>
+                        <td>CSS</td>
                     </tr>
                     <tr>
-                        <th><code class="code-span purple">&lt;sup&gt;</code></th>
-                        <th><sup>superscript</sup> Text</th>
-                        <th>CSS</th>
+                        <td><code>&lt;sup&gt;</code></td>
+                        <td><sup>superscript</sup> Text</td>
+                        <td>CSS</td>
                     </tr>
                     <tr>
-                        <th><code class="code-span purple">&lt;u&gt;</code></th>
-                        <th><u>Underline</u></th>
-                        <th>CSS</th>
+                        <td><code>&lt;u&gt;</code></td>
+                        <td><u>Underline</u></td>
+                        <td>CSS</td>
                     </tr>
                     <tr>
-                        <th><code class="code-span purple">&lt;s&gt;</code></th>
-                        <th><s>Strikethrough</s></th>
-                        <th>CSS</th>
+                        <td><code>&lt;s&gt;</code></td>
+                        <td><s>Strikethrough</s></td>
+                        <td>CSS</td>
                     </tr>
                 </table>
                 <div class="warn">
                     <p>The only one deprecated in HTML is <code>big</code>, however they should be avoid regardless</p>
                 </div>
             </div>
+            <div>
+                <h2>Adding inline tags</h2>
+                <p>Can easily be achieved by nesting the inline tags within a block tag, for example</p>
+                <div>
+                    <pre class="code-html">
+&lt;p&gt;&lt;b&gt;This is bold&lt;/b&gt; this isnt, &lt;i&gt;and this is italics&lt;/i&gt;&lt;/p&gt;
+                    </pre>
+                </div>
+                <p>Result: "<b>This is bold</b> this isnt, <i>and this is italics</i>"</p>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Links</h1>
+        </section>
+
+        <section id="Links">
+            <div>
+                <h2>Making links</h2>
+                <ul>
+                    <li>(Hyper)links make the web work and follow a simple principle
+                        <ul>
+                            <li>As defined in the W3C specification... <cite>"A link is a connection
+                                from one Web resource to another"</cite></li>
+                        </ul>
+                    </li>
+                    <li>Hyperlinks are often referred to as:
+                        <ul>
+                            <li><b>Anchors</b> (particularly in the formal specifications)</li>
+                            <li>Just plain old <b>links</b></li>
+                        </ul>
+                    </li>
+                    <li>Created in HTML using the anchor tag <code>&lt;a&gt;</code>
+                        <ul>
+                            <li>Usually (but not always) with a <code>href</code> attribute</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div>
+                    <pre class="code-html">
+&lt;a href="destination"&gt; Text&lt;/a&gt;
+                    </pre>
+                </div>
+                <p>As seen in this example, <a href="#Links">Text</a> - Links (by default) have blue text and are
+                    underlined, then once pressed they become purple. </p>
+            </div>
+            <div>
+                <h2>Adding a link</h2>
+                <p>To add a link is exceedingly simple, all you must do is add the anchor tag with any appropriate
+                into the main body of the HTML document, or inside a block level tag such as a
+                    <code>&lt;p&gt;</code> which is how I added the "Text" hyperlink in the "Making
+                Links" section.</p>
+            </div>
+            <div>
+                <h2>Common link types</h2>
+                <dl>
+                    <dt>To other websites</dt>
+                        <dd><code>href="http://www.google.co.uk/"</code></dd>
+                    <dt>To other pages on your site</dt>
+                        <dd><code>href="js.html"</code></dd>
+                    <dt>To parts of <b>this</b> page by ID</dt>
+                        <dd><code>href="#SomeID"</code></dd>
+                    <dt>To parts of <b>other</b> pages by ID</dt>
+                        <dd><code>href="js.html#SomeID"</code></dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Tables</h1>
+        </section>
+
+        <section id="Tables">
+            <div class="col-2-fit">
+                <div>
+                    <pre class="code-html">
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Top left&lt;/th&gt;
+        &lt;th&gt;Top right&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Bottom left&lt;/td&gt;
+        &lt;td&gt;Bottom right&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                </div>
+                <div>
+                    <ul>
+                        <li>Introduced into HTML to describe tabular data</li>
+                        <li>Have been (and still can be) used for content layout (with care)</li>
+                        <li>Tags and attributes provide basic structure and presentation</li>
+                        <li>Enhancements can be made using CSS</li>
+                    </ul>
+                    <table id="boringTable" border="1">
+                        <tr>
+                            <th>Top left</th>
+                            <th>Top right</th>
+                        </tr>
+                        <tr>
+                            <td>Bottom left</td>
+                            <td>Bottom right</td>
+                        </tr>
+                    </table>
+                    <p>As you can see above, each <code>&lt;tr&gt;</code> tag creates a new row
+                    then each <code>&lt;th&gt;</code> tag creates a new header then each
+                        <code>&lt;td&gt;</code> contains content in a column under each
+                    <code>&lt;th&gt;</code></p>
+                </div>
+            </div>
+            <div>
+                <h2>Basic table structure</h2>
+                <ul>
+                    <li>Start with <code>&lt;table&gt;...&lt;/table&gt;</code></li>
+                    <li>Content inside cells <code>&lt;td&gt;</code> or headers
+                        <code>&lt;th&gt;</code> </li>
+                    <li>Cells and/or headers enclosed in rows <code>&lt;tr&gt;</code></li>
+                </ul>
+            </div>
+            <div>
+                <table class="content">
+                    <h2>Table attributes</h2>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td><code>border</code></td>
+                        <td>Controls outside border visibility and thickness</td>
+                        <td>0 = no gridlines <br> 1 = gridlines <br> >1 = outside border only</td>
+                    </tr>
+                    <tr>
+                        <td><code>width</code></td>
+                        <td>Display width of table (default is "shrink-wrapped")</td>
+                        <td>Numbers (pixels) for absolute width % for relative width</td>
+                    </tr>
+                    <tr>
+                        <td><code>cellspacing</code></td>
+                        <td>Controls distance between cells (i.e. internal gridlines)</td>
+                        <td>Specify as number (of pixels)</td>
+                    </tr>
+                    <tr>
+                        <td><code>cellpadding</code></td>
+                        <td>Controls distance between cell content and cell edges</td>
+                        <td>Specify as number (of pixels)</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Table cell attributes</h2>
+                <table class="content">
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td><code>colspan</code></td>
+                        <td>Number of columns cell should span</td>
+                        <td rowspan="2">Equiv of "merged cells" in a spreadsheet</td>
+                    </tr>
+                    <tr>
+                        <td><code>rowspan</code></td>
+                        <td>Number of rows cell should span</td>
+                    </tr>
+                    <tr>
+                        <td><code>scope</code></td>
+                        <td>Direction in which a cell provides header information</td>
+                        <td>Values are <code>row</code> or <code>col</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>headers</code></td>
+                        <td>The ID values of the header(s) that apply to a cell</td>
+                        <td>Once cell can have multiple headers</td>
+                    </tr>
+                    <tr>
+                        <td><code>summary</code></td>
+                        <td>Provides a text summary of table purpose/contents</td>
+                        <td>Use for accessibility</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Structural Grouping</h1>
+        </section>
+
+        <section id="StructuralGrouping">
+            <div>
+                <h2>Structural Grouping & Association</h2>
+                <ul>
+                    <li>Why?
+                        <ul>
+                            <li>To group or associate related parts of the document together</li>
+                            <li>To identify unique parts of the document</li>
+                        </ul>
+                    </li>
+                    <li>How?
+                        <ul>
+                            <li>At document level, <code>&lt;div&gt;</code>
+                            and <code>&lt;span&gt;</code> tags used to enclose
+                            content </li>
+                            <li>At tag level <code>class</code> and <code>id</code> attributes used
+                            to identify and/or group elements</li>
+                        </ul>
+                    </li>
+                    <li>No associated visual styles/feedback</li>
+                    <li>Create an underlying framework for presentation and interactivity
+                    provided by CSS and JavaScript</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Document-level grouping</h2>
+                <ul>
+                    <li>Block-level tags can be grouped together using <code>&lt;div&gt;</code>
+                        <ul>
+                            <li>Creates page <b>div</b>isions</li>
+                            <li>Contents of a div can be treated as a single block</li>
+                        </ul>
+                    </li>
+                    <li>Inside blocks <code>&lt;span&gt; used to select inline
+                    fragments of content</code>
+                        <ul>
+                            <li>e.g. lines of text, or even single characters
+                                <br>
+                                <code>&lt;p&gt;The &lt;span&gt;first bit&lt;/span&gt; of... &lt;/p&gt;</code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Use class and/or id attributes to attach style/script</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Tag-level association</h2>
+                <ul>
+                    <li>uses <code>class</code> and <code>id</code>
+                    attributes </li>
+                    <li>Tags can be grouped together by adding a <code>class</code> attribute
+                        <ul>
+                            <li>Tags with the same value for <code>class</code> can be
+                            associated together </li>
+                            <li>A tag can be in multiple classes</li>
+                            <li>Any individual class value can be reused anywhere within a page</li>
+                        </ul>
+                    </li>
+                    <li>Any tag can be uniquely identified within a page
+                        <ul>
+                            <li>A tag can only have one <code>id</code> attribute</li>
+                            <li>An individual <code>id</code> attribute can be only used once
+                                <i>within</i> a page</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div>
+                    <pre class="code-html">
+&lt;p class="flowers"&gt; Roses are red&lt;/p&gt;
+&lt;p class="flowers" id="violets"&gt; Violets are blue&lt;/p&gt;
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Special Characters</h1>
+        </section>
+
+        <section id="SpecialCharacters">
+            <div>
+                <h2>Special Characters in XHTML</h2>
+                <p>XHTML requires all special characters to be correctly specified</p>
+                <ul>
+                    <li>Characters not in an encoding(e.g. &copy;)</li>
+                    <li>Characters with a special meaning (e.g. &lt;)</li>
+                </ul>
+                <img src="images/chars.png" alt="">
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Images and multimedia</h1>
+        </section>
+
+        <section id="ImagesAndMultimedia">
+            <div>
+                <h2>Basic Principles</h2>
+                <ul>
+                    <li>Any page content that isn't text needs the browser to be capable of handling it</li>
+                    <li>Some content will have native support
+                        <ul>
+                            <li>Built in to browser - no extra software needed</li>
+                            <li>Core image formats supported by all browsers</li>
+                            <li>Increasingly HTML5 allows native support for video/audio too</li>
+                        </ul>
+                    </li>
+                    <li>Others will requrie plug-in/helper aplications
+                        <ul>
+                            <li>Flash Player, Java VM, Media Player, QuickTime etc.</li>
+                        </ul>
+                    </li>
+                    <li>Some browsers come with some plug-ins by default
+                        <ul>
+                            <li>Chrome comes with Flash Player and a PDF reader</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Adding images</h2>
+                <div>
+                    <pre class="code-html">
+&lt;img width="300px" src="images/kitten.jpg" alt="A cute kitten"&gt;
+                    </pre>
+                </div>
+                <img width="300px" src="images/kitten.jpg" alt="A cute kitten">
+                <p>As you can see above, using that snippet of code inside a div, an image of a kitten whose width is
+                    300px has been generated, the source of the image is <code>
+                        src="images/kitten.jpg"</code> this is a local reference, and the image is stored next to all
+                of the other images on the website.</p>
+                <p>The image source can also be any URL such as <code>http://www.awebsite.co.uk/kitten.jpg</code></p>
+            </div>
+            <div>
+                <h2>Image attributes</h2>
+                <table class="content">
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Purpose</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td><code>src</code></td>
+                        <td>Specifies a URL location (relative or absolute) from which an image file can be retrieved</td>
+                        <td>Images can be located anywhere the browser can access</td>
+                    </tr>
+                    <tr>
+                        <td><code>alt</code></td>
+                        <td>A meaningful descriptive of an image to be used by screen-readers (or if image fails to load)</td>
+                        <td>An <code>alt</code> attribute required by specification.
+                        Can be empty <code>alt=""</code> for purely decorative images</td>
+                    </tr>
+                    <tr>
+                        <td><code>width</code> & <code>height</code></td>
+                        <td>Pixel dimensions for the space the browser should allow to display the image</td>
+                        <td>Changing these <b>does not</b> alter the size and shape of the image. Use an image editor to
+                        resize images</td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code></td>
+                        <td>Provides a descriptive tag for the image</td>
+                        <td>The text in a <b>title</b> attribute is usually rendered as a tool-tip when the mouse
+                        hovers over the image</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Image file types</h2>
+                <ul>
+                    <li>GIF (.gif)
+                        <ul>
+                            <li>256 colour palette - good for solid graphics</li>
+                            <li>Can have transparent background</li>
+                            <li>Can be used for simple animation</li>
+                            <li>Loss-less compression</li>
+                        </ul>
+                    </li>
+                    <li>JPEG (.jpg)
+                        <ul>
+                            <li>16 million colour palette - good for photos</li>
+                            <li>Lossy compression - take care</li>
+                            <li>Careful use = small file size + high quality</li>
+                        </ul>
+                    </li>
+                    <li>PNG (.png)
+                        <ul>
+                            <li>Open-source format with loss-less compression</li>
+                            <li>Conceived as an improvement on/replacement for GIF</li>
+                            <li>Handles higher resolution images, transparent etc.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Other media objects</h2>
+                <ul>
+                    <li>Web documents can contain more than just images
+                        <ul>
+                            <li>Audio content - sound files, streamed music etc.</li>
+                            <li>Video content - movies, streamed live footage etc.</li>
+                            <li>Embedded applications - Flash and Java apps etc.</li>
+                        </ul>
+                    </li>
+                    <li>Most cannot be played natively in the browser and require
+                    O/S support and/or a specific plug-in</li>
+                    <li>Common formats
+                        <ul>
+                            <li>Java, Adobe Flash, Apple QuickTime, Windows Media, MP3 audio etc.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Adding media objects</h2>
+                <ul>
+                    <li>Historically, most media formats were proprietary
+                        <ul>
+                            <li>Support depended on browser buy-in and licensing</li>
+                            <li>Has taken a long time to approach anything like a "standard" for
+                            including media objects in web pages</li>
+                        </ul>
+                    </li>
+                    <li>Originally proprietary tags added by browser manufacturers</li>
+                    <li><code>&lt;applet&gt;</code> (Java applets) - became part of
+                    HTML spec</li>
+                    <li><code>&lt;embed&gt;</code> (Netscape) - widely supported but <b>never</b>
+                    adopted in any standard HTML version</li>
+                    <li><code>&lt;object&gt;</code> and <code>&lt;param&gt;</code>
+                    are used by HTML 4.01 and XHTML 1.0</li>
+                    <li>HTML 5 has other options</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Using &lt;embed&gt;</h2>
+                <p>The most widely used method, Mostly due to support for older browsers (which don't exist now!)</p>
+                <div>
+                    <pre class="code-html">
+&lt;embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="video/webm"&gt;
+                    </pre>
+                </div>
+                <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="video/webm">
+                <ul>
+                    <li>Still used by major content services
+                        <ul>
+                            <li>Newer browsers still support it</li>
+                            <li>YouTube (and others) are phasing it out</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Using &lt;object&gt;</h2>
+                <ul>
+                    <li>Introduced by the W3C in HTML 4.01 as a generic way to include
+                    any external object in a page</li>
+                    <li>Supported by all current browsers, with some <i>slight</i> differences
+                        <ul>
+                            <li><code>type</code> - required by Internet Explorer</li>
+                            <li><code>data</code> - reqiored by Firefox</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div>
+                    <pre class="code-html">
+&lt;object data="http://address.co.uk/" type="application/x-shockwave-flash"&gt;&lt;/object&gt;
+                    </pre>
+                </div>
+            </div>
+            <div>
+                <h2>HTML 5</h2>
+                <ul>
+                    <li>The specification for HTML 5 includes improved support for media objects</li>
+                    <li>New logical tags e.g. <code>&lt;video&gt;</code>
+                    and <code>&lt;audio&gt;</code></li>
+                    <li>Expectations that browsers will support playback of some formats without needing
+                    additional plugins</li>
+                    <li>Issues with choice of default video format
+                        <ul>
+                            <li>Focus on widely used (proprietary) <b>h.264</b> video format for MP4</li>
+                            <li>Google Chrome announced a future removal support for h.264 (to focus on their
+                            own format)</li>
+                            <li>Mozilla didn't want to include h.264 as it needs to be licensed</li>
+                            <li>Most recent browsers support h.264</li>
+                        </ul>
+                    </li>
+                    <li>If a video is HTML 5 compatible, it will show browser controls on the video</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Forms</h1>
+        </section>
+
+        <section id="Forms">
+            <div>
+                <h2>What are web forms?</h2>
+                <ul>
+                    <li>Form tags and attributes create an interface for user interaction</li>
+                    <li>Core purpose of a form is to collect user input and return it to a server
+                        <ul>
+                            <li>Instruct browsers to create one or more form controls</li>
+                            <li>Provide a means to let user <i>submit</i> the form</li>
+                            <li>Specify how browsers should include form data to request to server</li>
+                            <li>Specify where (URL) to send the input</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Form structure</h2>
+                <ul>
+                    <li>Each form on a page enclosed in <code>&lt;form&gt;</code> tags
+                        <ul>
+                            <li>Wrapped around all controls for that form</li>
+                        </ul>
+                    </li>
+                    <li>Each <code>&lt;form&gt;</code> tag has <code>method</code> and <code>action</code> attributes</li>
+                </ul>
+                <img src="images/form-structure.png" alt="" class="wideImg">
+            </div>
+            <div>
+                <h2>Form controls</h2>
+                <ul>
+                    <li>Form controls are replaced tags used to collect user input
+                        <ul>
+                            <li>The tag is <b>replaced</b> by the browser interface for that control type</li>
+                            <li>W3C provide guidelines for consistent user experience</li>
+                        </ul>
+                    </li>
+                    <li>Each form control will have a name attribute</li>
+                    <li>Most have an explicit <code>value</code> attribute or an implied value (based on the user action</li>
+                    <li>On submission a <b>successful</b> form control will contain both a name and a value</li>
+                    <li>(Only) successful name/value pairs returned as a string to the server e.g.
+                        <ul>
+                            <li><code>username=Bob&age=35&email=bob@somewhere.com</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>One-line text input</h2>
+                <ul>
+                    <li>The basic (default) form control created by the <code>&lt;input&gt;</code> tag
+                        <ul>
+                            <li>Additional attributes to control basic behavior e.g.</li>
+                            <li>Visible characters (width of box) with <code>size</code> e.g. <code>size="25"</code></li>
+                            <li>Number of characters to accept with <code>maxlength</code> e.g. <code>maxlength="8"</code></li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;form method="get" action="http://a.server.com/script"&gt;
+    &lt;p&gt;
+        Enter your name: &lt;input type="text" name="username"&gt;
+    &lt;/p&gt;
+&lt;/form&gt;
+                </pre>
+                <form method="get" action="#">
+                    <p>
+                        E.g. Enter your name: <input type="text" name="username">
+                    </p>
+                </form>
+            </div>
+            <div>
+                <h2>Radio buttons</h2>
+                <ul>
+                    <li>Create mutually exclusive controls - user can only select one
+                        <ul>
+                            <li>Returns fixed name/value - one option can (should?) be pre-selected</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;p&gt; Please choose &lt;b&gt;ONE&lt;/b&gt; of the following
+    &lt;input type="radio" name="choice" value="A" checked="checked"&gt; A
+    &lt;input type="radio" name="choice" value="B"&gt; B
+    &lt;input type="radio" name="choice" value="C"&gt; C
+&lt;/p&gt;
+                </pre>
+                <p> E.g. Please choose <b>ONE</b> of the following:
+                    <input type="radio" name="choice" value="A" checked="checked"> A
+                    <input type="radio" name="choice" value="B"> B
+                    <input type="radio" name="choice" value="C"> C
+                </p>
+            </div>
+            <div>
+                <h2>Checkboxes</h2>
+                <ul>
+                    <li>Create individual independent controls
+                        <ul>
+                            <li><i>Should</i> return on if selected (better to supply a value though!)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;p&gt;Choose &lt;b&gt;ANY&lt;/b&gt;, &lt;b&gt;ALL&lt;/b&gt; or &lt;b&gt;NONE&lt;/b&gt; of the following
+    &lt;input type="checkbox" name="A" value="Yes" checked="checked"&gt; A
+    &lt;input type="checkbox" name="B" value="Yes"&gt; B
+    &lt;input type="checkbox" name="C" value="Yes"&gt; C
+&lt;/p&gt;
+                </pre>
+                <p>E.g. Choose <b>ANY</b>, <b>ALL</b> or <b>NONE</b> of the following
+                    <input type="checkbox" name="A" value="Yes" checked="checked"> A
+                    <input type="checkbox" name="B" value="Yes"> B
+                    <input type="checkbox" name="C" value="Yes"> C
+                </p>
+            </div>
+            <div>
+                <h2>Drop down menus</h2>
+                <ul>
+                    <li>The <code>&lt;select&gt;</code> tag allows user to select from a list
+                        <ul>
+                            <li>Can pre-select a default with <code>selected</code> attribute</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;p&gt; Please choose &lt;b&gt;ONE&lt;/b&gt; of the following
+    &lt;select name="drop_down"&gt;
+        &lt;option value="None" selected="selected"&gt;None&lt;/option&gt;
+        &lt;option value="A"&gt;Option A&lt;/option&gt;
+        &lt;option value="B"&gt;Option B&lt;/option&gt;
+        &lt;option value="C"&gt;Option C&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/p&gt;
+                </pre>
+                <p> E.g. Please choose <b>ONE</b> of the following
+                <select name="drop_down">
+                <option value="None" selected="selected">None</option>
+                <option value="A">Option A</option>
+                <option value="B">Option B</option>
+                <option value="C">Option C</option>
+                </select>
+                </p>
+            </div>
+            <div>
+                <h2>Multi-line input</h2>
+                <ul>
+                    <li>Collected using a <code>&lt;textare&gt;</code> tag
+                        <ul>
+                            <li>Box contents (inc whitespace/newlines) returned as the value</li>
+                            <li>This requires you to set <code>rows</code> and <code>cols</code> attributes to set the correct size</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;p&gt;Write whatever content you want here... &lt;br&gt;
+    &lt;textarea name="texArea" cols="30" rows="3"&gt;&lt;/textarea&gt;
+&lt;/p&gt;
+                </pre>
+                <p>Write whatever content you want here... <br>
+                    <textarea name="texArea" cols="30" rows="3"></textarea>
+                </p>
+            </div>
+            <div>
+                <h2>Password fields</h2>
+                <ul>
+                    <li>Specific type of one-line text box which hides input from anyone looking at the screen
+                        <ul>
+                            <li>However this doesn't offer any actual security other than visual, as anyone is able to change the text type to be visible if they have access to your comuter</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;p&gt;Insert password:
+    &lt;input type="password" name="user_password"&gt;
+&lt;/p&gt;
+                </pre>
+                <p>Insert password:
+                    <input type="password" name="user_password">
+                </p>
+            </div>
+            <div>
+                <h2>Hidden fields</h2>
+                <ul>
+                    <li>Do not appear on screen</li>
+                    <li>Used to return fixed values alongside user inputs
+                        <ul>
+                            <li>Values usually pre-populated e.g. time/date stamps</li>
+                            <li>Can be populated dynamically via client-side script e.g. returning calculated values alongside use input</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;p&gt;
+    &lt;input type="hidden" name="my_secret" value="hello"&gt;
+&lt;/p&gt;
+                </pre>
+                <p>This returns <code>my_secret=hello</code></p>
+            </div>
+            <div>
+                <h2>Form organisation</h2>
+                <ul>
+                    <li>Tags/attributes for organising forms</li>
+                    <li>Uses <code>&gt;fieldset&gt;</code>, <code>&gt;legend&gt;</code>, <code>&gt;label&gt;</code>
+                        <ul>
+                            <li>Plus <code>id</code> attributes</li>
+                        </ul>
+                    </li>
+                    <li>Offers block-level structure
+                        <ul>
+                            <li>Reducing markup needed inside them e.g. <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code> etc</li>
+                        </ul>
+                    </li>
+                    <li>Provides visual cues to users
+                        <ul>
+                            <li>Logical blocks with descriptive names</li>
+                        </ul>
+                    </li>
+                    <li>Enhanced usability/accessiblity
+                        <ul>
+                            <li>Associated labels with controls</li>
+                            <li>Increasing hit-box on small controls</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Using <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></h2>
+                <ul>
+                    <li>Block-level organisation used to group form controls together
+                        <ul>
+                            <li>Default visual appearance can be altered using CSS</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;fieldset&gt;
+    &lt;legend&gt;Choices&lt;/legend&gt;
+    Choose &lt;b&gt;ONE&lt;/b&gt; of the following
+    &lt;input type="radio" name="choice" value="A"&gt; Car
+    &lt;input type="radio" name="choice" value="A"&gt; Bus
+    &lt;input type="radio" name="choice" value="A"&gt; Train
+&lt;/fieldset&gt;
+                </pre>
+                <fieldset>
+                    <legend>Choices</legend>
+                    Choose <b>ONE</b> of the following
+                    <input type="radio" name="choice" value="Car"> Car
+                    <input type="radio" name="choice" value="Bus"> Bus
+                    <input type="radio" name="choice" value="Train"> Train
+                </fieldset>
+            </div>
+            <div>
+                <h2>Using <code>labels</code> and <code>id</code></h2>
+                <ul>
+                    <li>Allows text to be explicitly associated with a form control
+                        <ul>
+                            <li>Clicking on the label will activate the control</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;input type="radio" name="choice" value="A" id="A1"&gt;
+&lt;label for="A1"&gt;Apple&lt;/label&gt;
+
+&lt;label&gt;
+    &lt;input type="radio", name="choice", value="B"&gt;
+&lt;/label&gt;
+                </pre>
+                <ul>
+                    <li>You can either link a label to the input remotely</li>
+                    <li>Or you can surround the input with the <code>&lt;label&gt;</code> tag directly</li>
+                    <li>Both have the same intended effect</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Form buttons</h2>
+                <p>There are 3 types of button control, set the <code>type</code> attribute in <code>&lt;input&gt;</code> tag</p>
+                <table class="content">
+                    <tr>
+                        <th>Button Type</th>
+                        <th>Explanation</th>
+                    </tr>
+                    <tr>
+                        <td><b>Submit</b></td>
+                        <td>Invokes the browsers submit process and sends data to the server</td>
+                    </tr>
+                    <tr>
+                        <td><b>Reset</b></td>
+                        <td>Clears user input and returns form to its initial state <b>without</b> reloading the page</td>
+                    </tr>
+                    <tr>
+                        <td><b>Button</b></td>
+                        <td>Can <i>only</i> be used if attached to client-side scripted actions or events</td>
+                    </tr>
+                </table>
+                <p>Submit and reset buttons <b>do not</b> require any additional scripting in order to work</p>
+            </div>
+            <div>
+                <h2>Submit button</h2>
+                <ul>
+                    <li>All forms should have submit button
+                        <ul>
+                            <li>Can be a "regular" button (as drawn by the browser) or an image file</li>
+                            <li>Images not used as often now as buttons can be styled with CSS</li>
+                        </ul>
+                    </li>
+                </ul>
+                <pre class="code-html">
+&lt;input type="submit" value="Submit"&gt;
+&lt;input type="image" src="images/kitten.jpg" width="100px" alt="submit"&gt;
+                </pre>
+                <input type="submit" value="Submit">
+                <input type="image" src="images/kitten.jpg" width="100px" alt="submit">
+            </div>
+            <div>
+                <h2>Submit process</h2>
+                <ul>
+                    <li>Virtually every form should have one!</li>
+                    <li>Successful name/value pairs are attached to a request for the URL specified by the <code>action</code> attribute in the <code>&lt;form&gt;</code> tag</li>
+                    <li>The <code>method</code> attribute specifies the type of request made (and therefor how data is attached)</li>
+                </ul>
+                <pre class="code-html">
+                    &lt;form method="get" action="http://a.server.com/script"&gt;
+                        ...content...
+                    &lt;/form&gt;
+                </pre>
+                <div class="note">
+                    <p>On submission, attach name/value pairs to HTTP GET type request for the given URL</p>
+                </div>
+            </div>
+            <div>
+                <h2>The GET method</h2>
+                <ul>
+                    <li>When the user submits the form, browser makes a HTTP <b>GET</b> request for the processing URL
+                        <ul>
+                            <li>Successful form data is appended to the URL as a <b><i>querystirng</i></b></li>
+                            <li>The processing script will look at the querystring to extract the necessary data to use
+                                <ul>
+                                    <li><code>http://.../formscript.php?<b>inputbox=Bob&choice=C</b></code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>GET is the "default" method for all web requests (i.e. not actually restricted to use with forms)
+                        <ul>
+                            <li>Often used for typed addresses, links clicked in pages etc.</li>
+                            <li>Input data can be hard-coded into URLS/bookmarked directly e.g.
+                                <ul>
+                                    <li><a href="http://www.google.com/search?hl=en&q=netskills">http://www.google.com/search?hl=en&q=netskills</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>The POST method</h2>
+                <ul>
+                    <li>Using <code>method="post"</code> browser makes a HTTP POST request for the processing URL
+                        <ul>
+                            <li>Specific method for carrying data to a server in the <code>body</code> of the request</li>
+                            <li>Form data sent in same format but in different part of request message</li>
+                            <li>The processing script then loooks at the querystring extract (see GET method above)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <code>http://.../formscript.php</code>
+                <ul>
+                    <li>POST needs to be specifically invoked - usually via a form
+                        <ul>
+                            <li>Can be done programmatically using client-side scripting too</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Use GET or POST?</h2>
+                <table class="content">
+                    <tr>
+                        <th>GET</th>
+                        <th>POST</th>
+                    </tr>
+                    <tr>
+                        <td>Default method (used if no specific method supplied)</td>
+                        <td>Needs to be explicitly invoked via a form or script</td>
+                    </tr>
+                    <tr>
+                        <td>Date submitted (including passwords!) visible in the querystring</td>
+                        <td>Submitted data not (easily) visible as sent in the request body</td>
+                    </tr>
+                    <tr>
+                        <td>Results page can be bookmarked as data to re-run submission is stored in URL</td>
+                        <td>Results pages cannot be bookmarked or returned to later as POST data is not stored</td>
+                    </tr>
+                    <tr>
+                        <td>Refreshing a result page will repeat the submission with no warning</td>
+                        <td>User warned (by browser) before repeat action</td>
+                    </tr>
+                    <tr>
+                        <td>Not suitable for large amounts of data as URL is often truncated by browser</td>
+                        <td>Can handle large amounts of data as POST body can be any size</td>
+                    </tr>
+                    <tr>
+                        <td>Good for searches and simple applications where repeat submission is not an issue</td>
+                        <td>Always use for <b>login/password submissions</b></td>
+                    </tr>
+                </table>
+                <div class="note">
+                    <p><i><b>Truncate:</b> shorten (something) by cutting off the top or the end.</i></p>
+                </div>
+            </div>
         </section>
 
     </section>
 
-    <footer class="col-2">
+    <footer class="col-2" onclick="closeNav()">
         <div>
             <ul>
                 <li><a href="#">Links to shit</a></li>

@@ -10,85 +10,52 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script src="script.js"></script>
-    <link href="prism/prism.css" rel="stylesheet" />
 </head>
 <body>
-<script src="prism/prism.js"></script>
-<header>
-    <nav>
-        <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <a href="web.html">Web</a>
-            </button>
-            <div class="dropdown-content">
-                <a href="#HistoryOfTheWeb">History of the Web</a>
-                <a href="#WebServers">Web Servers</a>
-                <a href="#WebArchitechture">Web Architechture</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <a href="html.html">HTML</a>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">HTML Versions</a>
-                <a href="#">XHTML</a>
-                <a href="#">HTML Document</a>
-                <a href="#">HTML Tags</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <a href="css.html">CSS</a>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">css Section</a>
-                <a href="#">css2 Section</a>
-                <a href="#">css3 Section</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <a href="js.html" class="selected">JS</a>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">js Section</a>
-                <a href="#">js2 Section</a>
-                <a href="#">js3 Section</a>
-            </div>
-        </div>
-    </nav>
-    <button onclick="topFunction()" id="floatingButton"><i class="far fa-arrow-alt-circle-up"></i></button>
-</header>
+    <header>
+        <nav id="topNav">
+            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
+            <a href="index.html">Home</a>
+            <a href="web.html">Web</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="js.html">JS</a>
+        </nav>
+        <nav id="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">JS 1</a>
+            <a href="#">JS 2</a>
+        </nav>
+        <a onclick="openNav()" id="sideNavButton"><i class="fas fa-chevron-circle-right"></i></a>
+        <button onclick="topFunction()" id="floatingButton"><i class="fas fa-chevron-circle-up"></i></button>
+    </header>
 
-<section class="Header" id="JS">
-    <p class="Heading">Java Script</p>
-    <p class="SubHeading">&lt;Learn <a href="#">Java Script</a>&gt; </p>
-</section>
-
-<section class="main">
-
-    <section class="Introduction">
-        <h1>Java Script</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut consequatur consequuntur dignissimos eligendi esse excepturi expedita fugiat harum iure laboriosam libero nesciunt nulla odio, provident qui temporibus. Eaque, quos?</p>
+    <section class="Header" id="JS">
+        <p class="Heading">Java Script</p>
+        <p class="SubHeading">&lt;Learn <a href="#">Java Script</a>&gt; </p>
     </section>
 
-</section>
+    <section id="main" onclick="closeNav()">
 
-<footer class="col-2">
-    <div>
-        <ul>
-            <li><a href="#">Links to shit</a></li>
-            <li><a href="#">Maybe uni</a></li>
-            <li><a href="#">Idk</a></li>
-            <li><a href="#">Something</a></li>
-        </ul>
-    </div>
-    <div>
-        <p>Website developed by Oliver Butler</p>
-    </div>
-</footer>
+        <section class="Introduction">
+            <h1>Java Script</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut consequatur consequuntur dignissimos eligendi esse excepturi expedita fugiat harum iure laboriosam libero nesciunt nulla odio, provident qui temporibus. Eaque, quos?</p>
+        </section>
+
+    </section>
+
+    <footer class="col-2" onclick="closeNav()">
+        <div>
+            <ul>
+                <li><a href="#">Links to shit</a></li>
+                <li><a href="#">Maybe uni</a></li>
+                <li><a href="#">Idk</a></li>
+                <li><a href="#">Something</a></li>
+            </ul>
+        </div>
+        <div>
+            <p>Website developed by Oliver Butler</p>
+        </div>
+    </footer>
 </body>
 </html>
