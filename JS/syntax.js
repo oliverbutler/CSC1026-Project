@@ -1,6 +1,6 @@
-window.addEventListener("load", highlightSyntax);
-
-function highlightSyntax() {
+window.document.onload = highlightSyntax();
+//todo comment
+function highlightSyntax() { //todo code-css
     var ca = document.getElementsByClassName("code-html");
     for(var i = 0; i < ca.length; i++) {
         var data = ca[i].innerHTML;

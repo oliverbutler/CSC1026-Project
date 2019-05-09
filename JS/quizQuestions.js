@@ -1,4 +1,4 @@
-let webQuestions = -[
+let webQuestions = [
     {
         question: "What does DNS stand for?",
         answers: {
@@ -213,7 +213,7 @@ let htmlQuestions = [
     }
 ];
 
-let cssQuestions = [
+let cssQuestions = [ //todo complete these questions
     {
         question: "CSS ?",
         answers: {

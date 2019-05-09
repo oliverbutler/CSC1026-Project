@@ -8,11 +8,11 @@
 }
 
 .blue {
-    color: var(--blue);
+    color: #4717F6;
 }
 
 .purple {
-    color: var(--purple);
+    color: #A239CA;
 }
 
 /*==================| Main Page Layout |================*/
@@ -21,12 +21,13 @@ html {
     /*scroll-behavior: smooth;*/
     overflow-x: hidden;
     max-width: 100%;
+    transition: 0.5s;
 }
 
 body {
     font-family: "apercu", sans-serif;
-    background-color: var(--white);
-    color: var(--black);
+    background-color: #f4f7f6;
+    color: #0E0B16;
     font-size: 1.1em;
     margin: 0;
     min-height: 100%;
@@ -80,7 +81,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    color: var(--white);
+    color: #f4f7f6;
     padding-bottom: 20px;
 }
 
@@ -114,7 +115,7 @@ p {
     text-align: center;
 }
 .Header a:hover {
-    color: var(--white);
+    color: #f4f7f6;
 }
 
 .black-bg {
@@ -133,7 +134,7 @@ p {
     margin: 10px;
     border-radius: 15px;
     padding: 10px;
-    color: var(--white);
+    color: #f4f7f6;
 }
 
 .divider h1 {
@@ -257,12 +258,12 @@ figcaption {
     bottom: 15px;
     right: 15px;
     font-size: 2em;
-    color: var(--black);
+    color: #0E0B16;
     transition: 0.3s;
 }
 
 #floatingButton:hover {
-    color: var(--blue);
+    color: #4717F6;
 }
 
 #floatingButton img {
@@ -277,7 +278,7 @@ figcaption {
 }
 
 #sideNavButton:hover {
-    color: var(--blue);
+    color: #4717F6;
 }
 
 #sideNavButton img {
@@ -291,13 +292,13 @@ figcaption {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--black);
+    background-color: #0E0B16;
 }
 
 #topNav a {
     float: left;
     display: block;
-    color: var(--white);
+    color: #f4f7f6;
     font-weight: bold;
     font-size: 1rem;
     text-align: center;
@@ -314,15 +315,15 @@ figcaption {
 }
 
 #topNav #logoletter {
-    color: var(--black);
+    color: #0E0B16;
 }
 
 #topNav a:hover {
-    background-color: var(--blue);
+    background-color: #4717F6;
 }
 
 #topNav .selected {
-    background-color: var(--slate);
+    background-color: #272729;
 }
 
 #topNav .dropdown {
@@ -335,7 +336,7 @@ figcaption {
     border: none;
     outline: none;
     font-family: inherit;
-    background-color: var(--black);
+    background-color: #0E0B16;
     margin: 0;
     padding: 0;
 }
@@ -344,7 +345,7 @@ figcaption {
     display: none;
     position: absolute;
     z-index: 1;
-    background-color: var(--black);
+    background-color: #0E0B16;
     top: 46px;
 }
 
@@ -369,7 +370,7 @@ figcaption {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--black);
+    background-color: #0E0B16;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -379,13 +380,13 @@ figcaption {
     padding: 8px 8px 8px 30px;
     text-decoration: none;
     font-size: 15px;
-    color: var(--white);
+    color: #f4f7f6;
     display: block;
     transition: 0.3s;
 }
 
 #sideNav a:hover {
-    color: var(--blue);
+    color: #4717F6;
 }
 
 #sideNav .closebtn {
@@ -405,10 +406,10 @@ pre {
     padding-right: 20px;
     padding-top: 15px;
     margin-bottom: 5px;
-    border-left: 4px solid var(--purple);
+    border-left: 4px solid #A239CA;
     font-size: 1.1em;
     background: #2d2d2d;
-    color: var(--white);
+    color: #f4f7f6;
     white-space: pre;
     overflow: auto;
     font-family: monospace;
@@ -419,7 +420,7 @@ code{
     padding-left: 4px;
     padding-right: 4px;
     font-size: 110%;
-    color: var(--purple);
+    color: #A239CA;
 }
 
 .code-str {
@@ -428,6 +429,34 @@ code{
 
 .code-elem {
     color: mediumpurple;
+}
+
+.code-html {
+
+}
+
+.code-css {
+
+}
+
+.code-js {
+
+}
+
+.run {
+    background-color: #d7dad9;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1em;
+    transition: 0.2s;
+}
+
+.run:hover {
+    background-color: #a7aaa9;
+    color: white;
+    font-size: 1.1em;
 }
 
 /*====================| Warnings |================*/
@@ -440,7 +469,7 @@ code{
     border-left: 4px solid yellow;
     word-wrap: break-word;
     background: #fffdcd;
-    color: var(--black);
+    color: #0E0B16;
 }
 
 .note {
@@ -451,13 +480,13 @@ code{
     border-left: 4px solid #20ff1f;
     word-wrap: break-word;
     background: #d5ffd7;
-    color: var(--black);
+    color: #0E0B16;
 }
 
 /*==================| Footer |================*/
 
 footer {
-    background-color: var(--black);
+    background-color: #0E0B16;
     position: absolute;
     width: 100%;
     height: auto;
@@ -474,7 +503,7 @@ footer li {
 }
 
 footer a {
-    color: var(--white);
+    color: #f4f7f6;
     font-weight: bold;
     font-size: 0.9em;
     text-align: center;
@@ -483,11 +512,11 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--blue);
+    color: #4717F6;
 }
 
 footer p {
-    color: var(--white);
+    color: #f4f7f6;
     float: right;
 }
 

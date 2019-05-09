@@ -2,7 +2,7 @@ window.onscroll = function () {
     scrollFunction();
 };
 
-function scrollFunction() {
+function scrollFunction() { //todo comment code
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("floatingButton").style.display = "block";
     }  else {

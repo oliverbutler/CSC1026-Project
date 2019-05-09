@@ -29,14 +29,203 @@
 
     <section class="Header">
         <p class="Heading">Java Script</p>
-        <p class="SubHeading">&lt;Learn <a href="#">Java Script</a>&gt; </p>
+        <p class="SubHeading">&lt;Learn <a href="#">JavaScript</a>&gt; </p>
     </section>
 
     <section id="main" onclick="closeNav()">
 
         <section class="Introduction">
-            <h1>Java Script</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut consequatur consequuntur dignissimos eligendi esse excepturi expedita fugiat harum iure laboriosam libero nesciunt nulla odio, provident qui temporibus. Eaque, quos?</p>
+            <h1>JavaScript</h1>
+            <p>What is JavaScript? JavaScript is one of the 3 main languages which any web developer should learn, As you have
+            already started learning Java, you should be able to pickup JavaScript quickly.<br> <br> In this section I will discuss how to code with JavaScript, the fundamentals, and
+            also display some examples of JavaScript.</p>
+        </section>
+
+        <section id="Intro">
+            <div>
+                <h2>What does JavaScript do?</h2>
+                <ul>
+                    <li><b>HTML</b> - The content of a website</li>
+                    <li><b>CSS</b> - Layout and design of the website</li>
+                    <li><b>JS</b> - Change the behavior of the website</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Changing content</h1>
+        </section>
+
+        <section id="ChangingContent">
+            <div>
+                <h2>Changing HTML Content</h2>
+                <p>One of the most useful ways to use JavaScript, is to use the method <code>getElementById()</code></p>
+                <p>The point of this method, is it allows you to select any element by its <code>id</code>, for example, say we
+                have a pair of <code>&lt;p&gt;&lt;/p&gt;</code> tags, which we give an <code>id</code> of <code>"test"</code>,
+                we are now able to reference this paragraph using JavaScript, allowing us to change its content.</p>
+                <pre class="code-js">
+document.getElementById('example').innerHTML = "Magic!";
+                </pre>
+                <button class="run" onclick="exampleChangeId()">Run</button>
+                <p id="exampleChangeId">Hello World!</p>
+                <div class="note"><p>Reset the examples at any time by refreshing your page</p></div>
+            </div>
+            <div>
+                <h2>Change CSS Styles</h2>
+                <ul>
+                    <li>You can also use JavaScript to change the style of an element, for example changing its colour.</li>
+                    <li>This is extremely useful, as it allows for dynamically changing style sheets, rather than a plain page.</li>
+                </ul>
+                <pre class="code-js">
+document.getElementById("exampleChangeId").style.color = "blue";
+                </pre>
+                <button class="run" onclick="exampleChangeStyle()">Run</button>
+                <p id="exampleChangeStyle">Make me blue</p>
+            </div>
+            <div>
+                <h2>Displaying and Hiding content</h2>
+                <p>You are able to use JavaScript to change the display mode of content, which allows for you to hide or show
+                content based on your needs</p>
+                <p>In the example below, we will make two buttons, one that calls a function to hide, and one that reveals an object</p>
+                <pre class="code-js">
+function exampleHide() {
+    document.getElementById('kitten').style.display = 'none';
+}
+
+function exampleShow() {
+    document.getElementById('kitten').style.display = 'block';
+}
+                </pre>
+                <div>
+                    <button class="run" onclick="exampleHide()">Hide</button>
+                    <button class="run" onclick="exampleShow()">Show</button>
+                </div>
+                <img src="images/HTML/kitten.jpg" id="kitten" width="200px" alt="">
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Running functions</h1>
+        </section>
+
+        <section id="RunningFunctions">
+            <div>
+                <h2>Giving buttons function <code>onClick</code></h2>
+                <p>To give a button a function is a very simple process, once you have added your custom script to your
+                    HTML file with <code>&lt;script src="example.js"&gt;&lt;/script&gt;</code> in either the <code>&lt;head&gt;</code>
+                    or the <code>&lt;body&gt</code>, all you need to do is add <code>onClick=""</code>.</p>
+                <p>The example below shows how the buttons in the section above were generated.</p>
+                <pre class="code-html">
+&lt;button onclick="exampleHide()"&gt;Hide&lt;/button&gt;
+&lt;button onclick="exampleShow()"&gt;Show&lt;/button&gt;
+                </pre>
+            </div>
+            <div>
+                <h2>Loading scripts <code>onLoad</code></h2>
+                <p>A helpful way you can load scripts is by loading them when something loads, either the script itself, or say the body of a website
+                to make a script run when the script is added, add this line in you .js file</p>
+                <pre class="code-js">
+window.document.onload = function();
+                </pre>
+                <p>With the use of this, when the page is loaded, the function will run. </p>
+                <p>An example of when this would be useful would be for this
+                websites syntax highlighter, which as you can see from the above code snippets, automatically highlights syntax
+                to make the code easier to read and understand. This works by, on the page load, looking for any code blocks, taking the text from them,
+                and figuring out what content to put in a <code>&lt;span&gt;</code> which itself is given a class, which then
+                has CSS applied to it.</p>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>JavaScript File</h1>
+        </section>
+
+        <section id="JSFile">
+            <div>
+                <h2>Where to put JavaScript</h2>
+                <p>Okay, I get it, now you know the basics of what you can do with JavaScript (we haven't even scratched the surface of it yet),
+                but one of the most vital things you must be able to do is to know where to place the <code>&lt;script&gt;</code>. With HTML we have three options.</p>
+                <ol>
+                    <li>Place a link within the <code>&lt;head&gt;</code> </li>
+                    <li>Place a link within the <code>&lt;body&gt;</code> </li>
+                    <li>Write it within <code>&lt;script&gt;</code> tags in the <code>&lt;body&gt;</code> </li>
+                </ol>
+                <pre class="code-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt; 
+
+&lt;p id="example"&gt;My Paragraph&lt;/p&gt;
+&lt;button type="button" onclick="function()"&gt;Hello&lt;/button&gt;
+
+&lt;script&gt;
+function function() {
+    document.getElementById("example").innerHTML = "Hello World!";
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <p>Out of these options, there are two you should consider, 1, and 2. Option 3 is valid, however it is advisable to separate your JS from
+                your HTML, just as it is advisable to separate your CSS from your HTML.</p>
+                <p>You should, normally place your scripts in the <code>&lt;head&gt;</code>, especially if they are lightweight, or if you want them
+                    to load before the content of the website, however, if you have a script which may take a second to run,
+                you are best placing it at the <b>bottom</b> of the <code>&lt;body&gt;</code>, this will ensure it is loaded last.</p>
+            </div>
+            <div>
+                <h2>External references</h2>
+                <p>You can also reference scripts outside your local storage, this can be done by specifying the url in the
+                <code>&lt;script&gt;</code> tags.</p>
+                <pre class="code-html">
+&lt;script src="https://www.ncl.ac.uk/script.js"&gt;&lt;/script&gt;
+                </pre>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>JavaScript Outputs</h1>
+        </section>
+
+        <section id="JSOutputs">
+            <div>
+                <h2>Output options</h2>
+                <p>With JavaScript you have several different options for output... </p>
+                <ul>
+                    <li><code>innerHTML</code>
+                        <ul>
+                            <li>This is a fantastic option for outputting to your HTML, as it can be used to create HTML tags and styling</li>
+                        </ul>
+                    </li>
+                    <li><code>console.log()</code>
+                        <ul>
+                            <li>You can also write to the console from JavaScript, I find this particularly useful for when I am debugging, as Google Chrome developer mode also
+                            allows you to explore and debug objects you print to the console.</li>
+                        </ul>
+                    </li>
+                    <li><code>document.write()</code>
+                        <ul>
+                            <li>I suppose this could be used for testing, as it outputs to HTML easily, however if it is run again <b>all</b>
+                            of the HTML is deleted on the current page, which in my opinion makes it far less useful.</li>
+                        </ul>
+                    </li>
+                    <li><code>window.alert()</code>
+                        <ul>
+                            <li>Popup windows to display information.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>Syntax</h1>
+        </section>
+
+        <section id="Syntax">
+            <div>
+                <h2>JavaScript Syntax</h2>
+            </div>
         </section>
 
     </section>
@@ -54,6 +243,7 @@
             <p>Website developed by Oliver Butler</p>
         </div>
     </footer>
+    <script src="JS/examples.js"></script>
     <script src="JS/syntax.js"></script>
     <script src="JS/script.js"></script>
 </body>

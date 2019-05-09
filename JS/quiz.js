@@ -1,7 +1,8 @@
 var questionNumber = 0;
-var totalQuestions = 0;
 var numberCorrect = 0;
 var answersGiven = [];
+var string = "";
+let questions = [];
 
 const quizes = {
     WEB: 'Web',
@@ -10,11 +11,7 @@ const quizes = {
     JS: 'JavaScript'
 };
 
-var string = "";
-
-let questions = [];;
-
-window.document.onload = listQuizes();
+window.document.onload = listQuizes(); //todo comment code
 
 function listQuizes() {
 
@@ -34,22 +31,18 @@ function listQuizes() {
             if (quiz === "WEB") {
                 questions = webQuestions;
                 string = "Web";
-                totalQuestions = webQuestions.length;
             }
             if (quiz === "HTML") {
                 questions = htmlQuestions;
                 string = "HTML";
-                totalQuestions = htmlQuestions.length;
             }
             if (quiz === "CSS") {
                 questions = cssQuestions;
                 string = "CSS";
-                totalQuestions = cssQuestions.length;
             }
             if (quiz === "JS") {
                 questions = jsQuestions;
                 string = "JavaScript";
-                totalQuestions = jsQuestions.length;
             }
             next();
         }
@@ -68,7 +61,6 @@ function next() {
         makeQuestion(questionNumber);
     else
         printResults();
-
     questionNumber++;
 }
 
@@ -77,7 +69,7 @@ function makeQuestion(questionNumber) {
     output.push('<div id="QuestionDiv">');
     output.push('<a href="quiz.html" id="Return">Return</a>');
     output.push('<p id="Title">' + string + " Quiz" + '</p>');
-    output.push('<p id="QuestionNumber">' + "Question: " + (questionNumber + 1) + "/" + totalQuestions + '</p>');
+    output.push('<p id="QuestionNumber">' + "Question: " + (questionNumber + 1) + "/" + questions.length + '</p>');
     output.push('<p id="Question">' + (questions[questionNumber].question) + '</p>');
     var answers = questions[questionNumber].answers;
     for (var answerKey in answers) {
