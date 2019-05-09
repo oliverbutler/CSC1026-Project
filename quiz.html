@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Design</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" type="text/css" href="CSS/global.css">
+    <link rel="stylesheet" type="text/css" href="CSS/quiz.css">
+</head>
+<body onload="listQuizes()">
+<header>
+    <nav id="topNav">
+        <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
+        <a href="index.html">Home</a>
+        <a href="web.html">Web</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="js.html">JS</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+    <nav id="sideNav">
+    </nav>
+<!--    <a onclick="openNav()" id="sideNavButton"><img src="images/right.svg"></a>-->
+    <a onclick="topFunction()" id="floatingButton"><img src="images/up.svg"></a>
+</header>
+
+<section class="Header">
+    <p class="Heading">Quiz</p>
+    <p class="SubHeading">&lt;See what you've learnt!&gt; </p>
+</section>
+
+<section id="main" onclick="closeNav()">
+
+    <section class="Introduction">
+        <h1>Quizes</h1>
+        <p>Below you can see there are four different quizes for you to test you skills with, Web, HTML, CSS and JS.
+            With each of them relating to the content found on the appropriate page.</p>
+    </section>
+
+    <section>
+        <div id="quiz"></div>
+    </section>
+
+</section>
+
+<footer class="col-2" onclick="closeNav()">
+    <div>
+        <ul>
+            <li><a href="#">Links to shit</a></li>
+            <li><a href="#">Maybe uni</a></li>
+            <li><a href="#">Idk</a></li>
+            <li><a href="#">Something</a></li>
+        </ul>
+    </div>
+    <div>
+        <p>Website developed by Oliver Butler</p>
+    </div>
+</footer>
+<script src="JS/quizQuestions.js"></script>
+<script src="JS/quiz.js"></script>
+<script src="JS/syntax.js"></script>
+<script src="JS/script.js"></script>
+</body>
+</html>

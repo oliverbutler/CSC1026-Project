@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <title>Web Design</title>
     <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/global.css">
+    <link rel="stylesheet" type="text/css" href="CSS/web.css">
 </head>
 <body>
     <header>
@@ -20,6 +16,7 @@
             <a href="html.html">HTML</a>
             <a href="css.html">CSS</a>
             <a href="js.html">JS</a>
+            <a href="quiz.html">Quiz</a>
         </nav>
         <nav id="sideNav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -29,11 +26,11 @@
             <a href="#WebArchitechture">Web Architecture</a>
             <a href="#History">History</a>
         </nav>
-        <a onclick="openNav()" id="sideNavButton"><i class="fas fa-chevron-circle-right"></i></a>
-        <button onclick="topFunction()" id="floatingButton"><i class="fas fa-chevron-circle-up"></i></button>
+        <a onclick="openNav()" id="sideNavButton"><img src="images/right.svg"></a>
+        <a onclick="topFunction()" id="floatingButton"><img src="images/up.svg"></a>
     </header>
 
-    <section class="Header" id="Web" onclick="closeNav()">
+    <section class="Header" onclick="closeNav()">
         <p class="Heading">The Web</p>
         <p class="SubHeading">&lt;Behind the World Wide Web&gt; </p>
     </section>
@@ -90,26 +87,26 @@
                     <h2>Common Web Browsers</h2>
                     <table>
                         <tr>
-                            <th><img src="images/chrome.png" alt=""></th>
+                            <th><img src="images/Web/chrome.png" alt=""></th>
                             <th>Google Chrome</th>
                         </tr>
                         <tr>
-                            <th><img src="images/ie.png" alt=""></th>
+                            <th><img src="images/Web/ie.png" alt=""></th>
                             <th>Internet Explorer</th>
                         </tr>
                         <tr>
-                            <th><img src="images/safari.png" alt=""></th>
+                            <th><img src="images/Web/safari.png" alt=""></th>
                             <th>Safari</th>
                         </tr>
                         <tr>
-                            <th><img src="images/firefox.png" alt=""></th>
+                            <th><img src="images/Web/firefox.png" alt=""></th>
                             <th>Firefox</th>
                         </tr>
                     </table>
                 </div>
                 <div class="black-bg">
                     <h2>Simple DNS Request</h2>
-                    <p>The diagram shows how a simple DNS request works, between a client and a remote server.</p>
+                    <p>The diagram shows how a simple DNS (Domain Name System) request works, between a client and a remote server.</p>
                     <ol>
                         <li>Client Request</li>
                         <li>DNS Query to a DNS server, this is where your browser asks a remote server called a DNS Server, which then responds with the IP address where the target server is located.</li>
@@ -118,7 +115,7 @@
                         <li>A protocol request is sent</li>
                         <li>A protocol reply is recieved</li>
                     </ol>
-                    <img src="images/dns.png" alt="A Simple DNS request">
+                    <img src="images/Web/dns.png" alt="A Simple DNS request">
                     <p class="credit">Image by Oliver Butler</p>
                 </div>
             </div>
@@ -143,7 +140,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <img src="https://news.netcraft.com/wp-content/uploads/2018/01/wpid-wss-share1.png" alt="graph" class="">
+                    <img src="https://news.netcraft.com/wp-content/uploads/2018/01/wpid-wss-share1.png" alt="graph" width="500px">
                     <p class="credit">Image from <a href="https://news.netcraft.com/archives/2018/02/13/february-2018-web-server-survey.html"> Netcraft</a></p>
                 </div>
                 <div>
@@ -178,6 +175,12 @@
                             <li>Formatted string that identifies a resource</li>
                         </ul>
                     </li>
+                    <li><b>URL:</b> Uniform Resource Locator
+                        <ul>
+                            <li>Subset of URI's that, in addition to locating a resource, provides a means of locating the
+                            resource by describing its network location</li>
+                        </ul>
+                    </li>
                     <li><b>HTML/XHTML:</b> HyperText Markup Language and Extensible HTML</li>
                     <li><b>DNS:</b> Domain Name System</li>
                     <li><b>TCP/IP:</b> Internet Protocol Suite</li>
@@ -191,25 +194,118 @@
 
         <section id="History">
             <div class="timeline">
-                <div>
-                    <h2>2019</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.</p>
+                <div class="left">
+                    <div>
+                        <h2>1991</h2>
+                        <p>CERN introduces the World Wide Web to the public</p>
+                    </div>
+                    <div>
+                        <h2>1990</h2>
+                        <p>Tim Berners-Lee, at CERN develops HTML.</p>
+                    </div>
+                    <div>
+                        <h2>1989</h2>
+                        <p>World.std.com becomes first provider for dial-up access for the internet</p>
+                    </div>
+                    <div>
+                        <h2>1987</h2>
+                        <p>Number of hosts on the internet exceeds 20,000. Cisco ships its first router</p>
+                    </div>
+                    <div>
+                        <h2>1985</h2>
+                        <p>Symbolics.com, the site for Symbolics Computer Corp., becomes the first registered domain.</p>
+                    </div>
+                    <div>
+                        <h2>1983</h2>
+                        <p>Domain Name Service (DNS) creates .edu, .gov, .com, .mil, .org, .net and .int system for websites</p>
+                    </div>
+                    <div>
+                        <h2>1979</h2>
+                        <p>USENET is created to host news and discussion groups</p>
+                    </div>
+                    <div>
+                        <h2>1972</h2>
+                        <p>TCP and IP emerge as the protocol for ARPANET. This becomes the standard definition for the internet</p>
+                    </div>
+                    <div>
+                        <h2>1976</h2>
+                        <p>Queen Elizabeth II sends her first email</p>
+                    </div>
+                    <div>
+                        <h2>1974</h2>
+                        <p>Vinton Cerf and Bob Kahn publish a paper detailing the design of TCP</p>
+                    </div>
+                    <div>
+                        <h2>1973</h2>
+                        <p>Global networking becomes a reality as the University College of London and the Royal
+                            Radar Establishment (Norwary) connect to ARPANET, term Internet is born.</p>
+                    </div>
+                    <div>
+                        <h2>1969</h2>
+                        <p>Stanford Research Institude (SRI), sends first message "LO", was an attempt to send "LOGIN" from the University of Utha. The system crashed after "LO"</p>
+                    </div>
+                    <div>
+                        <h2>1965</h2>
+                        <p>Two computers at MIT Lincoln have communicated
+                            with each other using packet-switching technology</p>
+                    </div>
                 </div>
-                <div>
-                    <h2>2018</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.</p>
-                </div>
-                <div>
-                    <h2>2017</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.</p>
-                </div>
-                <div>
-                    <h2>2016</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.</p>
+                <div class="vertLine"></div>
+                <div class="right">
+                    <div>
+                        <h2>1991</h2>
+                        <p>CERN introduces the World Wide Web to the public</p>
+                    </div>
+                    <div>
+                        <h2>1990</h2>
+                        <p>Tim Berners-Lee, at CERN develops HTML.</p>
+                    </div>
+                    <div>
+                        <h2>1989</h2>
+                        <p>World.std.com becomes first provider for dial-up access for the internet</p>
+                    </div>
+                    <div>
+                        <h2>1987</h2>
+                        <p>Number of hosts on the internet exceeds 20,000. Cisco ships its first router</p>
+                    </div>
+                    <div>
+                        <h2>1985</h2>
+                        <p>Symbolics.com, the site for Symbolics Computer Corp., becomes the first registered domain.</p>
+                    </div>
+                    <div>
+                        <h2>1983</h2>
+                        <p>Domain Name Service (DNS) creates .edu, .gov, .com, .mil, .org, .net and .int system for websites</p>
+                    </div>
+                    <div>
+                        <h2>1979</h2>
+                        <p>USENET is created to host news and discussion groups</p>
+                    </div>
+                    <div>
+                        <h2>1972</h2>
+                        <p>TCP and IP emerge as the protocol for ARPANET. This becomes the standard definition for the internet</p>
+                    </div>
+                    <div>
+                        <h2>1976</h2>
+                        <p>Queen Elizabeth II sends her first email</p>
+                    </div>
+                    <div>
+                        <h2>1974</h2>
+                        <p>Vinton Cerf and Bob Kahn publish a paper detailing the design of TCP</p>
+                    </div>
+                    <div>
+                        <h2>1973</h2>
+                        <p>Global networking becomes a reality as the University College of London and the Royal
+                            Radar Establishment (Norwary) connect to ARPANET, term Internet is born.</p>
+                    </div>
+                    <div>
+                        <h2>1969</h2>
+                        <p>Stanford Research Institude (SRI), sends first message "LO", was an attempt to send "LOGIN" from the University of Utha. The system crashed after "LO"</p>
+                    </div>
+                    <div>
+                        <h2>1965</h2>
+                        <p>Two computers at MIT Lincoln have communicated
+                            with each other using packet-switching technology</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -229,5 +325,7 @@
             <p>Website developed by Oliver Butler</p>
         </div>
     </footer>
+    <script src="JS/syntax.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,86 @@
+
+.Header {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("https://images.pexels.com/photos/1624895/pexels-photo-1624895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+/*==================| Timeline |================*/
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    /*display: grid;*/
+    /*grid-template-columns: 1fr;*/
+    width: 100%;
+    display: flex;
+}
+
+.timeline .vertLine {
+    width: 15px;
+    border-radius: 5px;
+    background-color: lightslategray;
+    /*border: 2px solid gray;*/
+}
+
+.timeline > div {
+    width: 100%;
+}
+
+.timeline > div > div {
+    background-color: #e9eceb;
+    margin: 5px 20px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.timeline > div > div > p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.timeline > div > div > h2 {
+    margin: 0px;
+    padding: 0px 0px 10px;
+    text-align: center;
+}
+
+
+.timeline .left div::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #4717F6;
+    float: right;
+    margin-right: -54px;
+    position: sticky;
+}
+
+.timeline .right div::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #4717F6;
+    float: left;
+    margin-left: -54px;
+    position: sticky;
+}
+
+.timeline .left div:nth-child(even) {
+   visibility: hidden;
+}
+
+.timeline .right div:nth-child(odd) {
+  visibility: hidden;
+}
+
+
+#WebClients table img{
+    width: 45px;
+}
+
+#WebClients table th {
+    font-weight: normal;
+    text-align: left;
+    padding-left: 10px;
+}

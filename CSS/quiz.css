@@ -1,0 +1,180 @@
+.Header {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("https://images.pexels.com/photos/53209/newspaper-news-media-spectacles-53209.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+}
+
+#SelectQuiz {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#QuestionDiv {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#AnswerDiv {
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    #SelectQuiz {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #QuestionDiv {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #AnswerDiv {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+#SelectQuiz h2 {
+    text-align: center;
+}
+
+#SelectQuiz button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 1.4em;
+    padding: 0;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e9eceb;
+}
+
+#SelectQuiz button:hover {
+    font-size: 1.8em;
+    transition: 0.1s;
+    background-color: darkgray;
+    color: white;
+}
+
+#QuestionDiv #QuestionNumber {
+    font-size: 2em;
+}
+
+#QuestionDiv #Question {
+    font-size: 1.2em;
+}
+
+#QuestionDiv #Input {
+    display: block;
+    width: available;
+    background-color: #e9eceb;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#QuestionDiv input {
+    height: 20px;
+    width: 20px;
+}
+
+#QuestionDiv #Next {
+    width: 80px;
+    height: 60px;
+    font-size: 1.1em;
+    padding: 0;
+    margin-left: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: #d7dad9;
+}
+
+#QuestionDiv #Next:hover {
+    font-size: 1.3em;
+    transition: 0.1s;
+    background-color: darkgray;
+    color: white;
+}
+
+#QuestionDiv #Title {
+    font-size: 3em;
+    margin: 0px;
+}
+
+#AnswerDiv .correct {
+    color: green;
+}
+
+#AnswerDiv .wrong {
+    color: red;
+}
+
+#AnswerDiv {
+    position: relative;
+}
+
+#AnswerDiv #Result {
+    font-size: 2em;
+}
+
+#AnswerDiv #YourAnswers {
+    font-size: 1.2em;
+}
+
+#AnswerDiv #QuestionNumber {
+    font-size: 1.8em;
+}
+
+#AnswerDiv #Question {
+    font-size: 1.2em;
+}
+
+#AnswerDiv #Answer div p {
+    display: block;
+    width: available;
+    padding: 10px;
+    font-size: 1.1em;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e9eceb;
+}
+
+#AnswerDiv #Answer div .correct {
+    background-color: #cdf9c7;
+}
+
+#AnswerDiv #Answer div .wrong {
+    background-color: #f9d9d1;
+}
+
+#AnswerDiv #Title {
+    font-size: 3em;
+    margin: 0;
+}
+
+
+#QuestionDiv #Return {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#AnswerDiv #Return {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#Return {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #7d8ea9;
+    text-decoration: none;
+}
+

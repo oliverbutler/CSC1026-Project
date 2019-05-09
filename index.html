@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <title>Web Design</title>
     <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/global.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
 </head>
 <body>
     <header>
@@ -20,6 +16,7 @@
             <a href="html.html">HTML</a>
             <a href="css.html">CSS</a>
             <a href="js.html">JS</a>
+            <a href="quiz.html">Quiz</a>
         </nav>
         <nav id="sideNav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -27,11 +24,11 @@
             <a href="#Aims">Aims</a>
             <a href="#ModuleInfo">Module Information</a>
         </nav>
-        <a onclick="openNav()" id="sideNavButton"><i class="fas fa-chevron-circle-right"></i></a>
-        <button onclick="topFunction()" id="floatingButton"><i class="fas fa-chevron-circle-up"></i></button>
+        <a onclick="openNav()" id="sideNavButton"><img src="images/right.svg"></a>
+        <a onclick="topFunction()" id="floatingButton"><img src="images/up.svg"></a>
     </header>
 
-    <section class="Header" id="Home" onclick="closeNav()">
+    <section class="Header" onclick="closeNav()">
         <p class="Heading">Web Design</p>
         <p class="SubHeading">&lt;<a href="html.html">HTML</a> & <a href="css.html">CSS</a>&gt;</p>
     </section>
@@ -143,5 +140,7 @@
             <p>Website developed by Oliver Butler</p>
         </div>
     </footer>
+    <script src="JS/syntax.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

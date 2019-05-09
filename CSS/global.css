@@ -1,0 +1,493 @@
+/*==================| Colors |================*/
+:root {
+    --black: #0E0B16;
+    --slate: #272729;
+    --purple: #A239CA;
+    --blue: #4717F6;
+    --white: #f4f7f6;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.purple {
+    color: var(--purple);
+}
+
+/*==================| Main Page Layout |================*/
+
+html {
+    /*scroll-behavior: smooth;*/
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    font-family: "apercu", sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1.1em;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+
+}
+
+section {
+    padding: 0px 8px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+p {
+    padding: 0px 15px 0px 15px;
+}
+
+/*==================| Responsive Fit |================*/
+
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.col-2-fit {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+@Media (max-width: 800px) {
+    .col-2 {
+        grid-template-columns: 1fr;
+    }
+    .col-2-fit {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/*==================| Main Section Content |================*/
+
+#main {
+    max-width: 1500px;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.Header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: var(--white);
+    padding-bottom: 20px;
+}
+
+.Header .Heading {
+    font-weight: bolder;
+    font-size: 20vmin;
+    text-align: center;
+    margin: 0px;
+    line-height: 0.9;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+.Header .SubHeading {
+    font-style: italic;
+    font-size: 6vmin;
+    margin: 0px;
+    text-align: center;
+    color: rgba(244, 247, 246, 0.5);
+}
+
+.Header a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: rgba(244, 247, 246, 0.5);
+
+}
+
+.Introduction {
+    text-align: center;
+}
+.Header a:hover {
+    color: var(--white);
+}
+
+.black-bg {
+    background-color: #e9eceb;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#main > section {
+    margin: 15px;
+}
+
+.divider {
+    background-color: #3b5260;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    color: var(--white);
+}
+
+.divider h1 {
+    margin: 0px;
+}
+
+.divider h2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.black-bg h2{
+    padding-left: 15px;
+}
+
+.black-bg img {
+    width: 92%;
+}
+
+.fit-width {
+    width: fit-content;
+}
+
+.fit-height {
+    height: fit-content;
+}
+
+.fit-both {
+    width: fit-content;
+    height: fit-content;
+}
+
+.list > li{
+    padding-bottom: 5px;
+}
+
+.credit {
+    font-size: 13px;
+    text-align: center;
+}
+
+figure {
+    padding: 0px;
+    margin: 0px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/*==================| Span formatting |================*/
+
+.bigText {
+    font-size: 1.4em;
+}
+
+.smallText {
+    font-size: 0.6em;
+}
+
+/*==================| Boring-ify headings |================*/
+
+.boringTags, .boringTags h1, .boringTags h2, .boringTags h2,
+.boringTags h3, .boringTags h4, .boringTags h5,
+.boringTags h6 {
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+}
+
+/*==================| Tables |================*/
+#main .content {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+#main .content th{
+    font-weight: normal;
+    padding: 10px;
+    text-align: left;
+    background-color: #626671;
+    color: white;
+}
+
+#main .content td {
+    border: 1px solid #999999;
+    padding: 5px;
+}
+
+#main .content tr:nth-child(even) {
+    background-color: #e9eceb;;
+}
+
+/*==================| Images |================*/
+
+@Media (max-width: 1000px) {
+    .wideImg {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .medImg {
+        width: 100%;
+    }
+}
+
+.smallImage {
+    width: 100px;
+}
+
+/*==================| Floating Buttons |================*/
+
+#floatingButton{
+    display: none;
+    border: none;
+    outline: none;
+    background: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-size: 2em;
+    color: var(--black);
+    transition: 0.3s;
+}
+
+#floatingButton:hover {
+    color: var(--blue);
+}
+
+#floatingButton img {
+    height: 30px;
+    width: 30px;
+}
+
+#sideNavButton {
+    position: fixed;
+    top: calc(50%);
+    transition: 0.3s;
+}
+
+#sideNavButton:hover {
+    color: var(--blue);
+}
+
+#sideNavButton img {
+    height: 30px;
+    width: 30px;
+}
+/*==================| Top Navigation Bar |================*/
+
+#topNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--black);
+}
+
+#topNav a {
+    float: left;
+    display: block;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#topNav #logo {
+    position: absolute;
+    height: 35px;
+    top: 7px;
+    left: 8px;
+}
+
+#topNav #logoletter {
+    color: var(--black);
+}
+
+#topNav a:hover {
+    background-color: var(--blue);
+}
+
+#topNav .selected {
+    background-color: var(--slate);
+}
+
+#topNav .dropdown {
+    float: left;
+    overflow: hidden;
+    height: 46px;
+}
+
+#topNav .dropdown .dropdown-button {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+
+#topNav .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--black);
+    top: 46px;
+}
+
+#topNav .dropdown-content a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 10px 10px;
+}
+
+#topNav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*=============| Side Navigation Bar |===============*/
+
+#sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+#sideNav a {
+    padding: 8px 8px 8px 30px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--white);
+    display: block;
+    transition: 0.3s;
+}
+
+#sideNav a:hover {
+    color: var(--blue);
+}
+
+#sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*=====================| Code Display |==================*/
+
+pre {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    margin-bottom: 5px;
+    border-left: 4px solid var(--purple);
+    font-size: 1.1em;
+    background: #2d2d2d;
+    color: var(--white);
+    white-space: pre;
+    overflow: auto;
+    font-family: monospace;
+}
+
+code{
+    background-color: #f1f1f1;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 110%;
+    color: var(--purple);
+}
+
+.code-str {
+    color: lightskyblue;
+}
+
+.code-elem {
+    color: mediumpurple;
+}
+
+/*====================| Warnings |================*/
+
+.warn {
+    width: fit-content;
+    padding: 1px 5px 1px 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-left: 4px solid yellow;
+    word-wrap: break-word;
+    background: #fffdcd;
+    color: var(--black);
+}
+
+.note {
+    width: fit-content;
+    padding: 1px 5px 1px 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-left: 4px solid #20ff1f;
+    word-wrap: break-word;
+    background: #d5ffd7;
+    color: var(--black);
+}
+
+/*==================| Footer |================*/
+
+footer {
+    background-color: var(--black);
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin-bottom: -210px;
+    bottom: 0;
+}
+
+footer ul {
+    padding: 15px;
+}
+
+footer li {
+    padding: 1px;
+}
+
+footer a {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--blue);
+}
+
+footer p {
+    color: var(--white);
+    float: right;
+}
+

@@ -1,0 +1,134 @@
+
+.Header {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#CSSEssentials #red-text {
+    font-family: Arial, serif;
+    color: red;
+}
+
+#CSSEssentials #blue-example {
+    background-color: blue;
+    color: white;
+    width: 300px;
+}
+
+#CSSEssentials img:first-child {
+    width: 700px;
+}
+
+#CSSEssentials img:last-child {
+    width: 600px;
+}
+
+#CSSEssentials #first-letter-test:first-letter {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#CSSEssentials #mouseOver:hover {
+    color:blue;
+}
+
+/*==================| Sections |================*/
+
+#CSSBoxModel .PaddingExample {
+    border: 20px solid green;
+    width: fit-content;
+    padding: 5px 20px;
+    position: relative;
+    background-color: darkgrey;
+}
+
+#CSSBoxModel .PaddingExample p:nth-child(1) {
+    border: 1px dashed black;
+    background-color: white;
+}
+
+#CSSBoxModel .PaddingExample p:nth-child(2) {
+    position: absolute;
+    top: -14px;
+    left: 90px;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+#CSSBoxModel .MarginExample {
+    border: 20px solid lightskyblue;
+    width: fit-content;
+    position: relative;
+}
+
+#CSSBoxModel .MarginExample > p {
+    font-style: italic;
+    font-size: 0.9em;
+    top: -35px;
+    left: 110px;
+    position: absolute;
+}
+
+#CSSBoxModel .PaddingExample:nth-child(3) {
+    border: 20px solid green;
+    width: 150px;
+    padding: 5px 20px;
+    position: relative;
+    background-color: darkgrey;
+}
+
+#CSSBoxModel #background-image {
+    background-image: url(/images/CSS/nyan.png);
+    background-size: 150px;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+#CSSBoxModel #background-image-repeat {
+    background-image: url(/images/CSS/nyan.png), url(/images/CSS/nyanbackground.jpg);
+    background-size: 150px, cover;
+    background-position: center right, center;
+    background-repeat: repeat, no-repeat;
+}
+
+#CSSBoxModel .overflowExample {
+    border: 10px solid green;
+    width: 400px;
+    height: 100px;
+}
+
+#CSSBoxModel .hidden  {
+    overflow: hidden;
+}
+
+#CSSBoxModel .scroll {
+    overflow: scroll;
+}
+
+
+#CSSBoxModel .displayTable {
+    border: 20px solid lightskyblue;
+    width: 400px;
+    padding: 5px 20px;
+    position: relative;
+    background-color: lightgrey;
+}
+
+#CSSBoxModel .displayTable p {
+    display: inline;
+}
+
+
+#CSSBoxModel .displayTable .none {
+    display: none;
+}
+
+#CSSBoxModel .displayTable .hidden {
+    visibility: hidden;
+}
+
+#CSS3 #shadow {
+    text-shadow: 1px 3px 5px grey;
+    padding-left: 10px;
+    text-align: left;
+    color: rebeccapurple;
+}
