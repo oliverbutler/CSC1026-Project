@@ -277,31 +277,51 @@ let cssQuestions = [ //todo complete these questions
 
 let jsQuestions = [
     {
-        question: "JS ?",
+        question: "What is the purpose of JavaScript",
         answers: {
-            a: "Hyper Tech Markup Language",
-            b: "Hyper Text Markup Language",
-            c: "Hyperlinks and Text Markup Language"
+            a: "Change the behavior of the website",
+            b: "Layout and design of the website",
+            c: "The content of a website"
+        },
+        correct: "a"
+    },
+    {
+        question: "How would you hide an image with id='Kitten'?",
+        answers: {
+            a: "document.getElementByQuery('kitten').style.display = 'none';",
+            b: "html.getElementById('kitten').style.display = 'none';",
+            c: "document.getElementById('kitten').style.display = 'none';",
+            d: "document.getElementByClass('kitten').style.display = 'none';"
+        },
+        correct: "c"
+    },
+    {
+        question: "What is the issue with document.write()?",
+        answers: {
+            a: "It only takes strings",
+            b: "If it is re-run it will delete the current HTML",
+            c: "It is deprecated, so shouldn't be used on your site",
+            d: "It creates pop-up windows, which you don't need"
         },
         correct: "b"
     },
     {
-        question: "What ?",
+        question: "What would fruit[2] reference in var fruit = [\"Apple\", \"Orange\", \"Pear\"]?",
         answers: {
-            a: "World Website Web",
-            b: "Wide Website Web",
-            c: "World Wide Web"
+            a: "Apple",
+            b: "Orange",
+            c: "Pear",
+            d: "null"
         },
         correct: "c"
     },
     {
-        question: "Who ?",
+        question: "What will x in, x =  (10 < 10) ? \"A\" : \"B\" ?",
         answers: {
-            a: "Mark Zuccerberg",
-            b: "Tim Berners-Lee",
-            c: "Bill Gates",
-            d: "Neil Spiers"
+            a: "A",
+            b: "B",
+            c: "null"
         },
-        correct: "c"
+        correct: "b"
     }
 ];
