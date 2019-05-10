@@ -139,6 +139,10 @@ p {
     margin: 15px;
 }
 
+#main > div {
+    margin: 15px;
+}
+
 .divider {/*the dividers i have through the whole site*/
     background-color: #3b5260; /*contrasting colour*/
     margin: 10px; /*shape it*/
@@ -147,11 +151,13 @@ p {
     color: #f4f7f6;
 }
 
-.divider h1 {
+.divider h2 {
+    font-size: 2.5em;
+    text-align: center;
     margin: 0px;/*no margin, already dealt w. above*/
 }
 
-.divider h2 {
+.divider h3 {
     text-align: center;
     font-size: 20px;
 }

@@ -30,16 +30,16 @@
             <a href="#JSComparison">Comparisons</a>
 
         </nav>
-        <a onclick="openNav()" id="sideNavButton"><img src="CSS/images/right.svg"></a>
-        <a onclick="topFunction()" id="floatingButton"><img src="CSS/images/up.svg"></a>
+        <a onclick="openNav()" id="sideNavButton"><img src="CSS/images/right.svg" alt="rightImg"></a>
+        <a onclick="topFunction()" id="floatingButton"><img src="CSS/images/up.svg" alt="upImg"></a>
     </header>
 
-    <section class="Header">
+    <div class="Header">
         <p class="Heading">Java Script</p>
         <p class="SubHeading">&lt;Learn <a href="#">JavaScript</a>&gt; </p>
-    </section>
+    </div>
 
-    <section id="main" onclick="closeNav()">
+    <div id="main" onclick="closeNav()">
 
         <section class="Introduction">
             <h1>JavaScript</h1>
@@ -59,9 +59,9 @@
             </div>
         </section>
 
-        <section class="divider">
-            <h1>Changing content</h1>
-        </section>
+        <div class="divider">
+            <h2>Changing content</h2>
+        </div>
 
         <section id="ChangingContent">
             <div>
@@ -107,20 +107,20 @@ function exampleShow() {
                     <button class="run" onclick="exampleHide()">Hide</button>
                     <button class="run" onclick="exampleShow()">Show</button>
                 </div>
-                <img src="CSS/images/HTML/kitten.jpg" id="kitten" width="200px" alt="">
+                <img src="CSS/images/HTML/kitten.jpg" id="kitten" width="200" alt="">
             </div>
         </section>
 
-        <section class="divider">
-            <h1>Running functions</h1>
-        </section>
+        <div class="divider">
+            <h2>Running functions</h2>
+        </div>
 
         <section id="RunningFunctions">
             <div>
                 <h2>Giving buttons function <code>onClick</code></h2>
                 <p>To give a button a function is a very simple process, once you have added your custom script to your
                     HTML file with <code>&lt;script src="example.js"&gt;&lt;/script&gt;</code> in either the <code>&lt;head&gt;</code>
-                    or the <code>&lt;body&gt</code>, all you need to do is add <code>onClick=""</code>.</p>
+                    or the <code>&lt;body&gt;</code>, all you need to do is add <code>onClick=""</code>.</p>
                 <p>The example below shows how the buttons in the section above were generated.</p>
                 <pre class="code-html">
 &lt;button onclick="exampleHide()"&gt;Hide&lt;/button&gt;
@@ -143,9 +143,9 @@ window.document.onload = function();
             </div>
         </section>
 
-        <section class="divider">
-            <h1>JavaScript File</h1>
-        </section>
+        <div class="divider">
+            <h2>JavaScript File</h2>
+        </div>
 
         <section id="JSFile">
             <div>
@@ -190,9 +190,9 @@ function function() {
             </div>
         </section>
 
-        <section class="divider">
-            <h1>JavaScript Outputs</h1>
-        </section>
+        <div class="divider">
+            <h2>JavaScript Outputs</h2>
+        </div>
 
         <section id="JSOutputs">
             <div>
@@ -225,9 +225,9 @@ function function() {
             </div>
         </section>
 
-        <section class="divider">
-            <h1>JavaScriptSyntax</h1>
-        </section>
+        <div class="divider">
+            <h2>JavaScriptSyntax</h2>
+        </div>
 
         <section id="JavaScriptSyntax">
             <div>
@@ -290,9 +290,9 @@ z = y + x; //set z to y + x (21 + 9)
             </div>
         </section>
 
-        <section class="divider">
-            <h1>JavaScript Data Types</h1>
-        </section>
+        <div class="divider">
+            <h2>JavaScript Data Types</h2>
+        </div>
 
         <section id="JSDataTypes">
             <div>
@@ -333,9 +333,9 @@ var student = {firstName: "Bob", lastName: "Foster", age: 19};
             </div>
         </section>
 
-        <section class="divider">
-            <h1>JavaScript Comparison</h1>
-        </section>
+        <div class="divider">
+            <h2>JavaScript Comparison</h2>
+        </div>
 
         <section id="JSComparison">
             <div>
@@ -343,19 +343,19 @@ var student = {firstName: "Bob", lastName: "Foster", age: 19};
                 <p>The if statements in JavaScript are very similar to that of Java, but there is a notable difference with the comparison
                 operators.</p>
                 <pre class="code-js">
-if(size < 180 ) small = true;
+if(size &lt; 180 ) small = true;
                 </pre>
             </div>
             <div>
                 <h2>Conditional Operator</h2>
                 <p>Assigns value to variable based on some condition</p>
                 <pre class="code-js">
-var canDrink = (age < 18 ) ? "No":"Yes";
+var canDrink = (age &lt; 18 ) ? "No":"Yes";
                 </pre>
             </div>
         </section>
 
-    </section>
+    </div>
 
     <footer class="col-2" onclick="closeNav()">
         <div>

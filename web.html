@@ -26,16 +26,16 @@
             <a href="#WebArchitechture">Web Architecture</a>
             <a href="#History">History</a>
         </nav>
-        <a onclick="openNav()" id="sideNavButton"><img src="CSS/images/right.svg"></a>
-        <a onclick="topFunction()" id="floatingButton"><img src="CSS/images/up.svg"></a>
+        <a onclick="openNav()" id="sideNavButton"><img src="CSS/images/right.svg" alt="rightImg"></a>
+        <a onclick="topFunction()" id="floatingButton"><img src="CSS/images/up.svg" alt="upImg"></a>
     </header>
 
-    <section class="Header" onclick="closeNav()">
+    <div class="Header" onclick="closeNav()">
         <p class="Heading">The Web</p>
         <p class="SubHeading">&lt;Behind the World Wide Web&gt; </p>
-    </section>
+    </div>
 
-    <section id="main" onclick="closeNav()">
+    <div id="main" onclick="closeNav()">
 
         <section class="Introduction">
             <h1>What is the Web?</h1>
@@ -52,7 +52,6 @@
                             <li>Based on common standards - notably the TCP/IP protocol suite.</li>
                         </ul>
                     </li>
-                    <br>
                     <li><b>Protocols</b> specify how the transactions are carried out
                         <ul>
                             <li>They say how communication is initiated and maintained.</li>
@@ -60,7 +59,6 @@
                             <li>Enable the services running over the internet.</li>
                         </ul>
                     </li>
-                    <br>
                     <li>Software clients (and servers) allow users and devices to access and use internet services
                         <ul>
                             <li>Using centralised servers or P2P (Peer-2-Peer) systems.</li>
@@ -70,9 +68,9 @@
             </div>
         </section>
 
-        <section class="divider">
-            <h1>Web Clients</h1>
-        </section>
+        <div class="divider">
+            <h2>Web Clients</h2>
+        </div>
 
         <section id="WebClients">
             <div class="col-2">
@@ -121,9 +119,9 @@
             </div>
         </section>
 
-        <section class="divider">
-            <h1>Web Servers</h1>
-        </section>
+        <div class="divider">
+            <h2>Web Servers</h2>
+        </div>
 
         <section id="WebServers">
             <div class="col-2">
@@ -140,7 +138,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <img src="https://news.netcraft.com/wp-content/uploads/2018/01/wpid-wss-share1.png" alt="graph" width="500px">
+                    <img src="https://news.netcraft.com/wp-content/uploads/2018/01/wpid-wss-share1.png" alt="graph" width="500">
                     <p class="credit">Image from <a href="https://news.netcraft.com/archives/2018/02/13/february-2018-web-server-survey.html"> Netcraft</a></p>
                 </div>
                 <div>
@@ -156,10 +154,10 @@
             </div>
         </section>
 
-        <section class="divider">
-            <h1>Web architechture</h1>
-            <h2>HTTP, URIs and URLs</h2>
-        </section>
+        <div class="divider">
+            <h2>Web architechture</h2>
+            <h3>HTTP, URIs and URLs</h3>
+        </div>
 
         <section id="WebArchitechture">
             <div>
@@ -188,9 +186,9 @@
             </div>
         </section>
 
-        <section class="divider">
-            <h1>History</h1>
-        </section>
+        <div class="divider">
+            <h2>History</h2>
+        </div>
 
         <section id="History">
             <div class="timeline">
@@ -310,7 +308,7 @@
             </div>
         </section>
 
-    </section>
+    </div>
 
     <footer class="col-2" onclick="closeNav()">
         <div>
