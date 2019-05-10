@@ -1,10 +1,14 @@
 /*==================| Colors |================*/
-:root {
-    --black: #0E0B16;
-    --slate: #272729;
-    --purple: #A239CA;
-    --blue: #4717F6;
-    --white: #f4f7f6;
+.slate {
+    color: #272729;
+}
+
+.white {
+    color: #f4f7f6;
+}
+
+.black {
+    color: #0E0B16;
 }
 
 .blue {
@@ -20,23 +24,22 @@
 html {
     /*scroll-behavior: smooth;*/
     overflow-x: hidden;
-    max-width: 100%;
-    transition: 0.5s;
+    max-width: 100%; /*No horiz scroll*/
+    transition: 0.5s;/*animation time 0.5s*/
 }
 
 body {
-    font-family: "apercu", sans-serif;
-    background-color: #f4f7f6;
+    font-family: "apercu", sans-serif;/*set font*/
+    background-color: #f4f7f6;/*slightly off white background*/
     color: #0E0B16;
     font-size: 1.1em;
     margin: 0;
     min-height: 100%;
-    position: relative;
-
+    position: relative;/*For the absolute elements to attatch to*/
 }
 
 section {
-    padding: 0px 8px;
+    padding: 0px 8px;/*normalise the sections*/
 }
 
 h1 {
@@ -50,18 +53,25 @@ p {
 
 /*==================| Responsive Fit |================*/
 
-.col-2 {
+.col-2 { /*anything tagged .col-2 will split 50/50 on the page,*/
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /*as 1fr 1fr means 2 equal fractions*/
 }
-.col-2-fit {
+.col-2-fit { /*same thing, but squishes in the left one, used for code samples*/
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr;/*as its 1/6 && 5/6*/
 }
-
-@Media (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .col-2 {
+        grid-template-columns: 1fr; /*only do 1 column*/
+    }
+    .col-2-fit {
         grid-template-columns: 1fr;
+    }
+}
+@Media (max-width: 800px) { /*when screen is smaller*/
+    .col-2 {
+        grid-template-columns: 1fr; /*only do 1 column*/
     }
     .col-2-fit {
         grid-template-columns: 1fr;
@@ -72,22 +82,22 @@ p {
 /*==================| Main Section Content |================*/
 
 #main {
-    max-width: 1500px;
+    max-width: 1500px;  /*for really big screens, lets the content be just in the middle*/
     margin: auto;
-    padding-bottom: 15px;
+    padding-bottom: 15px; /*padding for the footer*/
 }
 
 .Header {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
+    background-repeat: no-repeat;/*dont repeat it*/
+    background-position: center;/*center the header bckground*/
+    background-size: 100%;/*make sure its the full width*/
     color: #f4f7f6;
     padding-bottom: 20px;
 }
 
 .Header .Heading {
-    font-weight: bolder;
-    font-size: 20vmin;
+    font-weight: bolder;/*make the weight bold*/
+    font-size: 20vmin;/*vmin means it will scale based on screen height*/
     text-align: center;
     margin: 0px;
     line-height: 0.9;
@@ -97,11 +107,11 @@ p {
 }
 
 .Header .SubHeading {
-    font-style: italic;
+    font-style: italic;/*italics*/
     font-size: 6vmin;
     margin: 0px;
     text-align: center;
-    color: rgba(244, 247, 246, 0.5);
+    color: rgba(244, 247, 246, 0.5);/*extra value is transparency*/
 }
 
 .Header a {
@@ -115,11 +125,11 @@ p {
     text-align: center;
 }
 .Header a:hover {
-    color: #f4f7f6;
+    color: #f4f7f6;/*when you hover over the subtitle, it is highlighted*/
 }
 
 .black-bg {
-    background-color: #e9eceb;
+    background-color: #e9eceb;/*anything i put in this class is given a pleasing contrast-y background*/
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -129,16 +139,16 @@ p {
     margin: 15px;
 }
 
-.divider {
-    background-color: #3b5260;
-    margin: 10px;
-    border-radius: 15px;
+.divider {/*the dividers i have through the whole site*/
+    background-color: #3b5260; /*contrasting colour*/
+    margin: 10px; /*shape it*/
+    border-radius: 15px;/*round it*/
     padding: 10px;
     color: #f4f7f6;
 }
 
 .divider h1 {
-    margin: 0px;
+    margin: 0px;/*no margin, already dealt w. above*/
 }
 
 .divider h2 {
@@ -178,7 +188,7 @@ p {
 
 figure {
     padding: 0px;
-    margin: 0px;
+    margin: 0px;/*for the image captions*/
 }
 
 figcaption {
@@ -189,7 +199,7 @@ figcaption {
 /*==================| Span formatting |================*/
 
 .bigText {
-    font-size: 1.4em;
+    font-size: 1.4em;/*presets, for when i need them*/
 }
 
 .smallText {
@@ -200,14 +210,14 @@ figcaption {
 
 .boringTags, .boringTags h1, .boringTags h2, .boringTags h2,
 .boringTags h3, .boringTags h4, .boringTags h5,
-.boringTags h6 {
+.boringTags h6 {/*for the HTML section, i had to boring-ify the H tags*/
     padding: 0px;
     text-align: center;
     margin: 0px;
 }
 
 /*==================| Tables |================*/
-#main .content {
+#main .content {/*Make the table have space*/
     border-collapse: collapse;
     margin: 10px;
 }
@@ -215,31 +225,31 @@ figcaption {
 #main .content th{
     font-weight: normal;
     padding: 10px;
-    text-align: left;
+    text-align: left; /*make the table headings different from the rest*/
     background-color: #626671;
     color: white;
 }
 
 #main .content td {
-    border: 1px solid #999999;
+    border: 1px solid #999999;/*grey backgorund*/
     padding: 5px;
 }
 
 #main .content tr:nth-child(even) {
-    background-color: #e9eceb;;
+    background-color: #e9eceb; /*every even row is different colour*/
 }
 
 /*==================| Images |================*/
 
 @Media (max-width: 1000px) {
     .wideImg {
-        width: 100%;
+        width: 100%;/*scale images based on their size responsively*/
     }
 }
 
 @media (max-width: 600px) {
     .medImg {
-        width: 100%;
+        width: 100%;/*scale images for med sizd*/
     }
 }
 
@@ -249,16 +259,16 @@ figcaption {
 
 /*==================| Floating Buttons |================*/
 
-#floatingButton{
+#floatingButton{ /*hide by default*/
     display: none;
-    border: none;
+    border: none;/*no normal button attributes like border*/
     outline: none;
     background: none;
     position: fixed;
     bottom: 15px;
-    right: 15px;
-    font-size: 2em;
-    color: #0E0B16;
+    right: 15px;/*position in the bottom right*/
+    font-size: 2em; /*its size*/
+    color: #0E0B16; /*match the other off blacks of the site*/
     transition: 0.3s;
 }
 
@@ -272,13 +282,13 @@ figcaption {
 }
 
 #sideNavButton {
-    position: fixed;
-    top: calc(50%);
+    position: fixed; /*side button wont move*/
+    top: calc(50%);/*50% down from the top*/
     transition: 0.3s;
 }
 
 #sideNavButton:hover {
-    color: #4717F6;
+    color: #4717F6;/*go blue when you hover ovr it*/
 }
 
 #sideNavButton img {
@@ -288,34 +298,34 @@ figcaption {
 /*==================| Top Navigation Bar |================*/
 
 #topNav {
-    list-style-type: none;
+    list-style-type: none; /*top nav make horizontal layout*/
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #0E0B16;
+    background-color: #0E0B16;/*off black background*/
 }
 
 #topNav a {
     float: left;
-    display: block;
-    color: #f4f7f6;
-    font-weight: bold;
+    display: block;/*layout horizontally*/
+    color: #f4f7f6;/*white text*/
+    font-weight: bold;/*make these bold*/
     font-size: 1rem;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: none;/*give the links no text decoration*/
     transition: 0.3s;
 }
 
 #topNav #logo {
-    position: absolute;
+    position: absolute;/*Position the logo above an empty element*/
     height: 35px;
     top: 7px;
     left: 8px;
 }
 
 #topNav #logoletter {
-    color: #0E0B16;
+    color: #0E0B16; /*position logo above this letter, make it background black so you cant see it*/
 }
 
 #topNav a:hover {
@@ -326,47 +336,12 @@ figcaption {
     background-color: #272729;
 }
 
-#topNav .dropdown {
-    float: left;
-    overflow: hidden;
-    height: 46px;
-}
-
-#topNav .dropdown .dropdown-button {
-    border: none;
-    outline: none;
-    font-family: inherit;
-    background-color: #0E0B16;
-    margin: 0;
-    padding: 0;
-}
-
-#topNav .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    background-color: #0E0B16;
-    top: 46px;
-}
-
-#topNav .dropdown-content a {
-    float: none;
-    display: block;
-    text-align: left;
-    font-size: 0.8rem;
-    padding: 10px 10px;
-}
-
-#topNav .dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /*=============| Side Navigation Bar |===============*/
 
 #sideNav {
-    height: 100%;
-    width: 0;
-    position: fixed;
+    height: 100%; /*full height of the screen*/
+    width: 0; /*default width is 0*/
+    position: fixed; /*fixed position*/
     z-index: 1;
     top: 0;
     left: 0;
@@ -377,11 +352,11 @@ figcaption {
 }
 
 #sideNav a {
-    padding: 8px 8px 8px 30px;
-    text-decoration: none;
-    font-size: 15px;
+    padding: 8px 8px 8px 30px; /*padding for side nav links*/
+    text-decoration: none;/*not link decoration*/
+    font-size: 15px;/*font size for them*/
     color: #f4f7f6;
-    display: block;
+    display: block;/*block so they */
     transition: 0.3s;
 }
 
@@ -399,19 +374,19 @@ figcaption {
 
 /*=====================| Code Display |==================*/
 
-pre {
+pre {/*code boxes, in preformatted containers*/
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
     margin-bottom: 5px;
-    border-left: 4px solid #A239CA;
+    border-left: 4px solid #A239CA; /*purple border*/
     font-size: 1.1em;
     background: #2d2d2d;
     color: #f4f7f6;
     white-space: pre;
-    overflow: auto;
+    overflow: auto;/*scrolls when screen shrinks*/
     font-family: monospace;
 }
 
@@ -423,12 +398,24 @@ code{
     color: #A239CA;
 }
 
-.code-str {
-    color: lightskyblue;
+.code-blue {
+    color: lightskyblue;/*colours for syntax highlighter*/
 }
 
-.code-elem {
+.code-purple {
     color: mediumpurple;
+}
+
+.code-yellow {
+    color: yellow;
+}
+
+.code-green {
+    color: #85ff6e;
+}
+
+.code-orange {
+    color: orange;
 }
 
 .code-html {
@@ -444,7 +431,7 @@ code{
 }
 
 .run {
-    background-color: #d7dad9;
+    background-color: #d7dad9;/*run buttons for JS code*/
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -454,14 +441,14 @@ code{
 }
 
 .run:hover {
-    background-color: #a7aaa9;
+    background-color: #a7aaa9;/*get bigger when you hover over them*/
     color: white;
     font-size: 1.1em;
 }
 
 /*====================| Warnings |================*/
 
-.warn {
+.warn {/*warning box*/
     width: fit-content;
     padding: 1px 5px 1px 5px;
     margin-left: 10px;
@@ -472,7 +459,7 @@ code{
     color: #0E0B16;
 }
 
-.note {
+.note {/*note box*/
     width: fit-content;
     padding: 1px 5px 1px 5px;
     margin-left: 10px;
@@ -486,11 +473,11 @@ code{
 /*==================| Footer |================*/
 
 footer {
-    background-color: #0E0B16;
-    position: absolute;
-    width: 100%;
+    background-color: #0E0B16;/*footer is black*/
+    position: absolute;/*and absolute */
+    width: 100%;/*full page width*/
     height: auto;
-    margin-bottom: -210px;
+    margin-bottom: -210px;/*attach to bottom correctly*/
     bottom: 0;
 }
 

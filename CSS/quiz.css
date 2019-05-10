@@ -1,5 +1,5 @@
 .Header {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("https://images.pexels.com/photos/53209/newspaper-news-media-spectacles-53209.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("images/Quiz/header.jpeg");
 }
 
 #SelectQuiz {
@@ -78,7 +78,7 @@
     width: 20px;
 }
 
-#QuestionDiv #Next {
+#QuestionDiv button {
     width: 80px;
     height: 60px;
     font-size: 1.1em;
@@ -90,7 +90,7 @@
     background-color: #d7dad9;
 }
 
-#QuestionDiv #Next:hover {
+#QuestionDiv button:hover {
     font-size: 1.3em;
     transition: 0.1s;
     background-color: darkgray;
@@ -176,5 +176,9 @@
     color: white;
     background-color: #7d8ea9;
     text-decoration: none;
+}
+
+#Return:hover {
+    background-color: #65758f;
 }
 

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Design</title>
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="CSS/images/logo.png">
     <link rel="stylesheet" type="text/css" href="CSS/global.css">
     <link rel="stylesheet" type="text/css" href="CSS/css.css">
 </head>
 <body>
     <header>
         <nav id="topNav">
-            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
+            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="CSS/images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
             <a href="index.html">Home</a>
             <a href="web.html">Web</a>
             <a href="html.html">HTML</a>
@@ -29,8 +29,8 @@
             <a href="#StandardsAndValidation">Standards and Validation</a>
             <a href="#CSS3">CSS3</a>
         </nav>
-        <a onclick="openNav()" id="sideNavButton"><img src="images/right.svg"></a>
-        <a onclick="topFunction()" id="floatingButton"><img src="images/up.svg"></a>
+        <a onclick="openNav()" id="sideNavButton"><img src="CSS/images/right.svg"></a>
+        <a onclick="topFunction()" id="floatingButton"><img src="CSS/images/up.svg"></a>
     </header>
 
     <section class="Header">
@@ -52,7 +52,7 @@
                 <h2>A Simple CSS Stylesheet</h2>
                 <div class="col-2-fit">
                     <div>
-                         <pre>
+                         <pre class="code-css">
 body {
     margin: 0px;
     font-family: "apercu", sans-serif;
@@ -160,7 +160,7 @@ p {
 &lt;/p&gt;
                 </pre>
                 <p id="blue-example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores aspernatur beatae consectetur delectus dolor dolorem earum eligendi inventore nobis obcaecati omnis optio possimus provident quo, recusandae reiciendis reprehenderit? Libero!</p>
-                <img src="images/CSS/basic-css.png" alt="">
+                <img src="CSS/images/CSS/basic-css.png" alt="">
             </div>
             <div>
                 <h2>Internal style sheet</h2>
@@ -448,7 +448,7 @@ h1.special {text-decoration: underline;}
                         </ul>
                     </li>
                 </ul>
-                <img src="images/CSS/colours.png" alt="">
+                <img src="CSS/images/CSS/colours.png" alt="">
             </div>
             <div>
                 <h2>Pseudo elements</h2>
@@ -857,7 +857,7 @@ background-repeat: repeat, no-repeat;
                     <li>Once content is viewed as "just boxes", CSS positioning and layout simply involves moving, placing or rearranging them</li>
                 </ul>
                 <figure>
-                    <img src="images/CSS/positioning.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/positioning.png" alt="" class="wideImg">
                     <figcaption>Image from CSC1026 Booklet</figcaption>
                 </figure>
             </div>
@@ -888,7 +888,7 @@ background-repeat: repeat, no-repeat;
 &lt;/html&gt;
                 </pre>
                 <figure>
-                    <img src="images/CSS/unordered.png" alt="">
+                    <img src="CSS/images/CSS/unordered.png" alt="">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
 
@@ -906,7 +906,7 @@ background-repeat: repeat, no-repeat;
                     </li>
                 </ul>
                 <figure>
-                    <img src="images/CSS/ordered.png" alt="">
+                    <img src="CSS/images/CSS/ordered.png" alt="">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -914,14 +914,14 @@ background-repeat: repeat, no-repeat;
                 <h2>Floats</h2>
                 <p>Potentially very neat way to position content, <b>but</b> avoid this important misconception...</p>
                 <figure>
-                    <img src="images/CSS/floats.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/floats.png" alt="" class="wideImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
             <div>
                 <h2>Floats: What really happens</h2>
                 <figure>
-                    <img src="images/CSS/floats-really.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/floats-really.png" alt="" class="wideImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -932,7 +932,7 @@ background-repeat: repeat, no-repeat;
                     <li>Values <code>left</code>, <code>right</code> or <code>both</code> determine which side of the box should be "clear" of any floated elements</li>
                 </ul>
                 <figure>
-                    <img src="images/CSS/float-clear.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/float-clear.png" alt="" class="wideImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -940,7 +940,7 @@ background-repeat: repeat, no-repeat;
                 <h2>Columns</h2>
                 <p>CSS columns are (relatively) easy with floats</p>
                 <figure>
-                    <img src="images/CSS/float-columns.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/float-columns.png" alt="" class="wideImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -948,7 +948,7 @@ background-repeat: repeat, no-repeat;
                 <h2>Floats and columns</h2>
                 <p>The non-floated boxes can be turned into columns using <code>margin</code> or <code>padding</code></p>
                 <figure>
-                    <img src="images/CSS/float-columns2.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/float-columns2.png" alt="" class="wideImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
                 <p class="credit">From the booklet</p>
@@ -999,7 +999,7 @@ background-repeat: repeat, no-repeat;
                     <li>Following HTML retains original position</li>
                 </ul>
                 <figure>
-                    <img src="images/CSS/relative.png" alt="" class="medImg">
+                    <img src="CSS/images/CSS/relative.png" alt="" class="medImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -1024,7 +1024,7 @@ background-repeat: repeat, no-repeat;
                     <li>Following (X)HTML behaves as if positioned block never existed</li>
                 </ul>
                 <figure>
-                    <img src="images/CSS/absolute-pos.png" alt="" class="medImg">
+                    <img src="CSS/images/CSS/absolute-pos.png" alt="" class="medImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -1051,7 +1051,7 @@ background-repeat: repeat, no-repeat;
                         </pre>
                     </div>
                     <figure>
-                        <img src="images/CSS/absolute-parents1.png" alt="">
+                        <img src="CSS/images/CSS/absolute-parents1.png" alt="">
                         <figcaption>Image from 1026 booklet</figcaption>
                     </figure>
                 </div>
@@ -1072,7 +1072,7 @@ background-repeat: repeat, no-repeat;
                         </pre>
                     </div>
                     <figure>
-                        <img src="images/CSS/absolute-parents2.png" alt="">
+                        <img src="CSS/images/CSS/absolute-parents2.png" alt="">
                         <figcaption>Image from 1026 booklet</figcaption>
                     </figure>
                 </div>
@@ -1094,7 +1094,7 @@ background-repeat: repeat, no-repeat;
 }
                 </pre>
                 <figure>
-                    <img src="images/CSS/fixed.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/fixed.png" alt="" class="wideImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -1127,7 +1127,7 @@ background-repeat: repeat, no-repeat;
                     </li>
                 </ul>
                 <figure>
-                    <img src="images/CSS/resetStyle.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/resetStyle.png" alt="" class="wideImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -1187,10 +1187,10 @@ background-repeat: repeat, no-repeat;
                 <p>Specify inside style sheets using @media rules</p>
                 <pre class="code-css">
 @media print {
-    body {background-color: blue; color: white}
-    a {text-decoration: none; font-weight: normal; color: white;}
-    #navbar {display, none;}
-    h2 {page-break-before: always;}
+    body { background-color: blue; color: white}
+    a { text-decoration: none; font-weight: normal; color: white;}
+    #navbar { display, none;}
+    h2 { page-break-before: always;}
 }
                 </pre>
             </div>
@@ -1286,7 +1286,7 @@ background-repeat: repeat, no-repeat;
                     </pre>
                         <div>
                             <figure>
-                                <img src="images/CSS/corners-round.png" alt="">
+                                <img src="CSS/images/CSS/corners-round.png" alt="">
                                 <figcaption>Image from 1026 booklet</figcaption>
                             </figure>
                         </div>
@@ -1300,7 +1300,7 @@ background-repeat: repeat, no-repeat;
                     </pre>
                         <div>
                             <figure>
-                                <img src="images/CSS/corners-shadow.png" alt="">
+                                <img src="CSS/images/CSS/corners-shadow.png" alt="">
                                 <figcaption>Image from 1026 booklet</figcaption>
                             </figure>
                         </div>
@@ -1325,7 +1325,7 @@ background-repeat: no-repeat;
                         </pre>
                     </div>
                     <figure>
-                        <img src="images/CSS/background-multiple.png" alt="">
+                        <img src="CSS/images/CSS/background-multiple.png" alt="">
                         <figcaption>Image from 1026 booklet</figcaption>
                     </figure>
 
@@ -1340,7 +1340,7 @@ background-origin: padding-box|content-box|border-box;
                         </pre> 
                     </div>
                     <figure>
-                        <img src="images/CSS/background-origin.png" alt="">
+                        <img src="CSS/images/CSS/background-origin.png" alt="">
                         <figcaption>Image from 1026 booklet</figcaption>
                     </figure>
                 </div>
@@ -1390,7 +1390,7 @@ h1 {text-shadow: 1px 3px 5px gray; }
                         </pre>  
                     </div>
                     <figure>
-                        <img src="images/CSS/opacity-1.png" alt="">
+                        <img src="CSS/images/CSS/opacity-1.png" alt="">
                         <figcaption>Image from 1026 booklet</figcaption>
                     </figure>
                 </div>
@@ -1404,7 +1404,7 @@ h1 {text-shadow: 1px 3px 5px gray; }
                         </pre>
                     </div>
                     <figure>
-                        <img src="images/CSS/opacity-2.png" alt="">
+                        <img src="CSS/images/CSS/opacity-2.png" alt="">
                         <figcaption>Image from 1026 booklet</figcaption>
                     </figure>
                 </div>
@@ -1420,7 +1420,7 @@ h1 {text-shadow: 1px 3px 5px gray; }
                     <li>Uses better pseudo-element support in modern browsers</li>
                 </ul>
                 <figure>
-                    <img src="images/CSS/generatedContent.png" alt="" class="wideImg">
+                    <img src="CSS/images/CSS/generatedContent.png" alt="" class="wideImg">
                     <figcaption>Image from 1026 booklet</figcaption>
                 </figure>
             </div>
@@ -1449,10 +1449,9 @@ h1 {text-shadow: 1px 3px 5px gray; }
     <footer class="col-2" onclick="closeNav()">
         <div>
             <ul>
-                <li><a href="#">Links to shit</a></li>
-                <li><a href="#">Maybe uni</a></li>
-                <li><a href="#">Idk</a></li>
-                <li><a href="#">Something</a></li>
+                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                <li><a href="https://www.w3.org/">W3C</a></li>
+                <li><a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/">University</a></li>
             </ul>
         </div>
         <div>

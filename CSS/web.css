@@ -1,31 +1,27 @@
 
 .Header {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("https://images.pexels.com/photos/1624895/pexels-photo-1624895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("images/Web/header.jpeg");
 }
 
 /*==================| Timeline |================*/
 
-/* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    /*display: grid;*/
-    /*grid-template-columns: 1fr;*/
     width: 100%;
-    display: flex;
+    display: flex;/* make display flex for the middle*/
 }
 
-.timeline .vertLine {
+.timeline .vertLine { /*vertical line for timeline*/
     width: 15px;
     border-radius: 5px;
     background-color: lightslategray;
-    /*border: 2px solid gray;*/
 }
 
 .timeline > div {
     width: 100%;
 }
 
-.timeline > div > div {
+.timeline > div > div {/*timeline individual*/
     background-color: #e9eceb;
     margin: 5px 20px;
     padding: 15px;
@@ -45,9 +41,9 @@
 
 
 .timeline .left div::before{
-    content: '';
+    content: '';/*left timeline*/
     width: 30px;
-    height: 30px;
+    height: 30px;/*make blue dots*/
     border-radius: 30px;
     background-color: #4717F6;
     float: right;
@@ -55,7 +51,7 @@
     position: sticky;
 }
 
-.timeline .right div::before {
+.timeline .right div::before {/*add the blue dots*/
     content: '';
     width: 30px;
     height: 30px;
@@ -66,7 +62,7 @@
     position: sticky;
 }
 
-.timeline .left div:nth-child(even) {
+.timeline .left div:nth-child(even) {/*every EVEN elememt on the left hide, every ODD element on the right, hide*/
    visibility: hidden;
 }
 

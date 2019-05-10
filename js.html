@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Design</title>
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="CSS/images/logo.png">
     <link rel="stylesheet" type="text/css" href="CSS/global.css">
     <link rel="stylesheet" type="text/css" href="CSS/js.css">
 </head>
 <body>
     <header>
         <nav id="topNav">
-            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
+            <a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/"><img src="CSS/images/logo.png" id="logo" alt=""> <span id="logoletter">O</span></a>
             <a href="index.html">Home</a>
             <a href="web.html">Web</a>
             <a href="html.html">HTML</a>
@@ -20,11 +20,18 @@
         </nav>
         <nav id="sideNav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">JS 1</a>
-            <a href="#">JS 2</a>
+            <a href="#Intro">Introduction</a>
+            <a href="#ChangingContent">Change Content</a>
+            <a href="#RunningFunctions">Run Functions</a>
+            <a href="#JSFile">The JS File</a>
+            <a href="#JSOutputs">Outputs</a>
+            <a href="#JavaScriptSyntax">Syntax</a>
+            <a href="#JSDataTypes">Data Types</a>
+            <a href="#JSComparison">Comparisons</a>
+
         </nav>
-        <a onclick="openNav()" id="sideNavButton"><img src="images/right.svg"></a>
-        <a onclick="topFunction()" id="floatingButton"><img src="images/up.svg"></a>
+        <a onclick="openNav()" id="sideNavButton"><img src="CSS/images/right.svg"></a>
+        <a onclick="topFunction()" id="floatingButton"><img src="CSS/images/up.svg"></a>
     </header>
 
     <section class="Header">
@@ -100,7 +107,7 @@ function exampleShow() {
                     <button class="run" onclick="exampleHide()">Hide</button>
                     <button class="run" onclick="exampleShow()">Show</button>
                 </div>
-                <img src="images/HTML/kitten.jpg" id="kitten" width="200px" alt="">
+                <img src="CSS/images/HTML/kitten.jpg" id="kitten" width="200px" alt="">
             </div>
         </section>
 
@@ -219,12 +226,132 @@ function function() {
         </section>
 
         <section class="divider">
-            <h1>Syntax</h1>
+            <h1>JavaScriptSyntax</h1>
         </section>
 
-        <section id="Syntax">
+        <section id="JavaScriptSyntax">
             <div>
-                <h2>JavaScript Syntax</h2>
+                <h2>Variables</h2>
+                <p>You declare variables in JavaScript like so, with the term <code>var</code></p>
+                <pre class="code-js">
+var y, z; //initialize 2 variables
+var x = 21; //initialize x and set it to 21
+y = 9; //set y to 9
+z = y + x; //set z to y + x (21 + 9)
+                </pre>
+            </div>
+            <div>
+                <h2>Literals</h2>
+                <p>JavaScript numbers can be written with or without decimals e.g. <code>10.50, 1001</code>, Strings are text and are either in double or single quotes
+                e.g. <code>'Hello World' "Hello World"</code></p>
+            </div>
+            <div>
+                <h2>Operators</h2>
+                <p>JavaScript has the following operators, <code>+-*/%</code>, which can be used in any combination, and follow standard orders of mathematics</p>
+                <table class="content">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Addition</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Subtraction</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplication</td>
+                    </tr>
+                    <tr>
+                        <td>**</td>
+                        <td>Exponential (X^Y)</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Division</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Modulus</td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>Increment</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Decrement</td>
+                    </tr>
+                </table>
+                <p>JS also has <code>=</code>, which is the assignment operator, to assign values to variables</p>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>JavaScript Data Types</h1>
+        </section>
+
+        <section id="JSDataTypes">
+            <div>
+                <h2>Strings</h2>
+                <p>Can use double or single quote brackets</p>
+                <pre class="code-js">
+var variable1 = "Hello";
+var variable2 = 'Hello';
+                </pre>
+                <p>You can use quotes inside a string, as long as the outside quotes are a different type</p>
+                <pre class="code-js">
+var doubleQuotes = "Hello 'boo' ";
+                </pre>
+            </div>
+            <div>
+                <h2>Numbers</h2>
+                <p>Unlike Java, JavaScript has one type of number, it can be written with or without decimals
+                also you can use scientific notation for either small or big numbers</p>
+                <pre class="code-js">
+var number = 42;
+var number = 0.42;
+var number = 42e-2;
+                </pre>
+            </div>
+            <div>
+                <h2>Arrays</h2>
+                <p>You can make arrays very easily in JavaScript, the array below is accessible through <code>fruit[index]</code> </p>
+                <pre class="code-js">
+var fruit = ["Apple", "Orange", "Pear"]
+                </pre>
+            </div>
+            <div>
+                <h2>Objects</h2>
+                <p>An object in JavaScript has properties, and you can declare them as you wish e.g.</p>
+                <pre class="code-js">
+var student = {firstName: "Bob", lastName: "Foster", age: 19};
+                </pre>
+            </div>
+        </section>
+
+        <section class="divider">
+            <h1>JavaScript Comparison</h1>
+        </section>
+
+        <section id="JSComparison">
+            <div>
+                <h2>If</h2>
+                <p>The if statements in JavaScript are very similar to that of Java, but there is a notable difference with the comparison
+                operators.</p>
+                <pre class="code-js">
+if(size < 180 ) small = true;
+                </pre>
+            </div>
+            <div>
+                <h2>Conditional Operator</h2>
+                <p>Assigns value to variable based on some condition</p>
+                <pre class="code-js">
+var canDrink = (age < 18 ) ? "No":"Yes";
+                </pre>
             </div>
         </section>
 
@@ -233,10 +360,9 @@ function function() {
     <footer class="col-2" onclick="closeNav()">
         <div>
             <ul>
-                <li><a href="#">Links to shit</a></li>
-                <li><a href="#">Maybe uni</a></li>
-                <li><a href="#">Idk</a></li>
-                <li><a href="#">Something</a></li>
+                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                <li><a href="https://www.w3.org/">W3C</a></li>
+                <li><a href="https://www.ncl.ac.uk/undergraduate/modules/csc1026/">University</a></li>
             </ul>
         </div>
         <div>

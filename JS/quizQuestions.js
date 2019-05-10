@@ -215,32 +215,63 @@ let htmlQuestions = [
 
 let cssQuestions = [ //todo complete these questions
     {
-        question: "CSS ?",
+        question: "What does CSS stand for?",
         answers: {
-            a: "Hyper Tech Markup Language",
-            b: "Hyper Text Markup Language",
-            c: "Hyperlinks and Text Markup Language"
+            a: "Classic Style Sheets",
+            b: "Cascading Style Sheets",
+            c: "Cascading Stylised Sheets"
         },
         correct: "b"
     },
     {
-        question: "What ?",
+        question: "Which identifier can be only used once per page?",
         answers: {
-            a: "World Website Web",
-            b: "Wide Website Web",
-            c: "World Wide Web"
+            a: "Link",
+            b: "Class",
+            c: "Id"
         },
         correct: "c"
     },
     {
-        question: "Who ?",
+        question: "Which Identifier can be used more than once per page?",
         answers: {
-            a: "Mark Zuccerberg",
-            b: "Tim Berners-Lee",
-            c: "Bill Gates",
-            d: "Neil Spiers"
+            a: "Link",
+            b: "Class",
+            c: "Id"
         },
-        correct: "c"
+        correct: "b"
+    },
+    {
+        question: "Which of the below selectors has the highest specificity?",
+        answers: {
+            a: "#thisBox",
+            b: ".special",
+            c: "p",
+            d: "#thisBox > p",
+            e: "#thisBox p.special"
+        },
+        correct: "b"
+    },
+    {
+        question: "Which pseudo element affects when you mouseover a link?",
+        answers: {
+            a: "hover",
+            b: "link",
+            c: "overview",
+            d: "link",
+            e: "active"
+        },
+        correct: "a"
+    },
+    {
+        question: "Which of the below styling options hides the element, but still takes up the space?",
+        answers: {
+            a: "display: none",
+            b: "visibility: hidden",
+            c: "display: hidden",
+            d: "hidden: inline",
+        },
+        correct: "b"
     }
 ];
 

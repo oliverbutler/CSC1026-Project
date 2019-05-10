@@ -1,20 +1,20 @@
 
 .Header {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(1, 1, 40, 0.5) ), url("images/CSS/header.jpg");
+} /*Set the background img for the heading with a overlay slightly blue and grey*/
 
-#CSSEssentials #red-text {
+#CSSEssentials #red-text { /*example red text*/
     font-family: Arial, serif;
     color: red;
 }
 
-#CSSEssentials #blue-example {
+#CSSEssentials #blue-example {/*example blue text*/
     background-color: blue;
     color: white;
     width: 300px;
 }
 
-#CSSEssentials img:first-child {
+#CSSEssentials img:first-child {/*save some id's and ref first/last child*/
     width: 700px;
 }
 
@@ -33,8 +33,8 @@
 
 /*==================| Sections |================*/
 
-#CSSBoxModel .PaddingExample {
-    border: 20px solid green;
+#CSSBoxModel .PaddingExample { /*my padding and margin diagrams*/
+    border: 20px solid green;/*just give it a fake border*/
     width: fit-content;
     padding: 5px 20px;
     position: relative;
@@ -47,7 +47,7 @@
 }
 
 #CSSBoxModel .PaddingExample p:nth-child(2) {
-    position: absolute;
+    position: absolute; /*move margin and padding labels around*/
     top: -14px;
     left: 90px;
     font-style: italic;
@@ -55,7 +55,7 @@
 }
 
 #CSSBoxModel .MarginExample {
-    border: 20px solid lightskyblue;
+    border: 20px solid lightskyblue;/*margin example to demonstrate it*/
     width: fit-content;
     position: relative;
 }
@@ -76,15 +76,15 @@
     background-color: darkgrey;
 }
 
-#CSSBoxModel #background-image {
-    background-image: url(/images/CSS/nyan.png);
+#CSSBoxModel #background-image {/*eg background image no repeat*/
+    background-image: url(images/CSS/nyan.png);
     background-size: 150px;
     background-position: center right;
     background-repeat: no-repeat;
 }
 
-#CSSBoxModel #background-image-repeat {
-    background-image: url(/images/CSS/nyan.png), url(/images/CSS/nyanbackground.jpg);
+#CSSBoxModel #background-image-repeat {/*eg background repeating*/
+    background-image: url(images/CSS/nyan.png), url(images/CSS/nyanbackground.jpg);
     background-size: 150px, cover;
     background-position: center right, center;
     background-repeat: repeat, no-repeat;
@@ -126,7 +126,7 @@
     visibility: hidden;
 }
 
-#CSS3 #shadow {
+#CSS3 #shadow {/*shadow text definition*/
     text-shadow: 1px 3px 5px grey;
     padding-left: 10px;
     text-align: left;
